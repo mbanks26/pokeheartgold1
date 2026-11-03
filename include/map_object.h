@@ -172,6 +172,7 @@ MapObjectManager *MapObjectManager_Init(FieldSystem *fieldSystem, u32 objectCoun
 void MapObjectManager_Delete(MapObjectManager *manager);
 void sub_0205E104(MapObjectManager *manager, u32 unused, u32 mapId, u32 objectCount, ObjectEvent *objectEvents);
 LocalMapObject *MapObject_Create(MapObjectManager *manager, u32 x, u32 z, u32 direction, u32 sprite, u32 movement, u32 mapNo);
+LocalMapObject *MapObject_CreateWithID(MapObjectManager *manager, u32 id, u32 x, u32 z, u32 direction, u32 sprite, u32 movement, u32 mapNo);
 LocalMapObject *MapObject_CreateWithParams(MapObjectManager *manager, u32 x, u32 y, u32 direction, u32 sprite, u32 movement, u32 mapNo, u32 param0, u32 param1, u32 param2);
 LocalMapObject *MapObject_CreateFromObjectEventWithId(MapObjectManager *mapObjectManager, u16 objectId, u32 numObjects, u32 mapId, const ObjectEvent *templates);
 void sub_0205E38C(LocalMapObject *object, u32 sprite);

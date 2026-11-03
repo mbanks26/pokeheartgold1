@@ -1,87 +1,171 @@
-/* Experimental companion: no save-layout or HAVE_FOLLOWER flag changes. */
+/* Independent companion controller. Native bit 9 is HIDDEN despite its name. */
+#include "sabrina_companion.h"
+#include "sabrina_companion_trail.h"
 #include "follow_mon.h"
 #include "task.h"
 #include "unk_02062108.h"
+#include "unk_02054648.h"
 #include "constants/sprites.h"
 #include "constants/global_fieldmap.h"
 #include "constants/maps.h"
 
-#define SABRINA_COMPANION_ID 252
+extern u32 sub_02060BB8(LocalMapObject *object, u32 direction);
+static struct {
+    FieldSystem *owner;
+    MapObjectManager *manager;
+    u32 map;
+    SabrinaTrail trail;
+    int stepFrames;
+    int cooldown;
+} sSabrinaCompanion;
 
+static void SabrinaCompanion_Reset(void) {
+    sSabrinaCompanion.owner = NULL;
+    sSabrinaCompanion.manager = NULL;
+    SabrinaTrail_Reset(&sSabrinaCompanion.trail);
+    sSabrinaCompanion.stepFrames = sSabrinaCompanion.cooldown = 0;
+}
+static void SabrinaCompanion_RemoveObjects(FieldSystem *fs) {
+    s32 index = 0;
+    LocalMapObject *object;
+    if (fs->mapObjectManager == NULL) { return; }
+    while (MapObjectManager_GetNextObjectWithFlagFromIndex(fs->mapObjectManager, &object, &index, MAPOBJECTFLAG_ACTIVE)) {
+        if (!SabrinaCompanion_IsSolid(object)) { MapObject_Delete(object); }
+    }
+}
+static void SabrinaCompanion_Drop(FieldSystem *fs) {
+    SabrinaCompanion_RemoveObjects(fs);
+    SabrinaTrail_Reset(&sSabrinaCompanion.trail);
+    sSabrinaCompanion.stepFrames = 0;
+    sSabrinaCompanion.cooldown = 8;
+}
+static void SabrinaCompanion_OnMapExit(FieldSystem *fs) {
+    SabrinaCompanion_RemoveObjects(fs);
+    SabrinaCompanion_Reset();
+}
+static BOOL SabrinaCompanion_HasTexture(FieldSystem *fs) {
+    int i;
+    for (i = 0; i < fs->mapObjectsToPreload->count; i++) {
+        if (fs->mapObjectsToPreload->ids[i] == SPRITE_GSLEADER10) { return TRUE; }
+    }
+    return FALSE;
+}
+static BOOL SabrinaCompanion_HasCanonicalNPC(FieldSystem *fs) {
+    s32 index = 0;
+    LocalMapObject *object;
+    while (MapObjectManager_GetNextObjectWithFlagFromIndex(fs->mapObjectManager, &object, &index, MAPOBJECTFLAG_ACTIVE)) {
+        if (MapObject_GetSpriteID(object) == SPRITE_GSLEADER10 && SabrinaCompanion_IsSolid(object)
+            && !MapObject_CheckVisible(object)) { return TRUE; }
+    }
+    return FALSE;
+}
+static BOOL SabrinaCompanion_Occupied(FieldSystem *fs, LocalMapObject *self, SabrinaTrailTile tile) {
+    s32 index = 0;
+    LocalMapObject *object;
+    LocalMapObject *mon = FollowMon_GetMapObject(fs);
+    LocalMapObject *player = PlayerAvatar_GetMapObject(fs->playerAvatar);
+    while (MapObjectManager_GetNextObjectWithFlagFromIndex(fs->mapObjectManager, &object, &index, MAPOBJECTFLAG_ACTIVE)) {
+        if (object == self || !SabrinaCompanion_IsSolid(object)) { continue; }
+        if (MapObject_GetXCoord(object) == tile.x && MapObject_GetZCoord(object) == tile.z
+            && SabrinaTrail_Abs(MapObject_GetYCoord(object) - tile.y) < 2) { return TRUE; }
+        if (object != mon && object != player && MapObject_CheckSingleMovement(object)
+            && MapObject_GetPreviousXCoord(object) == tile.x && MapObject_GetPreviousZCoord(object) == tile.z
+            && SabrinaTrail_Abs((int)MapObject_GetPreviousYCoord(object) - tile.y) < 2) { return TRUE; }
+    }
+    return FALSE;
+}
+static BOOL SabrinaCompanion_SafeTile(FieldSystem *fs, LocalMapObject *self, SabrinaTrailTile tile) {
+    VecFx32 pos;
+    s8 heightDelta = 0;
+    if (tile.x < 0 || tile.z < 0 || SabrinaCompanion_Occupied(fs, self, tile)) { return FALSE; }
+    pos.x = (tile.x * 16 + 8) * FX32_ONE;
+    pos.y = tile.y * 8 * FX32_ONE;
+    pos.z = (tile.z * 16 + 8) * FX32_ONE;
+    /* Same ground/height collision query as native movement. No blind teleport. */
+    return !sub_020549A8(fs, &pos, tile.x, tile.z, (int)&heightDelta) && heightDelta == 0;
+}
 static void SabrinaCompanion_Tick(FieldSystem *fs) {
     LocalMapObject *sabrina;
     LocalMapObject *mon;
-    s32 tx, tz, sx, sz, dx, dz;
-    u32 direction;
-    int i;
-    BOOL preloaded = FALSE;
-    if (fs->mapObjectManager == NULL || fs->playerAvatar == NULL || fs->mapObjectsToPreload == NULL) {
-        return;
+    SabrinaTrailTile tile, here;
+    SabrinaTrailTile *next;
+    int dx, dz, direction;
+    BOOL continuous;
+    if (fs->mapObjectManager == NULL || fs->playerAvatar == NULL || fs->location == NULL || fs->mapObjectsToPreload == NULL) { return; }
+    SabrinaCompanion_InitializeIfNeeded(fs->saveData);
+    if (sSabrinaCompanion.owner != fs || sSabrinaCompanion.manager != fs->mapObjectManager
+        || sSabrinaCompanion.map != fs->location->mapId) {
+        /* Also removes objects restored by an older prototype save. */
+        SabrinaCompanion_RemoveObjects(fs);
+        SabrinaCompanion_Reset();
+        sSabrinaCompanion.owner = fs;
+        sSabrinaCompanion.manager = fs->mapObjectManager;
+        sSabrinaCompanion.map = fs->location->mapId;
     }
-    sabrina = MapObjectManager_GetFirstActiveObjectByID(fs->mapObjectManager, SABRINA_COMPANION_ID);
-    /* Never alter a real event object that happens to have the reserved ID. */
-    if (sabrina != NULL && MapObject_GetSpriteID(sabrina) != SPRITE_GSLEADER10) {
-        return;
-    }
-    for (i = 0; i < fs->mapObjectsToPreload->count; i++) {
-        if (fs->mapObjectsToPreload->ids[i] == SPRITE_GSLEADER10) {
-            preloaded = TRUE;
-        }
-    }
-    if (!preloaded || PlayerAvatar_GetGender(fs->playerAvatar) != PLAYER_GENDER_MALE
-        || !FollowMon_IsActive(fs)) {
-        if (sabrina != NULL) { MapObject_Delete(sabrina); }
-        return;
+    if (!SabrinaCompanion_IsJoined(fs->saveData) || PlayerAvatar_GetGender(fs->playerAvatar) != PLAYER_GENDER_MALE
+        || !FollowMon_IsActive(fs) || !FollowMon_IsVisible(fs) || !SabrinaCompanion_HasTexture(fs)
+        || PlayerAvatar_GetState(fs->playerAvatar) != PLAYER_STATE_WALKING
+        || fs->location->mapId == MAP_SAFFRON_GYM || SabrinaCompanion_HasCanonicalNPC(fs)
+        || FieldSystem_TaskIsRunning(fs)) {
+        SabrinaCompanion_Drop(fs); return;
     }
     mon = FollowMon_GetMapObject(fs);
-    if (mon == NULL || !FollowMon_IsVisible(fs)
-        || PlayerAvatar_GetState(fs->playerAvatar) != PLAYER_STATE_WALKING) {
-        if (sabrina != NULL) { MapObject_SetVisible(sabrina, FALSE); }
-        return;
-    }
-    /* Do not start movement while scripts, menus, battles or transitions run. */
-    if (FieldSystem_TaskIsRunning(fs) || MapObject_CheckMovementPaused(mon)) {
-        return;
-    }
-    tx = MapObject_GetPreviousXCoord(mon);
-    tz = MapObject_GetPreviousZCoord(mon);
-    if (tx < 0 || tz < 0) { return; }
-    if ((tx == MapObject_GetXCoord(mon) && tz == MapObject_GetZCoord(mon))
-        || (tx == PlayerAvatar_GetXCoord(fs->playerAvatar) && tz == PlayerAvatar_GetZCoord(fs->playerAvatar))) {
-        return;
-    }
-    direction = MapObject_GetFacingDirection(mon);
+    if (mon == NULL || MapObject_CheckMovementPaused(mon)) { SabrinaCompanion_Drop(fs); return; }
+    if (sSabrinaCompanion.cooldown) { sSabrinaCompanion.cooldown--; return; }
+    sabrina = MapObjectManager_GetFirstActiveObjectByID(fs->mapObjectManager, SABRINA_COMPANION_OBJECT_ID);
+    if (sabrina != NULL && SabrinaCompanion_IsSolid(sabrina)) { return; }
+    tile.x = MapObject_GetPreviousXCoord(mon);
+    tile.y = MapObject_GetPreviousYCoord(mon);
+    tile.z = MapObject_GetPreviousZCoord(mon);
+    tile.direction = MapObject_GetFacingDirection(mon);
+    if (tile.x < 0 || tile.z < 0) { SabrinaCompanion_Drop(fs); return; }
+    /* The previous native tile is recorded before waiting for our held step. */
+    continuous = SabrinaTrail_Record(&sSabrinaCompanion.trail, tile);
+    if (!continuous && sabrina != NULL) { SabrinaCompanion_Drop(fs); return; }
     if (sabrina == NULL) {
-        sabrina = MapObject_Create(fs->mapObjectManager, tx, tz, direction, SPRITE_GSLEADER10, 0, MAP_NOTHING);
+        /* Fresh placement always uses the most recent traversed, unoccupied tile. */
+        if (!SabrinaCompanion_SafeTile(fs, NULL, tile)) { return; }
+        sabrina = MapObject_CreateWithID(fs->mapObjectManager, SABRINA_COMPANION_OBJECT_ID, tile.x, tile.z, tile.direction, SPRITE_GSLEADER10, 0, MAP_NOTHING);
         if (sabrina == NULL) { return; }
-        MapObject_SetID(sabrina, SABRINA_COMPANION_ID);
+        MapObject_SetID(sabrina, SABRINA_COMPANION_OBJECT_ID);
         MapObject_SetType(sabrina, 0);
         MapObject_SetScriptID(sabrina, 0xffff);
         MapObject_SetEventFlag(sabrina, 0);
         MapObject_SetKeep(sabrina, FALSE);
-        MapObject_SetXRange(sabrina, -1);
-        MapObject_SetYRange(sabrina, -1);
+        MapObject_SetXRange(sabrina, -1); MapObject_SetYRange(sabrina, -1);
         MapObject_SetFlag29(sabrina, TRUE);
         MapObject_SetFlagsBits(sabrina, MAPOBJECTFLAG_UNK13);
         MapObject_ClearFlagsBits(sabrina, (MapObjectFlagBits)(MAPOBJECTFLAG_UNK8 | MAPOBJECTFLAG_UNK7));
-        MapObject_SetPositionFromXYZAndDirection(sabrina, tx, MapObject_GetPreviousYCoord(mon), tz, direction);
+        MapObject_ClearFlag18(sabrina, FALSE); /* Native ignored-obstacle bit. */
+        MapObject_SetFlag19(sabrina, TRUE);   /* No event/interaction interception. */
+        MapObject_SetPositionFromXYZAndDirection(sabrina, tile.x, tile.y, tile.z, tile.direction);
+        MapObject_SetVisible(sabrina, FALSE); /* FALSE means shown in this engine. */
+        SabrinaTrail_Reset(&sSabrinaCompanion.trail);
+        SabrinaTrail_Record(&sSabrinaCompanion.trail, tile);
+        SabrinaTrail_Pop(&sSabrinaCompanion.trail);
         return;
     }
-    if (!MapObject_ClearHeldMovementIfActive(sabrina)) { return; }
-    if (!MapObject_CheckVisible(sabrina)) {
-        MapObject_SetPositionFromXYZAndDirection(sabrina, tx, MapObject_GetPreviousYCoord(mon), tz, direction);
-        MapObject_SetVisible(sabrina, TRUE);
+    here.x = MapObject_GetXCoord(sabrina); here.y = MapObject_GetYCoord(sabrina); here.z = MapObject_GetZCoord(sabrina);
+    here.direction = MapObject_GetFacingDirection(sabrina);
+    if (SabrinaCompanion_Occupied(fs, sabrina, here)) { SabrinaCompanion_Drop(fs); return; }
+    if (!MapObject_ClearHeldMovementIfActive(sabrina)) {
+        if (++sSabrinaCompanion.stepFrames > 120) { SabrinaCompanion_Drop(fs); }
         return;
     }
-    sx = MapObject_GetXCoord(sabrina); sz = MapObject_GetZCoord(sabrina);
-    dx = tx - sx; dz = tz - sz;
-    if (dx == 0 && dz == 0) { return; }
-    /* Follow only an already traversed adjacent tile. Never cut a corner. */
-    if ((dx == 0 && (dz == 1 || dz == -1)) || (dz == 0 && (dx == 1 || dx == -1))) {
-        direction = dx == 1 ? DIR_EAST : dx == -1 ? DIR_WEST : dz == 1 ? DIR_SOUTH : DIR_NORTH;
-        MapObject_SetHeldMovement(sabrina, MOVEMENT_RUN_UP + direction);
-    } else {
-        /* Catch up after a warp or fast movement, using the Pokemon's safe tile. */
-        MapObject_SetPositionFromXYZAndDirection(sabrina, tx, MapObject_GetPreviousYCoord(mon), tz, direction);
+    sSabrinaCompanion.stepFrames = 0;
+    next = SabrinaTrail_First(&sSabrinaCompanion.trail);
+    while (next != NULL && SabrinaTrail_Same(*next, here)) {
+        SabrinaTrail_Pop(&sSabrinaCompanion.trail);
+        next = SabrinaTrail_First(&sSabrinaCompanion.trail);
     }
+    if (next == NULL) { return; }
+    dx = next->x - here.x; dz = next->z - here.z;
+    if (SabrinaTrail_Abs(dx) + SabrinaTrail_Abs(dz) != 1 || SabrinaTrail_Abs(next->y - here.y) > 1
+        || !SabrinaCompanion_SafeTile(fs, sabrina, *next)) {
+        SabrinaCompanion_Drop(fs); return;
+    }
+    direction = dx == 1 ? DIR_EAST : dx == -1 ? DIR_WEST : dz == 1 ? DIR_SOUTH : DIR_NORTH;
+    if (sub_02060BB8(sabrina, direction) != 0) { SabrinaCompanion_Drop(fs); return; }
+    MapObject_SetHeldMovement(sabrina, MOVEMENT_RUN_UP + direction);
+    SabrinaTrail_Pop(&sSabrinaCompanion.trail);
 }

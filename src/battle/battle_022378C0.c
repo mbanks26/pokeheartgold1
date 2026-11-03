@@ -1,4 +1,5 @@
 #include "battle/battle_022378C0.h"
+#include "sabrina_companion.h"
 
 #include "constants/game_stats.h"
 
@@ -47,6 +48,9 @@ BOOL Battle_Run(OverlayManager *man, int *state) {
 
     switch (*state) {
     case BSTATE_INIT:
+        SabrinaCompanion_PrepareBattle(setup->saveData, setup->mapNumber, setup->battleType,
+            setup->trainerId[BATTLER_ENEMY], setup->trainerId[BATTLER_ENEMY2],
+            PlayerProfile_GetTrainerGender(setup->profile[BATTLER_PLAYER]) == PLAYER_GENDER_MALE);
         Heap_Create(HEAP_ID_3, HEAP_ID_BATTLE, 0xB0000);
         if ((setup->battleType & BATTLE_TYPE_LINK) && !(setup->battleSpecial & BATTLE_SPECIAL_RECORDING)) {
             *state = BSTATE_LINK_INIT;
@@ -163,6 +167,7 @@ BOOL Battle_Run(OverlayManager *man, int *state) {
         break;
     }
     case BSTATE_EXIT:
+        SabrinaCompanion_ClearBattlePresentation();
         return TRUE;
     }
     return FALSE;

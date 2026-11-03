@@ -107,6 +107,8 @@ static void ov01_021E66D8(void);
 static void ov01_021E66DC(void);
 static void ov01_021E66E0(void);
 
+#include "sabrina_companion.inc"
+
 static void FieldMap_VBlankCallback(void *fsys) {
     FieldSystem *fieldSystem = fsys;
     DoScheduledBgGpuUpdates(fieldSystem->bgConfig);
@@ -117,6 +119,7 @@ static void FieldMap_VBlankCallback(void *fsys) {
 }
 
 BOOL FieldMap_Init(OverlayManager *man, int *state) {
+    if (*state == 0) { SabrinaCompanion_Reset(); }
     u32 offset = 0xDCE6A1;
     BOOL ret = FALSE;
     FieldSystem *fieldSystem = OverlayManager_GetArgs(man);
@@ -234,7 +237,6 @@ BOOL FieldMap_Init(OverlayManager *man, int *state) {
     return ret;
 }
 
-#include "sabrina_companion.inc"
 
 BOOL FieldMap_Main(OverlayManager *man, int *state) {
     FieldSystem *fieldSystem = OverlayManager_GetArgs(man);
@@ -257,6 +259,7 @@ BOOL FieldMap_Exit(OverlayManager *man, int *state) {
     FieldSystem *fieldSystem;
     int offset = 0x2AAACF;
     fieldSystem = OverlayManager_GetArgs(man);
+    if (*state == 0) { SabrinaCompanion_OnMapExit(fieldSystem); }
     MapLoadManager_Tick(fieldSystem->mapLoadManager);
 
     switch (*state) {

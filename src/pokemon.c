@@ -1,4 +1,9 @@
 #include "pokemon.h"
+#include "sabrina_companion.h"
+#include "save_vars_flags.h"
+#include "constants/maps.h"
+#include "constants/sprites.h"
+#include "constants/trainers.h"
 
 #include "global.h"
 
@@ -4129,7 +4134,44 @@ BOOL BoxmonBelongsToPlayer(BoxPokemon *boxMon, PlayerProfile *profile, enum Heap
     return ret;
 }
 
+
+/* Presentation only: never modifies BattleSetup or battle rules. */
+static BOOL sSabrinaPairedBattleArt = FALSE;
+BOOL SabrinaCompanion_IsJoined(SaveData *save) {
+    return save != NULL && Save_VarsFlags_CheckFlagInArray(Save_VarsFlags_Get(save), FLAG_SABRINA_COMPANION_JOINED);
+}
+void SabrinaCompanion_SetJoined(SaveData *save, BOOL joined) {
+    SaveVarsFlags *flags = Save_VarsFlags_Get(save);
+    Save_VarsFlags_SetFlagInArray(flags, FLAG_SABRINA_COMPANION_INITIALIZED);
+    if (joined) { Save_VarsFlags_SetFlagInArray(flags, FLAG_SABRINA_COMPANION_JOINED); }
+    else { Save_VarsFlags_ClearFlagInArray(flags, FLAG_SABRINA_COMPANION_JOINED); }
+}
+void SabrinaCompanion_InitializeIfNeeded(SaveData *save) {
+    if (save != NULL && PlayerProfile_GetTrainerGender(Save_PlayerData_GetProfile(save)) == PLAYER_GENDER_MALE
+        && Party_GetCount(SaveArray_Party_Get(save)) != 0
+        && !Save_VarsFlags_CheckFlagInArray(Save_VarsFlags_Get(save), FLAG_SABRINA_COMPANION_INITIALIZED)) {
+        SabrinaCompanion_SetJoined(save, TRUE);
+    }
+}
+BOOL SabrinaCompanion_IsSolid(LocalMapObject *object) {
+    return !(MapObject_GetID(object) == SABRINA_COMPANION_OBJECT_ID
+        && MapObject_GetSpriteID(object) == SPRITE_GSLEADER10
+        && MapObject_GetScriptID(object) == 0xffff);
+}
+void SabrinaCompanion_PrepareBattle(SaveData *save, u32 map, u32 type, int enemy1, int enemy2, BOOL male) {
+    SabrinaCompanion_InitializeIfNeeded(save);
+    sSabrinaPairedBattleArt = male && SabrinaCompanion_IsJoined(save)
+        && map != MAP_SAFFRON_GYM
+        && !(type & (BATTLE_TYPE_DOUBLES | BATTLE_TYPE_MULTI | BATTLE_TYPE_LINK | BATTLE_TYPE_FRONTIER | BATTLE_TYPE_TUTORIAL))
+        && enemy1 != TRAINER_LEADER_SABRINA_SABRINA && enemy2 != TRAINER_LEADER_SABRINA_SABRINA
+        && enemy1 != TRAINER_LEADER_SABRINA_SABRINA_2 && enemy2 != TRAINER_LEADER_SABRINA_SABRINA_2;
+}
+void SabrinaCompanion_ClearBattlePresentation(void) { sSabrinaPairedBattleArt = FALSE; }
+
 int TrainerClassToBackpicID(int trainerClass, BOOL isLink) {
+    if (trainerClass == TRAINERCLASS_PKMN_TRAINER_ETHAN && !sSabrinaPairedBattleArt) {
+        return isLink ? SABRINA_SOLO_LINK_BACKPIC : SABRINA_SOLO_BACKPIC;
+    }
     switch (trainerClass) {
     case TRAINERCLASS_PKMN_TRAINER_ETHAN:
     case TRAINERCLASS_PKMN_TRAINER_LYRA:

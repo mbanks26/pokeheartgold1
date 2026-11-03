@@ -137,3 +137,5 @@
 .public ov01_02205604
 .public ov01_02205664
 .public ov01_022056C4
+
+.public SabrinaCompanion_IsSolid

@@ -1,4 +1,5 @@
 #include "map_object.h"
+#include "sabrina_companion.h"
 
 #include "global.h"
 
@@ -247,6 +248,28 @@ LocalMapObject *MapObject_CreateWithParams(MapObjectManager *manager, u32 x, u32
     return MapObject_CreateFromObjectEvent(manager, &objectEvent, mapNo);
 }
 
+/* Set the identity before lookup, avoiding reuse of an unrelated ID-zero actor. */
+LocalMapObject *MapObject_CreateWithID(MapObjectManager *manager, u32 id, u32 x, u32 y, u32 direction, u32 sprite, u32 movement, u32 mapNo) {
+    ObjectEvent objectEvent;
+    ObjectEvent_SetID(&objectEvent, id);
+    ObjectEvent_SetSpriteID(&objectEvent, sprite);
+    ObjectEvent_SetMovement(&objectEvent, movement);
+    ObjectEvent_SetType(&objectEvent, 0);
+    ObjectEvent_SetEventFlag(&objectEvent, 0);
+    ObjectEvent_SetScriptID(&objectEvent, 0);
+    ObjectEvent_SetFacingDirection(&objectEvent, direction);
+    ObjectEvent_SetParam(&objectEvent, 0, 0);
+    ObjectEvent_SetParam(&objectEvent, 0, 1);
+    ObjectEvent_SetParam(&objectEvent, 0, 2);
+    ObjectEvent_SetXRange(&objectEvent, 0);
+    ObjectEvent_SetYRange(&objectEvent, 0);
+    ObjectEvent_SetXCoord(&objectEvent, x);
+    ObjectEvent_SetZCoord(&objectEvent, y);
+    ObjectEvent_SetYCoord(&objectEvent, 0);
+
+    return MapObject_CreateFromObjectEvent(manager, &objectEvent, mapNo);
+}
+
 LocalMapObject *MapObject_CreateFromObjectEventWithId(MapObjectManager *manager, u16 id, u32 objectEventCount, u32 mapNo, const ObjectEvent *events) {
     LocalMapObject *ret = NULL;
     ObjectEvent *objectEvent = ObjectEvent_GetByID(id, objectEventCount, (ObjectEvent *)events);
@@ -397,6 +420,10 @@ void FieldSystem_SyncMapObjectsToSaveEx(FieldSystem *fieldSystem, MapObjectManag
     LocalMapObject *object;
 
     while (MapObjectManager_GetNextObjectWithFlagFromIndex(manager, &object, &index, MAPOBJECTFLAG_ACTIVE)) { // MapObjectManager_GetNextActiveObject? this is an iterator however
+        /* Status is persisted in flags; this transient actor is rebuilt safely. */
+        if (!SabrinaCompanion_IsSolid(object)) {
+            continue;
+        }
         SavedMapObject_InitFromLocalMapObject(fieldSystem, object, savedObjects);
 
         count--;
@@ -1957,7 +1984,7 @@ LocalMapObject *MapObjectManager_GetFirstObjectWithXAndZ(MapObjectManager *manag
     LocalMapObject *objects = MapObjectManager_GetObjects(manager);
 
     do {
-        if (MapObject_GetFlagsBitsMask(objects, MAPOBJECTFLAG_ACTIVE) != 0) {
+        if (MapObject_GetFlagsBitsMask(objects, MAPOBJECTFLAG_ACTIVE) != 0 && SabrinaCompanion_IsSolid(objects)) {
             if (checkPrevious && x == MapObject_GetPreviousXCoord(objects) && z == MapObject_GetPreviousZCoord(objects)) {
                 return objects;
             }

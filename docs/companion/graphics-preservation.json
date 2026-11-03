@@ -1,0 +1,15 @@
+{
+  "unchanged_existing_members": 85,
+  "appended_backpic_ids": [
+    17,
+    18
+  ],
+  "source_commit": "bda9631d",
+  "source_backpic_ids": [
+    0,
+    15
+  ],
+  "original_archive_sha256": "f0a0e8d5fff5c3502a6f556e4197dfcd0123d4fd409adff8ea2486fb92737ff8",
+  "extended_archive_sha256": "14802568db84d7e114a23553f31753a2bc203a6b5503a68ba685e103b2faa168",
+  "new_graphics_created": false
+}

@@ -1963,6 +1963,10 @@ _02060CC8:
 	cmp r0, #0
 	beq _02060D84
 	ldr r0, [sp, #4]
+	bl SabrinaCompanion_IsSolid
+	cmp r0, #0
+	beq _02060D84
+	ldr r0, [sp, #4]
 	bl MapObject_GetXCoord
 	str r0, [sp, #0xc]
 	ldr r0, [sp, #4]

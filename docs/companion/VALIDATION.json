@@ -1,0 +1,97 @@
+{
+  "status": "stabilization candidate; gameplay validation pending",
+  "date_utc": "2026-11-03",
+  "repository": "mbanks26/pokeheartgold1",
+  "branch": "development/sabrina-stabilization-20261103",
+  "parent": "4ea2dc8a603cb58df6b64f8057cae436a0c7f5ac",
+  "protection": {
+    "remote_checkpoint": "recovery/pre-companion-stabilization-20261103",
+    "prototype_rom_sha1": "544e5b9a59dab0656ab1c3fe28f0e4fe8f4fd8db",
+    "prior_roms_unchanged": true,
+    "master_changed": false
+  },
+  "compilation": {
+    "result": "PASS",
+    "target": "pokeheartgold.us.nds",
+    "directory": "build/sabrina-stabilization",
+    "final_exit_code": 0,
+    "repeat_build": "no work to do",
+    "arm7_stock_checksum": "PASS",
+    "stock_arm9_or_full_rom_checksum": "not applicable to modified code/art",
+    "generic_default_all_target": "fails in unrelated host SDK assembly target; explicit ROM target succeeds"
+  },
+  "rom": {
+    "size": 134217728,
+    "sha1": "fb8859d20ee7c2e321294aa1366320d8acc9f3e2",
+    "sha256": "7076e1a80f6eb4439dc95bd898a1487bfd5243b8eb5d8a55c5704a6c009a7bfa"
+  },
+  "patch": {
+    "path": "sabrina-companion-stabilized.bps",
+    "size": 4126119,
+    "sha1": "d777865e457f822ea6315a5c38ec6982335ae4c8",
+    "sha256": "86c7333a1c50c59002f969a8c601e479c4975f5943e2aa6b80be925ff349f5f2",
+    "required_clean_source_sha1": "4fcded0e2713dc03929845de631d0932ea2b5a37",
+    "generator_roundtrip": "PASS",
+    "independent_RomPatcherJS_apply_and_CRC": "PASS"
+  },
+  "host_tests": {
+    "result": "PASS",
+    "assertions": 83,
+    "runner": "tests/test_sabrina_stabilization.py (old entry delegates)",
+    "code": "actual controller, trail, persistence/battle policy and save-object serializer; engine calls stubbed",
+    "sanitizers": "address + undefined behavior; leak detection disabled because host ptrace prevents LeakSanitizer",
+    "coverage": [
+      "starter auto-join",
+      "persistent disable/enable bits",
+      "all four directions",
+      "queued corner while busy",
+      "idle stop",
+      "blocked terrain and height",
+      "occupied tiles",
+      "reverse overlap",
+      "native collision refusal",
+      "allocation/preload failure",
+      "foreign reserved ID preservation",
+      "duplicate cleanup",
+      "save serialization omits transient human",
+      "map exit/change",
+      "task/pause/cycling/surfing removal and restoration",
+      "stuck-step timeout",
+      "FIFO overflow/warp discontinuity",
+      "Gym/rematch and excluded-mode battle presentation"
+    ]
+  },
+  "asset_preservation": {
+    "baseline": "4ea2dc8a",
+    "verified_existing_graphic_files": 5980,
+    "changed_existing_graphic_files": [],
+    "existing_backpic_members_preserved": 85,
+    "appended_existing_solo_resources": 10,
+    "changed_story_scripts": [],
+    "other_changed_game_assets": []
+  },
+  "headless_emulator": {
+    "emulator": "DeSmuME CLI 0.9.13 under Xvfb, HLE firmware/BIOS",
+    "rom_sha1": "fb8859d20ee7c2e321294aa1366320d8acc9f3e2",
+    "startup": "PASS: opening animation, title and new-game information menu rendered",
+    "formation_or_story_scenarios": "NOT VERIFIED",
+    "note": "Synthetic inputs and screenshot capture are boot/menu smoke checks, not proof of companion rendering, save restoration, Gym outcomes or full-game stability.",
+    "evidence": [
+      "emulator-title.png",
+      "emulator-newgame.png"
+    ]
+  },
+  "visual_gameplay": {
+    "Manic_EMU_iPhone": "NOT RUN; device unavailable in cloud",
+    "pending": [
+      "actual simultaneous follower rendering",
+      "all map/terrain/door/ledge cases",
+      "actual save and load",
+      "wild/trainer paired throwing animation",
+      "story cutscenes",
+      "Saffron victory/defeat and return",
+      "long playthrough and original progression"
+    ],
+    "checklist": "MANIC-EMU-CHECKLIST.md"
+  }
+}
