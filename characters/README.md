@@ -92,7 +92,7 @@ resulting `.nds` in Files and import it into Manic EMU as a separate test game.
 Keep your existing ROM and save backed up; start a fresh test save for each gender.
 
 - Required source ROM SHA-1: `4fcded0e2713dc03929845de631d0932ea2b5a37`.
-- Final graphics ROM SHA-1: `fabcb35631d686c667955545083bfb00bba32cc5`.
+- Final graphics ROM SHA-1: `40a353ae2f4973dba725dbf175ea0d6b5d12bc6b`.
 - The BPS patch has source/target/patch CRC checks and was applied back to the
   stock source, reproducing the final built ROM byte for byte.
 - Patch generation: `python3 tools/make_character_patch.py STOCK.nds CUSTOM.nds characters/heartgold-characters.bps`.
@@ -114,3 +114,16 @@ Cycling, surfing, fishing and the remaining player action/disguise texture banks
 are now integrated; see [actions/README.md](actions/README.md) for IDs and tests.
 Earlier lists of original special-state graphics above describe the earlier commits.
 Intro, Trainer Card, shared Sabrina battle art and dual-follower logic remain pending.
+
+## Portraits and paired battle art
+
+Intro and Trainer Card portraits for both protagonists are integrated using
+the existing custom front artwork resized into native slots. Four intro display
+slots share one pose. Trainer Card name/signature/badges remain unchanged.
+Sabrina now appears beside the male in all eight normal/link back battle poses;
+this is artwork, not a second battle trainer or battle-rule change. The prior
+solo back sheet remains in male/battle-back-solo.png.
+
+All conversions and graphics-only ROM isolation checks passed. Every new portrait,
+card display, and paired throw needs visual/animation testing in Manic EMU.
+Runtime Sabrina-plus-Pokemon movement is a separate implementation stage.

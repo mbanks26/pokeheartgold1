@@ -209,6 +209,8 @@ def verify(stock_path, modified_path, stages):
     fs = rom_files(stock); assert fs == rom_files(modified), 'Filesystem offsets changed'
     changed = [p for p,(a,z) in fs.items() if stock[a:z] != modified[a:z]]
     allowed = {'a/0/8/1','a/0/5/8'}
+    if (ROOT/'characters/portrait-conversion.json').exists():
+        allowed.update({'a/0/4/9', 'a/1/2/0'})
     if any(n!='sabrina' for n in stages): allowed.add('a/0/0/6')
     assert set(changed) == allowed, changed
     a = bytearray(stock);b = bytearray(modified)
