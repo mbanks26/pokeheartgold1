@@ -3,28 +3,11 @@
   "messages": [
     {
       "id": "msg_0531_T11GYM0101_00000",
-      "en_US": [
-        "Sabrina: I knew you were coming...\r",
-        "Three years ago I had a vision of\n",
-        "your arrival. You’re after my Badge.\r",
-        "I don’t enjoy battling, but it’s my\n",
-        "duty as a Gym Leader to confer\f",
-        "Badges on anyone who has proven\f",
-        "him- or herself worthy.\r",
-        "Since you wish it, I will show you my\n",
-        "psychic powers!\r"
-      ]
+      "en_US": "Sabrina: Ready? You know I will\nnot go easy.\rYou did not come all this way to\nbe handed a Badge."
     },
     {
       "id": "msg_0531_T11GYM0101_00001",
-      "en_US": [
-        "Sabrina: Your power...\n",
-        "It far exceeds what I foresaw...\r",
-        "Maybe it isn’t possible to fully\n",
-        "predict what the future holds...\r",
-        "OK, you win. You earned yourself\n",
-        "the Marsh Badge.\r"
-      ]
+      "en_US": "Sabrina: You earned that. Every\nbit of it.\rI am proud of you. Take the\nMarsh Badge, challenger."
     },
     {
       "id": "msg_0531_T11GYM0101_00002",
@@ -35,13 +18,7 @@
     },
     {
       "id": "msg_0531_T11GYM0101_00003",
-      "en_US": [
-        "Sabrina: I failed to accurately predict\n",
-        "your power. That means that your\f",
-        "power is beyond my psychic ability.\r",
-        "You deserve this.\n",
-        "Please take this TM, too!\r"
-      ]
+      "en_US": "Sabrina: There is one more\nthing. You deserve this TM, too."
     },
     {
       "id": "msg_0531_T11GYM0101_00004",

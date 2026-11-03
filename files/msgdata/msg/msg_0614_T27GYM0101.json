@@ -116,6 +116,10 @@
         "Certified Trainer!\f",
         "{STRVAR_1 3, 0, 0}"
       ]
+    },
+    {
+      "id": "msg_0614_T27GYM0101_00012",
+      "en_US": "Morty: Sabrina, you sense it\ntoo? There is something about\rthis place.\rBut your traveling partner came\nfor a Badge. Let us begin."
     }
   ]
 }

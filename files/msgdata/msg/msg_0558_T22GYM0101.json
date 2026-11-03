@@ -124,6 +124,10 @@
         "Certified Trainer!\f",
         "{STRVAR_1 3, 0, 0}"
       ]
+    },
+    {
+      "id": "msg_0558_T22GYM0101_00011",
+      "en_US": "Falkner: Sabrina! I did not\nexpect a Saffron Gym Leader in\rthe audience.\rI hope you both enjoy the\nbattle."
     }
   ]
 }

@@ -11,6 +11,8 @@
 // The std_XXX constants (no leading underscore)
 // are for use in event scripts.
 
+#define std_sabrina_conversation 2072
+
 #define _std_misc                      2000
 #define std_signpost                   2000
 #define std_hidden_item_fanfare        2001

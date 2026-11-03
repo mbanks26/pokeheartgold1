@@ -190,6 +190,8 @@ void FieldInput_Update(FieldInput *fieldInput, FieldSystem *fieldSystem, u16 new
     fieldInput->playerDir = sub_0205DD94(fieldSystem->playerAvatar, newKeys, heldKeys);
 }
 
+#include "sabrina_dialogue.inc"
+
 int FieldInput_Process(FieldInput *fieldInput, FieldSystem *fieldSystem) {
     if (fieldInput->unk0_D == FALSE && TryStartMapScriptByType(fieldSystem, INIT_SCRIPT_ON_FRAME_TABLE) == TRUE) {
         return 1;
@@ -319,6 +321,8 @@ int FieldInput_Process(FieldInput *fieldInput, FieldSystem *fieldSystem) {
     if (fieldInput->unk0_8 && ov02_02251F20(FieldSystem_GetGearPhoneRingManager(fieldSystem))) {
         return 2;
     }
+
+    if (SabrinaStory_TryConversation(fieldSystem, fieldInput)) { return 1; }
 
     return 0;
 }

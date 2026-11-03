@@ -1,4 +1,5 @@
 #include "constants/scrcmd.h"
+#include "constants/sabrina_story.h"
 #include "fielddata/script/scr_seq/event_0003.h"
 #include "msgdata/msg/msg_0040.h"
 #include "msgdata/msg/msg_0191.h"
@@ -77,6 +78,7 @@
 	ScrDef scr_seq_0003_069
 	ScrDef scr_seq_0003_070
 	ScrDef scr_seq_0003_071
+	ScrDef scr_seq_0003_072
 	ScrDefEnd
 
 scr_seq_0003_002:
@@ -1751,3 +1753,12 @@ scr_seq_0003_064:
 	ReleaseAll
 	End
 	.balign 4, 0
+
+scr_seq_0003_072:
+    PlaySE SEQ_SE_DP_SELECT
+    LockAll
+    NonNPCMsgVar VAR_STORY_DIALOGUE_TEXT
+    WaitButton
+    CloseMsg
+    ReleaseAll
+    End

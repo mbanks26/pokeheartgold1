@@ -351,6 +351,13 @@ scr_seq_T30_017:
     PlaySE SEQ_SE_DP_SELECT
     LockAll
     FacePlayer
+    GoToIfSet FLAG_SISTER_RECEIVED_EEVEE, T30_EeveeCatchupDone
+    NPCMsg msg_0629_T30_00020
+    PlayCry SPECIES_EEVEE, 0
+    WaitCry
+    CloseMsg
+    SetFlag FLAG_SISTER_RECEIVED_EEVEE
+T30_EeveeCatchupDone:
     GoToIfSet FLAG_SISTER_LATE_MET, T30_Sister_Later
     NPCMsg msg_0629_T30_00015
     TouchscreenMenuHide

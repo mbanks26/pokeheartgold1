@@ -542,6 +542,10 @@ scr_seq_T21_003:
 	MovePersonFacing obj_T21_gsrivel, 583, 0, VAR_TEMP_x4001, DIR_WEST
 	ApplyMovement obj_T21_gsrivel, _0808
 	WaitMovement
+	GoToIfUnset FLAG_SABRINA_COMPANION_JOINED, SabrinaSilverAckDone
+	NPCMsg msg_0550_T21_00025
+	CloseMsg
+SabrinaSilverAckDone:
 	NPCMsg msg_0550_T21_00013
 	CloseMsg
 	GetStarterChoice VAR_SPECIAL_RESULT

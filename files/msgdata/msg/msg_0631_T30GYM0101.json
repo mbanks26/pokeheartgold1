@@ -132,6 +132,10 @@
         "Certified Trainer!\f",
         "{STRVAR_1 3, 0, 0}"
       ]
+    },
+    {
+      "id": "msg_0631_T30GYM0101_00012",
+      "en_US": "Clair: You brought Sabrina? That\nwill not impress me.\rThis is your challenge. Show me\nwhat you can do."
     }
   ]
 }
