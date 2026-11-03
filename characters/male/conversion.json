@@ -1,0 +1,84 @@
+{
+  "character": "male",
+  "overworld": [
+    {
+      "path": "files/data/mmodel/mmodel/mmodel_00000069.NSBTX",
+      "frames": [
+        "hero.1",
+        "hero.10",
+        "hero.11",
+        "hero.12",
+        "hero.13",
+        "hero.14",
+        "hero.15",
+        "hero.16",
+        "hero.17",
+        "hero.18",
+        "hero.19",
+        "hero.2",
+        "hero.20",
+        "hero.21",
+        "hero.22",
+        "hero.23",
+        "hero.24",
+        "hero.25",
+        "hero.26",
+        "hero.27",
+        "hero.28",
+        "hero.29",
+        "hero.3",
+        "hero.30",
+        "hero.31",
+        "hero.32",
+        "hero.4",
+        "hero.5",
+        "hero.6",
+        "hero.7",
+        "hero.8",
+        "hero.9"
+      ],
+      "sha256": "6b483ca9a8fd0a77ea87445aefe7aba9e73492d82ef59e60394d06f6a2be5f53"
+    }
+  ],
+  "battle": [
+    {
+      "archive": "files/a/0/5/8",
+      "class": 0,
+      "frames": 1,
+      "changed_members": [
+        0,
+        1,
+        4
+      ],
+      "NCER_NANR_preserved": true,
+      "NCGR_roundtrip": true,
+      "portrait_encryption_roundtrip": true
+    },
+    {
+      "archive": "files/a/0/0/6",
+      "class": 0,
+      "frames": 8,
+      "changed_members": [
+        0,
+        1,
+        4
+      ],
+      "NCER_NANR_preserved": true,
+      "NCGR_roundtrip": true,
+      "portrait_encryption_roundtrip": true
+    },
+    {
+      "archive": "files/a/0/0/6",
+      "class": 15,
+      "frames": 8,
+      "changed_members": [
+        75,
+        76,
+        79
+      ],
+      "NCER_NANR_preserved": true,
+      "NCGR_roundtrip": true,
+      "portrait_encryption_roundtrip": true
+    }
+  ]
+}

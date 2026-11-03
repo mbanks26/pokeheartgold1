@@ -20,8 +20,8 @@ BACK = 'files/a/0/0/6'
 MMODEL = 'files/data/mmodel/mmodel/mmodel_{:08d}.NSBTX'
 CHARACTERS = {
     'sabrina': {'textures': [163], 'front': 107, 'back': []},
-    'male': {'textures': [69, 95], 'front': 0, 'back': [0, 15]},
-    'female': {'textures': [70, 96], 'front': 1, 'back': [1, 16]},
+    'male': {'textures': [69], 'front': 0, 'back': [0, 15]},
+    'female': {'textures': [70], 'front': 1, 'back': [1, 16]},
 }
 
 def original(path):

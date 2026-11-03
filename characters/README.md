@@ -49,5 +49,21 @@ naming, following Pokemon, filesystem layout and all unrelated assets.
 
 ## Scope
 
+## Stage 2: Male protagonist
+
+- Normal walking/running bank: MMODEL_HERO, member 69 of a/0/8/1 (32 textures).
+  The run slots reuse the custom directional step artwork at the original timings.
+- Front trainer sprite and encrypted portrait: class 0 of a/0/5/8.
+- Eight back battle throw poses and encrypted portraits in both ordinary and
+  link variants: backpic IDs 0 and 15 of a/0/0/6.
+- Original battle OAM layouts and animation sequences retained.
+- Conversion, main/sub checksums and graphics-only ROM checks passed; see male/.
+- Manic EMU testing pending: choose male, naming, all four walking/running
+  directions, first wild battle/Pokeball throw, trainer battle, back animation,
+  link-variant display if used, following Pokemon, save/load and map transitions.
+- Separate cycling, surfing, HM-use, fishing, watering, ladder, saving/healing,
+  Rocket-disguise, Pokeathlon, alternate-avatar and intro/Trainer Card graphics
+  remain original. Those require later artwork/integration, not just playtesting.
+
 No dual follower system, gameplay changes, naming changes, story changes or
 following-Pokemon changes. No emulator gameplay validation has yet been claimed.
