@@ -16,6 +16,7 @@ static struct {
     u32 map;
     SabrinaTrail trail;
     int stepFrames;
+    int blockedFrames;
     int cooldown;
 } sSabrinaCompanion;
 
@@ -23,7 +24,7 @@ static void SabrinaCompanion_Reset(void) {
     sSabrinaCompanion.owner = NULL;
     sSabrinaCompanion.manager = NULL;
     SabrinaTrail_Reset(&sSabrinaCompanion.trail);
-    sSabrinaCompanion.stepFrames = sSabrinaCompanion.cooldown = 0;
+    sSabrinaCompanion.stepFrames = sSabrinaCompanion.blockedFrames = sSabrinaCompanion.cooldown = 0;
 }
 static void SabrinaCompanion_RemoveObjects(FieldSystem *fs) {
     s32 index = 0;
@@ -36,7 +37,7 @@ static void SabrinaCompanion_RemoveObjects(FieldSystem *fs) {
 static void SabrinaCompanion_Drop(FieldSystem *fs) {
     SabrinaCompanion_RemoveObjects(fs);
     SabrinaTrail_Reset(&sSabrinaCompanion.trail);
-    sSabrinaCompanion.stepFrames = 0;
+    sSabrinaCompanion.stepFrames = sSabrinaCompanion.blockedFrames = 0;
     sSabrinaCompanion.cooldown = 8;
 }
 static void SabrinaCompanion_OnMapExit(FieldSystem *fs) {
@@ -119,8 +120,16 @@ static void SabrinaCompanion_Tick(FieldSystem *fs) {
     tile.z = MapObject_GetPreviousZCoord(mon);
     tile.direction = MapObject_GetFacingDirection(mon);
     if (tile.x < 0 || tile.z < 0) { SabrinaCompanion_Drop(fs); return; }
-    /* The previous native tile is recorded before waiting for our held step. */
-    continuous = SabrinaTrail_Record(&sSabrinaCompanion.trail, tile);
+    /* Native previous coordinates reset to current on a completed step. Only
+     * record a vacated tile: recording the settled Pokemon tile would make
+     * Sabrina chase into the Pokemon and disappear every time the player stops. */
+    continuous = TRUE;
+    if (tile.x != MapObject_GetXCoord(mon) || tile.z != MapObject_GetZCoord(mon)) {
+        continuous = SabrinaTrail_Record(&sSabrinaCompanion.trail, tile);
+    } else if (sabrina == NULL) {
+        if (!sSabrinaCompanion.trail.lastValid) { return; }
+        tile = sSabrinaCompanion.trail.last; /* Checked vacated tile, never the settled Pokemon tile. */
+    }
     if (!continuous && sabrina != NULL) { SabrinaCompanion_Drop(fs); return; }
     if (sabrina == NULL) {
         /* Fresh placement always uses the most recent traversed, unoccupied tile. */
@@ -158,14 +167,31 @@ static void SabrinaCompanion_Tick(FieldSystem *fs) {
         SabrinaTrail_Pop(&sSabrinaCompanion.trail);
         next = SabrinaTrail_First(&sSabrinaCompanion.trail);
     }
-    if (next == NULL) { return; }
+    if (next == NULL) {
+        sSabrinaCompanion.blockedFrames = 0;
+        /* A corner can end on Sabrina's tile without another step. Face the
+         * adjacent Pokemon instead of retaining the last walking direction. */
+        dx = (int)MapObject_GetXCoord(mon) - here.x;
+        dz = (int)MapObject_GetZCoord(mon) - here.z;
+        if (SabrinaTrail_Abs(dx) + SabrinaTrail_Abs(dz) == 1) {
+            direction = dx == 1 ? DIR_EAST : dx == -1 ? DIR_WEST : dz == 1 ? DIR_SOUTH : DIR_NORTH;
+            MapObject_SetOrQueueFacing(sabrina, direction);
+        }
+        return;
+    }
     dx = next->x - here.x; dz = next->z - here.z;
     if (SabrinaTrail_Abs(dx) + SabrinaTrail_Abs(dz) != 1 || SabrinaTrail_Abs(next->y - here.y) > 1
         || !SabrinaCompanion_SafeTile(fs, sabrina, *next)) {
         SabrinaCompanion_Drop(fs); return;
     }
     direction = dx == 1 ? DIR_EAST : dx == -1 ? DIR_WEST : dz == 1 ? DIR_SOUTH : DIR_NORTH;
-    if (sub_02060BB8(sabrina, direction) != 0) { SabrinaCompanion_Drop(fs); return; }
+    /* Native collision keeps a moving Pokemon's previous footprint occupied
+     * until its step finishes. Wait for that footprint instead of blinking out. */
+    if (sub_02060BB8(sabrina, direction) != 0) {
+        if (++sSabrinaCompanion.blockedFrames > 120) { SabrinaCompanion_Drop(fs); }
+        return;
+    }
+    sSabrinaCompanion.blockedFrames = 0;
     MapObject_SetHeldMovement(sabrina, MOVEMENT_RUN_UP + direction);
     SabrinaTrail_Pop(&sSabrinaCompanion.trail);
 }

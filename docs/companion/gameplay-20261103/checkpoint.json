@@ -1,0 +1,19 @@
+{
+  "rom_sha1": "5cbf4223b6b1a02ccee28fd276e86281fff61291",
+  "emulator": "DeSmuME libretro, software rasterizer, frame controlled",
+  "host_assertions": 88,
+  "status": "walking fixes validated; extended gameplay testing ongoing",
+  "preserved_existing_graphics": 5980,
+  "corner_no_disappearance": "48/48 frames on f0d23bec intermediate (before idle-facing-only correction)",
+  "tests_with_latest_rom": [
+    "battery save inside building loaded",
+    "cycling companion suppression/restoration with authored action save",
+    "native Saffron Gym entry and teleport pads; companion suppressed"
+  ],
+  "not_yet_verified": [
+    "Surf restoration",
+    "battle presentation and Gym outcomes",
+    "full story progression",
+    "Manic EMU on iPhone"
+  ]
+}

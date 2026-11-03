@@ -1,5 +1,7 @@
 # Sabrina companion stabilization candidate
 
+**Newer gameplay work:** [emulator findings and current candidate](GAMEPLAY-VALIDATION.md) on `development/sabrina-gameplay-validation-20261103`. The original report and patch below are retained as a historical checkpoint.
+
 The recovered custom graphics and prototype are together in **mbanks26/pokeheartgold1**,
 not the similarly named pokeheartgold repository. This work continues from
 4ea2dc8a on **development/sabrina-stabilization-20261103**. The recovery checkpoint,

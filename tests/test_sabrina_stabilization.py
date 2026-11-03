@@ -78,6 +78,7 @@ static LocalMapObject *MapObject_CreateWithID(MapObjectManager*m,u32 id,u32 x,u3
 static void MapObject_Delete(LocalMapObject*o){o->flags=0;deletes++;}
 #define SET(name,field) static void name(LocalMapObject*o,u32 v){o->field=v;}
 SET(MapObject_SetID,id) SET(MapObject_SetScriptID,script)
+static void MapObject_SetOrQueueFacing(LocalMapObject*o,u32 v){o->dir=v;}
 static void MapObject_SetType(LocalMapObject*o,u32 v){}
 static void MapObject_SetEventFlag(LocalMapObject*o,u32 v){}
 static void MapObject_SetKeep(LocalMapObject*o,BOOL v){o->keep=v;}
@@ -139,6 +140,10 @@ int main(void){
  a->busy=0;moveMon(10,9,9,9);manager.objects[0].x=20;manager.objects[0].z=20;tick(1);CHECK(lastCommand==18&&steps==4);a->busy=0;
  /* A real reverse-turn collision must discard the human rather than block. */
  manager.objects[0].x=a->x;manager.objects[0].z=a->z;tick(1);CHECK(!companion());
+ /* Native idle completion resets previous coordinates onto the occupied tile. */
+ fresh();tick(1);a=companion();manager.objects[1].px=manager.objects[1].x;manager.objects[1].pz=manager.objects[1].z;
+ tick(180);CHECK(companion()==a&&creates==1&&deletes==0&&steps==0);CHECK(a->dir==DIR_SOUTH);
+ fresh();manager.objects[1].px=manager.objects[1].x;manager.objects[1].pz=manager.objects[1].z;tick(20);CHECK(!companion()&&SabrinaCompanion_IsJoined(&save));
  fresh();tick(1);task=1;tick(1);CHECK(!companion()&&SabrinaCompanion_IsJoined(&save));task=0;tick(10);CHECK(companion()!=NULL);
  fresh();tick(1);manager.objects[1].paused=1;tick(1);CHECK(!companion());manager.objects[1].paused=0;tick(10);CHECK(companion()!=NULL);
  fresh();tick(1);avatar.state=1;tick(1);CHECK(!companion());avatar.state=0;tick(10);CHECK(companion()!=NULL);
@@ -148,7 +153,9 @@ int main(void){
  fresh();preload.count=0;tick(2);CHECK(SabrinaCompanion_IsJoined(&save)&&!companion());
  fresh();manager.objects[1].px=-1;tick(1);CHECK(!companion());
  fresh();moveMon(10,10,10,10);tick(1);CHECK(!companion());
- fresh();tick(1);nativeBlocked=1;moveMon(10,10,10,11);tick(1);CHECK(!companion()&&steps==0);
+ fresh();tick(1);a=companion();nativeBlocked=1;moveMon(10,10,10,11);tick(3);CHECK(companion()==a&&steps==0&&deletes==0);
+ nativeBlocked=0;tick(1);CHECK(companion()==a&&steps==1&&lastCommand==17&&deletes==0);
+ fresh();tick(1);nativeBlocked=1;moveMon(10,10,10,11);tick(121);CHECK(!companion()&&steps==0);
  fresh();tick(1);moveMon(11,11,12,11);tick(1);CHECK(!companion()&&steps==0);tick(10);CHECK(companion()!=NULL);
  fresh();tick(1);a=companion();moveMon(10,10,10,11);tick(1);CHECK(a->busy);tick(121);CHECK(!companion());
  fresh();tick(1);stored=save.flags;SabrinaCompanion_OnMapExit(&fs);CHECK(!companion());CHECK(!memcmp(&stored,&save.flags,sizeof(stored)));

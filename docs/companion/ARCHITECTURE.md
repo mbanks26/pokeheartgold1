@@ -34,6 +34,8 @@ coordinates and native Pokemon state continue to use the original engine.
 
 ## Movement, collisions and lifecycle
 
+The follow-up gameplay fixes are documented in [GAMEPLAY-VALIDATION.md](GAMEPLAY-VALIDATION.md): ignore settled Pokemon previous coordinates, wait for transient native footprints, and update idle facing after corners.
+
 The field overlay reserves the existing sprite 369/model 163 when preload capacity
 allows. Each update requires a joined male player, a visible active native Pokemon,
 normal walking, available graphics and no field task or paused Pokemon movement.
