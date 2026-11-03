@@ -1,0 +1,12 @@
+{"frames": 600}
+{"frames": 3, "buttons": ["A"]}
+{"frames": 180}
+{"frames": 3, "buttons": ["A"]}
+{"frames": 300}
+{"frames": 8, "buttons": ["A"]}
+{"frames": 600, "inspect": true, "shot": "ledge-before.png"}
+{"frames": 16, "buttons": ["RIGHT"], "sample": "ledge-jump.json", "shot": "ledge-mid.png", "inspect": true}
+{"frames": 16, "buttons": ["RIGHT"], "inspect": true, "shot": "ledge-crossed.png"}
+{"frames": 48, "buttons": ["RIGHT"], "sample": "ledge-walk.json"}
+{"frames": 180, "inspect": true, "shot": "ledge-after.png", "expect": {"counts": {"252": 1, "253": 1}}}
+{"exit": true}

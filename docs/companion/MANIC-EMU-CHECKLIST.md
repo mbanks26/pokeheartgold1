@@ -5,7 +5,11 @@ ROM. Apply the new BPS patch to the matching clean US HeartGold ROM, not to a
 previous custom ROM. Start from a new game or copied battery save; avoid loading
 save states made with another ROM build. No terminal or desktop editor is needed.
 
-Record the ROM SHA-1 from VALIDATION.json and whether each check passes. A brief
+Cloud emulator checks are recorded separately in [GAMEPLAY-VALIDATION.md](GAMEPLAY-VALIDATION.md).
+These checkboxes remain open because Manic EMU has not been accessed.
+The current candidate SHA-1 is `5cbf4223b6b1a02ccee28fd276e86281fff61291`.
+
+Record the ROM SHA-1 from GAMEPLAY-VALIDATION.json and whether each check passes. A brief
 screen recording is helpful for any failure. Include map/location, action, whether
 Sabrina disappeared, and whether returning to walking restored her.
 

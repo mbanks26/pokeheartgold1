@@ -44,8 +44,9 @@ The human object never changes the Pokemon identity or native following code.
 A bounded 16-tile FIFO records changes to the Pokemon's previous traversed tile,
 including while Sabrina finishes her current animation. Adjacent crumbs are
 followed with native directional step animations. Idle frames issue no new step.
-Overflow, discontinuities, occupied tiles, invalid heights/terrain, failed native
-collision probes or a 120-frame stuck movement discard the transient actor/trail.
+Overflow, discontinuities, occupied tiles, invalid heights/terrain or a 120-frame
+stuck movement discard the transient actor/trail. Transient native collision
+reservations are waited out; a 120-update blocked timeout provides recovery.
 After an eight-update recovery delay, placement uses a currently checked traversed
 tile. Recovery may visibly remove/reintroduce Sabrina; it never blindly teleports
 her through walls. North, south, east, west and queued corners have host coverage.

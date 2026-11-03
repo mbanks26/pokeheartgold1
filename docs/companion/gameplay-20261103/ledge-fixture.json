@@ -1,0 +1,23 @@
+{
+  "source": "/workspace/work/gameplay-validation/fixture-tool-check/starter.sav",
+  "source_sha256": "b25b041e2b2822e828b69c10aef3c65607da39cff3e18ee14ebb3d06102c7b2f",
+  "output": "/workspace/work/gameplay-validation/fixture-tool-check/ledge-repel.sav",
+  "output_sha256": "1a1dfc18f92b65569018e136df6f12e826bc4926d4b4e4089d1f8664ec5a3385",
+  "test_fixture_only": true,
+  "map": 33,
+  "coordinates": [
+    650,
+    2,
+    404
+  ],
+  "changed_save_slots": [
+    262144
+  ],
+  "setup": [
+    "relocated saved player/native Pokemon; removed stale NPC records",
+    "Bicycle and Old Rod; bicycle registered",
+    "Fog Badge to allow Surf",
+    "fast text",
+    "native Repel counter 250"
+  ]
+}

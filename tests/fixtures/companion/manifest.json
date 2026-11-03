@@ -1,0 +1,12 @@
+{
+  "starter-lab.sav.gz": {
+    "raw_sha256": "b25b041e2b2822e828b69c10aef3c65607da39cff3e18ee14ebb3d06102c7b2f",
+    "purpose": "Synthetic CPDEX test save; no user progress or ROM assets",
+    "raw_bytes": 524288
+  },
+  "town-after-following.sav.gz": {
+    "raw_sha256": "1eddd44034a80ae154edd1a98f75e2c3cc636c277bd26dc4f531c90badc180c7",
+    "purpose": "Synthetic CPDEX test save; no user progress or ROM assets",
+    "raw_bytes": 524288
+  }
+}

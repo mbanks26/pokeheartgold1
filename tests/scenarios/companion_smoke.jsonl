@@ -1,0 +1,18 @@
+{"frames": 600}
+{"frames": 3, "buttons": ["A"]}
+{"frames": 180}
+{"frames": 3, "buttons": ["A"]}
+{"frames": 300}
+{"frames": 8, "buttons": ["A"]}
+{"frames": 600, "inspect": true, "shot": "cold-load.png", "expect": {"map": 60, "joined": true, "counts": {"252": 0, "253": 1}}}
+{"frames": 48, "buttons": ["RIGHT"]}
+{"frames": 120, "inspect": true, "shot": "east.png", "expect": {"map": 60, "counts": {"252": 1, "253": 1}, "positions": {"255": [688, 2, 399], "253": [687, 2, 399], "252": [686, 2, 399]}, "directions": {"255": 3, "253": 3, "252": 3}}}
+{"frames": 48, "buttons": ["DOWN"], "sample": "down-motion.json"}
+{"frames": 120, "inspect": true, "shot": "south.png", "expect": {"counts": {"252": 1, "253": 1}, "positions": {"255": [688, 2, 402], "253": [688, 2, 401], "252": [688, 2, 400]}, "directions": {"255": 1, "253": 1, "252": 1}}}
+{"frames": 32, "buttons": ["LEFT"], "sample": "left-motion.json"}
+{"frames": 120, "inspect": true, "shot": "west.png", "expect": {"counts": {"252": 1, "253": 1}, "positions": {"255": [686, 2, 402], "253": [687, 2, 402], "252": [688, 2, 402]}, "directions": {"255": 2, "253": 2, "252": 2}}}
+{"frames": 32, "buttons": ["UP"], "sample": "up-motion.json"}
+{"frames": 120, "inspect": true, "shot": "north.png", "expect": {"counts": {"252": 1, "253": 1}, "positions": {"255": [686, 2, 400], "253": [686, 2, 401], "252": [686, 2, 402]}, "directions": {"255": 0, "253": 0, "252": 0}}}
+{"frames": 180, "sample": "idle-series.json", "inspect": true, "shot": "idle.png", "expect": {"counts": {"252": 1, "253": 1}}, "state": "idle.state"}
+{"load": "idle.state", "frames": 1, "inspect": true, "expect": {"counts": {"252": 1, "253": 1}}}
+{"exit": true}

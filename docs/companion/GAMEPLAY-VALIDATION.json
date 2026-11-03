@@ -1,0 +1,903 @@
+{
+  "date_utc": "2026-11-03",
+  "status": "sampled native-emulator gameplay passed; Manic and full-game testing pending",
+  "repository": "mbanks26/pokeheartgold1",
+  "branch": "development/sabrina-gameplay-validation-20261103",
+  "runtime_fix_commit": "bc2f6a1e959947c0d81e0620c21ca4fb4c1809b3",
+  "parent_stabilization": "2acac1673d5a59cc5364d6551b3d85196a3a93fd",
+  "rom": {
+    "size": 134217728,
+    "sha1": "5cbf4223b6b1a02ccee28fd276e86281fff61291",
+    "sha256": "c8898c0cc610df7f14e80f395147db14e01a19b0af2139f637fd930f296ad4a9"
+  },
+  "patch": {
+    "path": "sabrina-companion-gameplay-tested.bps",
+    "size": 4124564,
+    "sha1": "4d603a54162e576da3161de85369bb11a3aabfe2",
+    "sha256": "118f70e95854f4b99fa6e677811827ea9a17735a5b451f01ce50842772e9c156",
+    "required_clean_source_sha1": "4fcded0e2713dc03929845de631d0932ea2b5a37",
+    "generator_roundtrip": "PASS",
+    "independent_RomPatcherJS_CRC_apply": "PASS"
+  },
+  "compilation": {
+    "result": "PASS",
+    "target": "pokeheartgold.us.nds",
+    "build_dir": "build/sabrina-gameplay-validation",
+    "ARM7_checksum": "PASS",
+    "stock_ARM9_full_ROM_checksum": "not applicable"
+  },
+  "host_tests": {
+    "result": "PASS",
+    "assertions": 88,
+    "sanitizers": [
+      "address",
+      "undefined behavior"
+    ],
+    "engine_calls": "stubbed"
+  },
+  "asset_preservation": {
+    "existing_graphic_files": 5980,
+    "changed_existing_graphics": 0,
+    "existing_back_archive_members_preserved": 85,
+    "recovered_solo_members_previously_appended": 10,
+    "changed_story_scripts": 0
+  },
+  "emulator": {
+    "name": "DeSmuME libretro",
+    "source_commit": "95b4d798731caa809125b6c3c11d17cc332ff6ef",
+    "source_archive_sha256": "279d6f75852f406c3af24f9323944deb51ea7a7d5438f8108a62ce2951aed80c",
+    "core_sha256": "554e67b3f5ba12f83fbe2bac2189c94c9224b85dbd82d14f00fba8303bd7ed08",
+    "mode": "x64 JIT, software rasterizer, HLE BIOS/firmware, scripted buttons/touch and RAM reads",
+    "Manic_EMU_tested": false
+  },
+  "clean_smoke": {
+    "scenario": "tests/scenarios/companion_smoke.jsonl",
+    "commands": 18,
+    "assertion_groups_pass": 7,
+    "errors": 0,
+    "exit_code": 0,
+    "frame_count": 2515,
+    "actor_ids": {
+      "player": 255,
+      "native_Pokemon": 253,
+      "Sabrina": 252
+    },
+    "series": {
+      "down-motion.json": {
+        "frames": 48,
+        "human_present": 48,
+        "Pokemon_present": 48,
+        "unique_positions": {
+          "255": 4,
+          "253": 4,
+          "252": 3
+        }
+      },
+      "left-motion.json": {
+        "frames": 32,
+        "human_present": 32,
+        "Pokemon_present": 32,
+        "unique_positions": {
+          "255": 3,
+          "253": 3,
+          "252": 2
+        }
+      },
+      "up-motion.json": {
+        "frames": 32,
+        "human_present": 32,
+        "Pokemon_present": 32,
+        "unique_positions": {
+          "255": 3,
+          "253": 3,
+          "252": 2
+        }
+      },
+      "idle-series.json": {
+        "frames": 180,
+        "human_present": 180,
+        "Pokemon_present": 180,
+        "unique_positions": {
+          "255": 1,
+          "253": 1,
+          "252": 1
+        }
+      }
+    }
+  },
+  "evidence_cases": [
+    {
+      "scenario": "candidate-final",
+      "screenshot": "town-cold-load-pass.png",
+      "frame": 1694,
+      "assertions": "PASS",
+      "map": 60,
+      "field_task": "0x0",
+      "paired_art": 0,
+      "joined": true,
+      "avatar_state": 0,
+      "read_bytes": null,
+      "actors": [
+        {
+          "id": 255,
+          "sprite": 0,
+          "xyz": [
+            685,
+            2,
+            399
+          ],
+          "direction": 1
+        },
+        {
+          "id": 253,
+          "sprite": 581,
+          "xyz": [
+            685,
+            2,
+            398
+          ],
+          "direction": 1
+        }
+      ]
+    },
+    {
+      "scenario": "candidate-final",
+      "screenshot": "town-cold-reload-walk-pass.png",
+      "frame": 2150,
+      "assertions": "PASS",
+      "map": 60,
+      "field_task": "0x0",
+      "paired_art": 0,
+      "joined": true,
+      "avatar_state": 0,
+      "read_bytes": null,
+      "actors": [
+        {
+          "id": 255,
+          "sprite": 0,
+          "xyz": [
+            688,
+            2,
+            399
+          ],
+          "direction": 3
+        },
+        {
+          "id": 253,
+          "sprite": 581,
+          "xyz": [
+            687,
+            2,
+            399
+          ],
+          "direction": 3
+        },
+        {
+          "id": 252,
+          "sprite": 369,
+          "xyz": [
+            686,
+            2,
+            399
+          ],
+          "direction": 3
+        }
+      ]
+    },
+    {
+      "scenario": "newbark-actions-test",
+      "screenshot": "cycle-hide-final.png",
+      "frame": 4255,
+      "assertions": "PASS",
+      "map": 60,
+      "field_task": "0x0",
+      "paired_art": 0,
+      "joined": true,
+      "avatar_state": 1,
+      "read_bytes": null,
+      "actors": [
+        {
+          "id": 255,
+          "sprite": 21,
+          "xyz": [
+            691,
+            2,
+            402
+          ],
+          "direction": 1
+        },
+        {
+          "id": 253,
+          "sprite": 590,
+          "xyz": [
+            691,
+            2,
+            402
+          ],
+          "direction": 0
+        }
+      ]
+    },
+    {
+      "scenario": "newbark-actions-test",
+      "screenshot": "cycle-restore-final.png",
+      "frame": 4521,
+      "assertions": "PASS",
+      "map": 60,
+      "field_task": "0x0",
+      "paired_art": 0,
+      "joined": true,
+      "avatar_state": 0,
+      "read_bytes": null,
+      "actors": [
+        {
+          "id": 255,
+          "sprite": 0,
+          "xyz": [
+            688,
+            2,
+            402
+          ],
+          "direction": 2
+        },
+        {
+          "id": 253,
+          "sprite": 590,
+          "xyz": [
+            689,
+            2,
+            402
+          ],
+          "direction": 2
+        },
+        {
+          "id": 252,
+          "sprite": 369,
+          "xyz": [
+            690,
+            2,
+            402
+          ],
+          "direction": 2
+        }
+      ]
+    },
+    {
+      "scenario": "newbark-actions-test",
+      "screenshot": "surfing-pass.png",
+      "frame": 6477,
+      "assertions": "PASS",
+      "map": 60,
+      "field_task": "0x0",
+      "paired_art": 0,
+      "joined": true,
+      "avatar_state": 2,
+      "read_bytes": null,
+      "actors": [
+        {
+          "id": 255,
+          "sprite": 178,
+          "xyz": [
+            701,
+            1,
+            400
+          ],
+          "direction": 3
+        },
+        {
+          "id": 253,
+          "sprite": 590,
+          "xyz": [
+            701,
+            1,
+            400
+          ],
+          "direction": 3
+        }
+      ]
+    },
+    {
+      "scenario": "newbark-actions-test",
+      "screenshot": "wild-intro-120.png",
+      "frame": 7087,
+      "assertions": "visual/observation",
+      "map": null,
+      "field_task": null,
+      "paired_art": null,
+      "joined": null,
+      "avatar_state": null,
+      "read_bytes": null,
+      "actors": []
+    },
+    {
+      "scenario": "newbark-actions-test",
+      "screenshot": "surf-and-battle-recovery-pass.png",
+      "frame": 9784,
+      "assertions": "PASS",
+      "map": 60,
+      "field_task": "0x0",
+      "paired_art": 0,
+      "joined": true,
+      "avatar_state": 0,
+      "read_bytes": null,
+      "actors": [
+        {
+          "id": 255,
+          "sprite": 0,
+          "xyz": [
+            696,
+            2,
+            400
+          ],
+          "direction": 2
+        },
+        {
+          "id": 253,
+          "sprite": 590,
+          "xyz": [
+            697,
+            2,
+            400
+          ],
+          "direction": 2
+        },
+        {
+          "id": 252,
+          "sprite": 369,
+          "xyz": [
+            698,
+            2,
+            400
+          ],
+          "direction": 2
+        }
+      ]
+    },
+    {
+      "scenario": "newbark-actions-test",
+      "screenshot": "fishing-action.png",
+      "frame": 10096,
+      "assertions": "visual/observation",
+      "map": 60,
+      "field_task": "0x22c0424",
+      "paired_art": 0,
+      "joined": true,
+      "avatar_state": 0,
+      "read_bytes": null,
+      "actors": [
+        {
+          "id": 255,
+          "sprite": 188,
+          "xyz": [
+            700,
+            2,
+            400
+          ],
+          "direction": 3
+        },
+        {
+          "id": 253,
+          "sprite": 590,
+          "xyz": [
+            699,
+            2,
+            400
+          ],
+          "direction": 3
+        }
+      ]
+    },
+    {
+      "scenario": "newbark-actions-test",
+      "screenshot": "fishing-restoration-pass.png",
+      "frame": 10962,
+      "assertions": "PASS",
+      "map": 60,
+      "field_task": "0x0",
+      "paired_art": 0,
+      "joined": true,
+      "avatar_state": 0,
+      "read_bytes": null,
+      "actors": [
+        {
+          "id": 255,
+          "sprite": 0,
+          "xyz": [
+            697,
+            2,
+            400
+          ],
+          "direction": 2
+        },
+        {
+          "id": 253,
+          "sprite": 590,
+          "xyz": [
+            698,
+            2,
+            400
+          ],
+          "direction": 2
+        },
+        {
+          "id": 252,
+          "sprite": 369,
+          "xyz": [
+            699,
+            2,
+            400
+          ],
+          "direction": 2
+        }
+      ]
+    },
+    {
+      "scenario": "saffron-test",
+      "screenshot": "gym-entry-check.png",
+      "frame": 2102,
+      "assertions": "PASS",
+      "map": 410,
+      "field_task": "0x0",
+      "paired_art": 0,
+      "joined": true,
+      "avatar_state": 0,
+      "read_bytes": null,
+      "actors": [
+        {
+          "id": 255,
+          "sprite": 0,
+          "xyz": [
+            15,
+            1,
+            28
+          ],
+          "direction": 0
+        },
+        {
+          "id": 253,
+          "sprite": 590,
+          "xyz": [
+            15,
+            1,
+            28
+          ],
+          "direction": 0
+        }
+      ]
+    },
+    {
+      "scenario": "saffron-test",
+      "screenshot": "gym-battle120.png",
+      "frame": 6058,
+      "assertions": "visual/observation",
+      "map": null,
+      "field_task": null,
+      "paired_art": null,
+      "joined": null,
+      "avatar_state": null,
+      "read_bytes": null,
+      "actors": []
+    },
+    {
+      "scenario": "saffron-test",
+      "screenshot": "sabrina-win-field.png",
+      "frame": 13879,
+      "assertions": "visual/observation",
+      "map": 410,
+      "field_task": "0x0",
+      "paired_art": 0,
+      "joined": true,
+      "avatar_state": 0,
+      "read_bytes": "20",
+      "actors": [
+        {
+          "id": 255,
+          "sprite": 0,
+          "xyz": [
+            15,
+            4,
+            14
+          ],
+          "direction": 0
+        },
+        {
+          "id": 253,
+          "sprite": 590,
+          "xyz": [
+            15,
+            4,
+            15
+          ],
+          "direction": 0
+        }
+      ]
+    },
+    {
+      "scenario": "saffron-test",
+      "screenshot": "sabrina-resumes-after-victory.png",
+      "frame": 16043,
+      "assertions": "PASS",
+      "map": 59,
+      "field_task": "0x0",
+      "paired_art": 0,
+      "joined": true,
+      "avatar_state": 0,
+      "read_bytes": null,
+      "actors": [
+        {
+          "id": 255,
+          "sprite": 0,
+          "xyz": [
+            1328,
+            4,
+            208
+          ],
+          "direction": 1
+        },
+        {
+          "id": 253,
+          "sprite": 590,
+          "xyz": [
+            1328,
+            4,
+            207
+          ],
+          "direction": 1
+        },
+        {
+          "id": 252,
+          "sprite": 369,
+          "xyz": [
+            1328,
+            4,
+            206
+          ],
+          "direction": 1
+        }
+      ]
+    },
+    {
+      "scenario": "saffron-test",
+      "screenshot": "sabrina-loss-recovery.png",
+      "frame": 21776,
+      "assertions": "visual/observation",
+      "map": 63,
+      "field_task": "0x0",
+      "paired_art": 0,
+      "joined": true,
+      "avatar_state": 0,
+      "read_bytes": "00",
+      "actors": [
+        {
+          "id": 255,
+          "sprite": 0,
+          "xyz": [
+            6,
+            0,
+            8
+          ],
+          "direction": 0
+        },
+        {
+          "id": 253,
+          "sprite": 590,
+          "xyz": [
+            6,
+            0,
+            8
+          ],
+          "direction": 0
+        }
+      ]
+    },
+    {
+      "scenario": "saffron-test",
+      "screenshot": "loss-companion-rejoined.png",
+      "frame": 22018,
+      "assertions": "PASS",
+      "map": 63,
+      "field_task": "0x0",
+      "paired_art": 0,
+      "joined": true,
+      "avatar_state": 0,
+      "read_bytes": "00",
+      "actors": [
+        {
+          "id": 255,
+          "sprite": 0,
+          "xyz": [
+            6,
+            0,
+            10
+          ],
+          "direction": 1
+        },
+        {
+          "id": 253,
+          "sprite": 590,
+          "xyz": [
+            6,
+            0,
+            9
+          ],
+          "direction": 1
+        },
+        {
+          "id": 252,
+          "sprite": 369,
+          "xyz": [
+            6,
+            0,
+            8
+          ],
+          "direction": 1
+        }
+      ]
+    },
+    {
+      "scenario": "cave-trainer-test",
+      "screenshot": "cave-walk-after-transition.png",
+      "frame": 4025,
+      "assertions": "PASS",
+      "map": 99,
+      "field_task": "0x0",
+      "paired_art": 0,
+      "joined": true,
+      "avatar_state": 0,
+      "read_bytes": null,
+      "actors": [
+        {
+          "id": 255,
+          "sprite": 0,
+          "xyz": [
+            27,
+            0,
+            41
+          ],
+          "direction": 0
+        },
+        {
+          "id": 253,
+          "sprite": 590,
+          "xyz": [
+            27,
+            0,
+            42
+          ],
+          "direction": 0
+        },
+        {
+          "id": 252,
+          "sprite": 369,
+          "xyz": [
+            27,
+            0,
+            43
+          ],
+          "direction": 0
+        }
+      ]
+    },
+    {
+      "scenario": "cave-trainer-test",
+      "screenshot": "ordinary-trainer-intro.png",
+      "frame": 6109,
+      "assertions": "visual/observation",
+      "map": 36,
+      "field_task": "0x22c02f4",
+      "paired_art": 1,
+      "joined": true,
+      "avatar_state": 0,
+      "read_bytes": null,
+      "actors": [
+        {
+          "id": 255,
+          "sprite": 0,
+          "xyz": [
+            468,
+            2,
+            431
+          ],
+          "direction": 1
+        },
+        {
+          "id": 253,
+          "sprite": 590,
+          "xyz": [
+            467,
+            2,
+            431
+          ],
+          "direction": 3
+        }
+      ]
+    },
+    {
+      "scenario": "cave-trainer-test",
+      "screenshot": "ordinary-trainer-recovery-pass.png",
+      "frame": 9974,
+      "assertions": "PASS",
+      "map": 36,
+      "field_task": "0x0",
+      "paired_art": 0,
+      "joined": true,
+      "avatar_state": 0,
+      "read_bytes": null,
+      "actors": [
+        {
+          "id": 255,
+          "sprite": 0,
+          "xyz": [
+            466,
+            2,
+            428
+          ],
+          "direction": 0
+        },
+        {
+          "id": 253,
+          "sprite": 590,
+          "xyz": [
+            466,
+            2,
+            429
+          ],
+          "direction": 0
+        },
+        {
+          "id": 252,
+          "sprite": 369,
+          "xyz": [
+            466,
+            2,
+            430
+          ],
+          "direction": 0
+        }
+      ]
+    },
+    {
+      "scenario": "route29-test",
+      "screenshot": "connection-clear-walking-pass.png",
+      "frame": 4555,
+      "assertions": "PASS",
+      "map": 60,
+      "field_task": "0x0",
+      "paired_art": 0,
+      "joined": true,
+      "avatar_state": 0,
+      "read_bytes": null,
+      "actors": [
+        {
+          "id": 255,
+          "sprite": 0,
+          "xyz": [
+            685,
+            2,
+            401
+          ],
+          "direction": 3
+        },
+        {
+          "id": 253,
+          "sprite": 581,
+          "xyz": [
+            684,
+            2,
+            401
+          ],
+          "direction": 3
+        },
+        {
+          "id": 252,
+          "sprite": 369,
+          "xyz": [
+            683,
+            2,
+            401
+          ],
+          "direction": 3
+        }
+      ]
+    }
+  ],
+  "genuine_save_slots": [
+    {
+      "sector": 0,
+      "counter": 2,
+      "CRC_valid": true,
+      "joined": true,
+      "location": [
+        60,
+        -1,
+        685,
+        399,
+        1
+      ],
+      "saved_actor_ids": [
+        255,
+        253,
+        0,
+        1,
+        2,
+        5
+      ]
+    },
+    {
+      "sector": 262144,
+      "counter": 1,
+      "CRC_valid": true,
+      "joined": true,
+      "location": [
+        61,
+        -1,
+        6,
+        10,
+        3
+      ],
+      "saved_actor_ids": [
+        255,
+        0,
+        2,
+        253
+      ]
+    }
+  ],
+  "remaining": [
+    "Manic EMU on iPhone",
+    "all story events and long progression",
+    "exhaustive map geometry/ledges/stairs/narrow passages",
+    "every action/save combination",
+    "other disguises/special actions",
+    "Sabrina rematch gameplay"
+  ],
+  "native_ledge": {
+    "result": "PASS",
+    "scenario": "tests/scenarios/companion_ledge.jsonl",
+    "fixture": {
+      "source": "/workspace/work/gameplay-validation/fixture-tool-check/starter.sav",
+      "source_sha256": "b25b041e2b2822e828b69c10aef3c65607da39cff3e18ee14ebb3d06102c7b2f",
+      "output": "/workspace/work/gameplay-validation/fixture-tool-check/ledge-repel.sav",
+      "output_sha256": "1a1dfc18f92b65569018e136df6f12e826bc4926d4b4e4089d1f8664ec5a3385",
+      "test_fixture_only": true,
+      "map": 33,
+      "coordinates": [
+        650,
+        2,
+        404
+      ],
+      "changed_save_slots": [
+        262144
+      ],
+      "setup": [
+        "relocated saved player/native Pokemon; removed stale NPC records",
+        "Bicycle and Old Rod; bicycle registered",
+        "Fog Badge to allow Surf",
+        "fast text",
+        "native Repel counter 250"
+      ]
+    },
+    "commands": 12,
+    "errors": 0,
+    "assertion_groups_pass": 1,
+    "exit_code": 0,
+    "temporary_hiding": "allowed during unsafe trail; safe restoration observed",
+    "final_positions": {
+      "player": [
+        655,
+        2,
+        404
+      ],
+      "native_Pokemon": [
+        654,
+        2,
+        404
+      ],
+      "Sabrina": [
+        653,
+        2,
+        404
+      ]
+    }
+  }
+}
