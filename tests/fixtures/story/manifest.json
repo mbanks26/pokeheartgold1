@@ -35,5 +35,101 @@
     "native_counter": 2,
     "sister_eevee": true,
     "player_Bill_Eevee_gift_used": false
+  },
+  "shiny-starter-152.sav.gz": {
+    "raw_sha256": "5b78546a10b706307c16a99df8a71cdabd1a6bacc0656c54d983af4c2dd6b49a",
+    "raw_bytes": 524288,
+    "source": "own native Stage C starter choice and save; no user progress",
+    "counter": 3,
+    "pokemon": {
+      "species": 152,
+      "level": 5,
+      "ability": 65,
+      "experience": 135,
+      "moves": [
+        33,
+        45,
+        0,
+        0
+      ],
+      "PP": [
+        35,
+        40,
+        0,
+        0
+      ],
+      "PID": 878592113,
+      "OT_ID": 3484597151,
+      "nature": 13,
+      "shiny_xor": 2,
+      "genuinely_shiny": true,
+      "checksum_valid": true,
+      "HP": 19,
+      "max_HP": 19
+    }
+  },
+  "shiny-starter-155.sav.gz": {
+    "raw_sha256": "a0ff601ecfcca9b79cdebf36b3a8fd5be27ffc5ea9e703e4bec075df33b25d3e",
+    "raw_bytes": 524288,
+    "source": "own native Stage C starter choice and save; no user progress",
+    "counter": 3,
+    "pokemon": {
+      "species": 155,
+      "level": 5,
+      "ability": 66,
+      "experience": 135,
+      "moves": [
+        33,
+        43,
+        0,
+        0
+      ],
+      "PP": [
+        35,
+        30,
+        0,
+        0
+      ],
+      "PID": 2286877799,
+      "OT_ID": 3484597151,
+      "nature": 24,
+      "shiny_xor": 4,
+      "genuinely_shiny": true,
+      "checksum_valid": true,
+      "HP": 20,
+      "max_HP": 20
+    }
+  },
+  "shiny-starter-158.sav.gz": {
+    "raw_sha256": "0fb193217bcb6451274912352e7bcf650c18247170003cef575d76bdcd3aa9d2",
+    "raw_bytes": 524288,
+    "source": "own native Stage C starter choice and save; no user progress",
+    "counter": 3,
+    "pokemon": {
+      "species": 158,
+      "level": 5,
+      "ability": 67,
+      "experience": 135,
+      "moves": [
+        10,
+        43,
+        0,
+        0
+      ],
+      "PP": [
+        35,
+        30,
+        0,
+        0
+      ],
+      "PID": 1984365164,
+      "OT_ID": 3484597151,
+      "nature": 14,
+      "shiny_xor": 6,
+      "genuinely_shiny": true,
+      "checksum_valid": true,
+      "HP": 20,
+      "max_HP": 20
+    }
   }
 }

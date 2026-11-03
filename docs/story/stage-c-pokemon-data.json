@@ -1,0 +1,200 @@
+{
+  "152": {
+    "before_save": {
+      "player_OT_ID": 3484597151,
+      "party": [
+        {
+          "held_item": 0,
+          "species": 152,
+          "level": 5,
+          "ability": 65,
+          "experience": 135,
+          "moves": [
+            33,
+            45,
+            0,
+            0
+          ],
+          "PP": [
+            35,
+            40,
+            0,
+            0
+          ],
+          "PID": 878592113,
+          "OT_ID": 3484597151,
+          "nature": 13,
+          "shiny_xor": 2,
+          "genuinely_shiny": true,
+          "checksum_valid": true,
+          "HP": 19,
+          "max_HP": 19
+        }
+      ]
+    },
+    "after_native_cold_load": {
+      "player_OT_ID": 3484597151,
+      "party": [
+        {
+          "held_item": 0,
+          "species": 152,
+          "level": 5,
+          "ability": 65,
+          "experience": 135,
+          "moves": [
+            33,
+            45,
+            0,
+            0
+          ],
+          "PP": [
+            35,
+            40,
+            0,
+            0
+          ],
+          "PID": 878592113,
+          "OT_ID": 3484597151,
+          "nature": 13,
+          "shiny_xor": 2,
+          "genuinely_shiny": true,
+          "checksum_valid": true,
+          "HP": 19,
+          "max_HP": 19
+        }
+      ]
+    }
+  },
+  "155": {
+    "before_save": {
+      "player_OT_ID": 3484597151,
+      "party": [
+        {
+          "held_item": 0,
+          "species": 155,
+          "level": 5,
+          "ability": 66,
+          "experience": 135,
+          "moves": [
+            33,
+            43,
+            0,
+            0
+          ],
+          "PP": [
+            35,
+            30,
+            0,
+            0
+          ],
+          "PID": 2286877799,
+          "OT_ID": 3484597151,
+          "nature": 24,
+          "shiny_xor": 4,
+          "genuinely_shiny": true,
+          "checksum_valid": true,
+          "HP": 20,
+          "max_HP": 20
+        }
+      ]
+    },
+    "after_native_cold_load": {
+      "player_OT_ID": 3484597151,
+      "party": [
+        {
+          "held_item": 0,
+          "species": 155,
+          "level": 5,
+          "ability": 66,
+          "experience": 135,
+          "moves": [
+            33,
+            43,
+            0,
+            0
+          ],
+          "PP": [
+            35,
+            30,
+            0,
+            0
+          ],
+          "PID": 2286877799,
+          "OT_ID": 3484597151,
+          "nature": 24,
+          "shiny_xor": 4,
+          "genuinely_shiny": true,
+          "checksum_valid": true,
+          "HP": 20,
+          "max_HP": 20
+        }
+      ]
+    }
+  },
+  "158": {
+    "before_save": {
+      "player_OT_ID": 3484597151,
+      "party": [
+        {
+          "held_item": 0,
+          "species": 158,
+          "level": 5,
+          "ability": 67,
+          "experience": 135,
+          "moves": [
+            10,
+            43,
+            0,
+            0
+          ],
+          "PP": [
+            35,
+            30,
+            0,
+            0
+          ],
+          "PID": 1984365164,
+          "OT_ID": 3484597151,
+          "nature": 14,
+          "shiny_xor": 6,
+          "genuinely_shiny": true,
+          "checksum_valid": true,
+          "HP": 20,
+          "max_HP": 20
+        }
+      ]
+    },
+    "after_native_cold_load": {
+      "player_OT_ID": 3484597151,
+      "party": [
+        {
+          "held_item": 0,
+          "species": 158,
+          "level": 5,
+          "ability": 67,
+          "experience": 135,
+          "moves": [
+            10,
+            43,
+            0,
+            0
+          ],
+          "PP": [
+            35,
+            30,
+            0,
+            0
+          ],
+          "PID": 1984365164,
+          "OT_ID": 3484597151,
+          "nature": 14,
+          "shiny_xor": 6,
+          "genuinely_shiny": true,
+          "checksum_valid": true,
+          "HP": 20,
+          "max_HP": 20
+        }
+      ]
+    }
+  }
+}
