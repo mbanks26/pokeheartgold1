@@ -1,0 +1,44 @@
+[
+  {
+    "texture_id": 95,
+    "frames": 32,
+    "metadata_preserved": true,
+    "pixel_roundtrip": true,
+    "sha256": "53993984678f4189b171f9dcb5a9bcfbfe7ba4f0593534c8880dcf6310f4f625"
+  },
+  {
+    "texture_id": 96,
+    "frames": 32,
+    "metadata_preserved": true,
+    "pixel_roundtrip": true,
+    "sha256": "7b350c6aa4dfb7106a9546705606a310eefb315f01f8f7fb7e50078b21e0f238"
+  },
+  {
+    "texture_id": 99,
+    "frames": 32,
+    "metadata_preserved": true,
+    "pixel_roundtrip": true,
+    "sha256": "b985a11c557548d35e7650720bb5273f0ce9d3c6cd6455346d6c777d63473f8e"
+  },
+  {
+    "texture_id": 100,
+    "frames": 32,
+    "metadata_preserved": true,
+    "pixel_roundtrip": true,
+    "sha256": "e57483f3a4e299e5438371e6ab3dd61c4c2b2610480a6070014c4c6ef7bd26e1"
+  },
+  {
+    "texture_id": 213,
+    "frames": 32,
+    "metadata_preserved": true,
+    "pixel_roundtrip": true,
+    "sha256": "6b483ca9a8fd0a77ea87445aefe7aba9e73492d82ef59e60394d06f6a2be5f53"
+  },
+  {
+    "texture_id": 214,
+    "frames": 32,
+    "metadata_preserved": true,
+    "pixel_roundtrip": true,
+    "sha256": "3f1b362682b6f74ba896f87074f47d2445fa2270dd1eef9f1579c8b6a390b0cd"
+  }
+]

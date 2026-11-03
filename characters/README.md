@@ -92,7 +92,7 @@ resulting `.nds` in Files and import it into Manic EMU as a separate test game.
 Keep your existing ROM and save backed up; start a fresh test save for each gender.
 
 - Required source ROM SHA-1: `4fcded0e2713dc03929845de631d0932ea2b5a37`.
-- Final graphics ROM SHA-1: `975662f2da5ebb213196881da807fa3ca4407dfb`.
+- Final graphics ROM SHA-1: `fabcb35631d686c667955545083bfb00bba32cc5`.
 - The BPS patch has source/target/patch CRC checks and was applied back to the
   stock source, reproducing the final built ROM byte for byte.
 - Patch generation: `python3 tools/make_character_patch.py STOCK.nds CUSTOM.nds characters/heartgold-characters.bps`.
@@ -107,3 +107,10 @@ These visual checks have **not** been performed in Manic EMU.
 
 No dual follower system, gameplay changes, naming changes, story changes or
 following-Pokemon changes. No emulator gameplay validation has yet been claimed.
+
+## Extended action graphics checkpoint
+
+Cycling, surfing, fishing and the remaining player action/disguise texture banks
+are now integrated; see [actions/README.md](actions/README.md) for IDs and tests.
+Earlier lists of original special-state graphics above describe the earlier commits.
+Intro, Trainer Card, shared Sabrina battle art and dual-follower logic remain pending.

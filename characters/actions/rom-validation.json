@@ -1,0 +1,52 @@
+{
+  "stages": [
+    "sabrina",
+    "male",
+    "female"
+  ],
+  "rom_sha1": "fabcb35631d686c667955545083bfb00bba32cc5",
+  "rom_size": 134217728,
+  "changed_files": [
+    "a/0/0/6",
+    "a/0/5/8",
+    "a/0/8/1"
+  ],
+  "changed_overworld_members": [
+    69,
+    70,
+    71,
+    72,
+    73,
+    74,
+    75,
+    76,
+    77,
+    78,
+    79,
+    80,
+    81,
+    82,
+    85,
+    86,
+    87,
+    88,
+    89,
+    90,
+    95,
+    96,
+    97,
+    98,
+    99,
+    100,
+    163,
+    207,
+    208,
+    213,
+    214,
+    248,
+    249
+  ],
+  "all_other_ROM_bytes_identical_to_stock": true,
+  "gameplay_story_naming_following_Pokemon_unchanged": true,
+  "emulator_gameplay_tested": false
+}

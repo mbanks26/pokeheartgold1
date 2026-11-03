@@ -216,6 +216,7 @@ def verify(stock_path, modified_path, stages):
         start,end = fs[path];a[start:end]=b'\0'*(end-start);b[start:end]=b'\0'*(end-start)
     assert a == b, 'A byte outside the allowed graphics archives changed'
     expected_tex = {i for n in stages for i in CHARACTERS[n]['textures']}
+    expected_tex.update(int(p.stem) for p in (ROOT/'characters/actions').glob('*.png'))
     start,end = fs['a/0/8/1']
     original_mm = members(stock[start:end]);custom_mm = members(modified[start:end])
     actual_tex = {i for i,(a,b) in enumerate(zip(original_mm,custom_mm)) if a!=b}

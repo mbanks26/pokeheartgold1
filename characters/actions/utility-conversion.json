@@ -1,0 +1,86 @@
+[
+  {
+    "texture_id": 73,
+    "frames": 4,
+    "metadata_preserved": true,
+    "pixel_roundtrip": true,
+    "sha256": "89f97d91075ce5e92d3f0d152321a47c7543fa19b6159250d5d7a1db1d746ea3"
+  },
+  {
+    "texture_id": 74,
+    "frames": 4,
+    "metadata_preserved": true,
+    "pixel_roundtrip": true,
+    "sha256": "84ce5d761cc198478fb94c0d84407c43b87638a887d89f022dd60ed0037d211b"
+  },
+  {
+    "texture_id": 75,
+    "frames": 4,
+    "metadata_preserved": true,
+    "pixel_roundtrip": true,
+    "sha256": "bf75a23af69f60a04bd105dc0f1ca87a291e0627019da074c51ef719f44a7291"
+  },
+  {
+    "texture_id": 76,
+    "frames": 4,
+    "metadata_preserved": true,
+    "pixel_roundtrip": true,
+    "sha256": "00ab0bd809e74b0ef9b6136db309ff6a8649682668262fac609fbe01265a4bf4"
+  },
+  {
+    "texture_id": 77,
+    "frames": 7,
+    "metadata_preserved": true,
+    "pixel_roundtrip": true,
+    "sha256": "94aebbc19b0c9adf10178392f669b7c55c64b4f3d3c4850485917e62bcd0ba3f"
+  },
+  {
+    "texture_id": 78,
+    "frames": 7,
+    "metadata_preserved": true,
+    "pixel_roundtrip": true,
+    "sha256": "2fc2b504bff43391df80f2b9362a8053c278358ec554316ee4f880ac0e32b9d8"
+  },
+  {
+    "texture_id": 81,
+    "frames": 6,
+    "metadata_preserved": true,
+    "pixel_roundtrip": true,
+    "sha256": "55a2626dc2574691cd2d78afd8bd82b53ccde525f976a2195fa5f604af8d6b71"
+  },
+  {
+    "texture_id": 82,
+    "frames": 6,
+    "metadata_preserved": true,
+    "pixel_roundtrip": true,
+    "sha256": "07dcece2fca22df7081ea46a157bca8e30a64976782a8dea442759133e2f3f68"
+  },
+  {
+    "texture_id": 87,
+    "frames": 2,
+    "metadata_preserved": true,
+    "pixel_roundtrip": true,
+    "sha256": "748b1d52832b4132c6d7a81c9e84e5eb3b7efc8d32bc109ec789563e38463cdd"
+  },
+  {
+    "texture_id": 88,
+    "frames": 2,
+    "metadata_preserved": true,
+    "pixel_roundtrip": true,
+    "sha256": "477319ef92c8e468f32c553e6b691306ac36d17be8265c5fe40b1162952c2b12"
+  },
+  {
+    "texture_id": 248,
+    "frames": 2,
+    "metadata_preserved": true,
+    "pixel_roundtrip": true,
+    "sha256": "dbbec166635e78388f3a0192a258c969755732163fd68c283145fe0327eae14c"
+  },
+  {
+    "texture_id": 249,
+    "frames": 2,
+    "metadata_preserved": true,
+    "pixel_roundtrip": true,
+    "sha256": "3190ef776408cfec209bdad58f55c48962186546fbaf8a6f1aabfc08777abcde"
+  }
+]

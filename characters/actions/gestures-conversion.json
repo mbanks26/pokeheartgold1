@@ -1,0 +1,58 @@
+[
+  {
+    "texture_id": 85,
+    "frames": 12,
+    "metadata_preserved": true,
+    "pixel_roundtrip": true,
+    "sha256": "ce3d98a28d187580c4878a50bf59f7decfce01e1306e75894043d4d7248e09a7"
+  },
+  {
+    "texture_id": 86,
+    "frames": 12,
+    "metadata_preserved": true,
+    "pixel_roundtrip": true,
+    "sha256": "67f8f42ce09c79cfabc87f06fb501d4f3c02c744b68b0da6e29883925b94b842"
+  },
+  {
+    "texture_id": 89,
+    "frames": 12,
+    "metadata_preserved": true,
+    "pixel_roundtrip": true,
+    "sha256": "c9891978345d79538b4216cb851e78eb91433e2acfe52205d975771db9eff09e"
+  },
+  {
+    "texture_id": 90,
+    "frames": 12,
+    "metadata_preserved": true,
+    "pixel_roundtrip": true,
+    "sha256": "299c4220303730d6efb6adc061f34445086d72d4376ba1b9412ae865d9d3abb6"
+  },
+  {
+    "texture_id": 97,
+    "frames": 12,
+    "metadata_preserved": true,
+    "pixel_roundtrip": true,
+    "sha256": "e2e589054990ce3b1ce5dc8941091e744f775c7a5fc88ae6dcc2bd6ba3e7a827"
+  },
+  {
+    "texture_id": 98,
+    "frames": 12,
+    "metadata_preserved": true,
+    "pixel_roundtrip": true,
+    "sha256": "b9f6347552af4a6a3e50e23e13b912224ffc5a03690aa75e6eb6721cb160aa96"
+  },
+  {
+    "texture_id": 207,
+    "frames": 8,
+    "metadata_preserved": true,
+    "pixel_roundtrip": true,
+    "sha256": "7134f51835dc424ebce9385a16bd78576c2b6f6ada84bba48e742adf1572a168"
+  },
+  {
+    "texture_id": 208,
+    "frames": 8,
+    "metadata_preserved": true,
+    "pixel_roundtrip": true,
+    "sha256": "e19cce622f5f38f9aab634a70b3dd4f9c066d7ce6c689e5370da44020e1a4020"
+  }
+]

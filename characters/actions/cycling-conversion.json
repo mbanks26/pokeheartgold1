@@ -1,0 +1,16 @@
+[
+  {
+    "texture_id": 71,
+    "frames": 24,
+    "metadata_preserved": true,
+    "pixel_roundtrip": true,
+    "sha256": "2979567868782450b209713fb064798fd8dfca6b3cfda000eb2db45f26351e30"
+  },
+  {
+    "texture_id": 72,
+    "frames": 24,
+    "metadata_preserved": true,
+    "pixel_roundtrip": true,
+    "sha256": "bb60c49036c55f3339fc3231f078ed75d900d0dbe0b6e0bb4d45c27802601d69"
+  }
+]
