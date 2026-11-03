@@ -1,5 +1,6 @@
 #include "pokemon.h"
 #include "sabrina_companion.h"
+#include "constants/sabrina_story.h"
 #include "save_vars_flags.h"
 #include "constants/maps.h"
 #include "constants/sprites.h"
@@ -4147,6 +4148,10 @@ void SabrinaCompanion_SetJoined(SaveData *save, BOOL joined) {
     else { Save_VarsFlags_ClearFlagInArray(flags, FLAG_SABRINA_COMPANION_JOINED); }
 }
 void SabrinaCompanion_InitializeIfNeeded(SaveData *save) {
+    if (save != NULL && PlayerProfile_GetTrainerGender(Save_PlayerData_GetProfile(save)) != PLAYER_GENDER_MALE) {
+        Save_VarsFlags_SetFlagInArray(Save_VarsFlags_Get(save), FLAG_STORY_DISABLED_FOR_FEMALE);
+        return;
+    }
     if (save != NULL && PlayerProfile_GetTrainerGender(Save_PlayerData_GetProfile(save)) == PLAYER_GENDER_MALE
         && Party_GetCount(SaveArray_Party_Get(save)) != 0
         && !Save_VarsFlags_CheckFlagInArray(Save_VarsFlags_Get(save), FLAG_SABRINA_COMPANION_INITIALIZED)) {

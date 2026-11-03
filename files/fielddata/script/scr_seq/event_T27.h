@@ -1,6 +1,8 @@
 #ifndef SCR_SEQ_T27_H_
 #define SCR_SEQ_T27_H_
 
+#include "constants/sabrina_story.h"
+
 #define _EV_scr_seq_T27_000 0
 #define _EV_scr_seq_T27_001 1
 #define _EV_scr_seq_T27_002 2
@@ -29,4 +31,5 @@
 #define obj_T27_gsoldman1_3  7
 #define obj_T27_gsmiddleman1 8
 
+#define _EV_scr_seq_T27_017 17
 #endif // SCR_SEQ_T27_H_

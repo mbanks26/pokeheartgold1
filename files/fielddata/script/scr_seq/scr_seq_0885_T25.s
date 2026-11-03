@@ -1,4 +1,5 @@
 #include "constants/scrcmd.h"
+#include "constants/sabrina_story.h"
 #include "fielddata/script/scr_seq/event_T25.h"
 #include "msgdata/msg/msg_0581_T25.h"
 #include "macros/script.inc"
@@ -37,6 +38,7 @@
 	ScrDef scr_seq_T25_030
 	ScrDef scr_seq_T25_031
 	ScrDef scr_seq_T25_032
+	ScrDef scr_seq_T25_033
 	ScrDefEnd
 
 scr_seq_T25_018:
@@ -735,3 +737,28 @@ scr_seq_T25_029:
 	TrainerTipsEx 2, msg_0581_T25_00046
 	End
 	.balign 4, 0
+
+scr_seq_T25_033:
+    PlaySE SEQ_SE_DP_SELECT
+    LockAll
+    FacePlayer
+    GoToIfSet FLAG_SISTER_RECEIVED_EEVEE, T25_Sister_After
+    NPCMsg msg_0581_T25_00047
+    PlayCry SPECIES_EEVEE, 0
+    WaitCry
+    SetFlag FLAG_SISTER_RECEIVED_EEVEE
+    CloseMsg
+    ApplyMovement obj_story_breeder, T25_Sister_BreederLeaves
+    WaitMovement
+    HidePerson obj_story_breeder
+T25_Sister_After:
+    NPCMsg msg_0581_T25_00048
+    WaitButton
+    CloseMsg
+    ReleaseAll
+    End
+    .balign 4, 0
+T25_Sister_BreederLeaves:
+    WalkNormalSouth 4
+    WalkNormalWest 6
+    EndMovement

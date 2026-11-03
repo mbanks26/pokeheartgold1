@@ -27,5 +27,13 @@
         ]
       ]
     ]
+  },
+  "after-sister-eevee.sav.gz": {
+    "raw_sha256": "83dd5e47bcfeed90e75e94245f63d6cdbebe4cbb6a6582a9818cc88452bd3c33",
+    "raw_bytes": 524288,
+    "source": "own authored late-game Feraligatr fixture, then real Goldenrod Eevee event and native save; no user progress",
+    "native_counter": 2,
+    "sister_eevee": true,
+    "player_Bill_Eevee_gift_used": false
   }
 }

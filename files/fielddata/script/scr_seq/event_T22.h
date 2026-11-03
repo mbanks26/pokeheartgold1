@@ -1,6 +1,8 @@
 #ifndef SCR_SEQ_T22_H_
 #define SCR_SEQ_T22_H_
 
+#include "constants/sabrina_story.h"
+
 #define _EV_scr_seq_T22_000 0
 #define _EV_scr_seq_T22_001 1
 #define _EV_scr_seq_T22_002 2
@@ -31,4 +33,5 @@
 #define obj_T22_gswoman3      11
 #define obj_T22_gsbabyboy1    12
 
+#define _EV_scr_seq_T22_015 15
 #endif // SCR_SEQ_T22_H_

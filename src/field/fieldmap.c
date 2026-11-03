@@ -96,7 +96,7 @@ static void FieldSystem_InitMapLoadManager(FieldSystem *fieldSystem);
 static void ov01_021E64A4(FieldSystem *fieldSystem);
 static void ov01_021E6580(FieldSystem *fieldSystem);
 static BOOL ov01_021E662C(void);
-static MapObjectsToPreload *FetchMapObjectsToPreload(enum HeapID heapID, u16 modelBank);
+static MapObjectsToPreload *FetchMapObjectsToPreload(enum HeapID heapID, u16 modelBank, u32 map);
 static const int *MapObjectsToPreload_GetIDs(const MapObjectsToPreload *mapObjectsToPreload);
 static int MapObjectsToPreload_GetCount(const MapObjectsToPreload *mapObjectsToPreload);
 static void MapObjectsToPreload_Free(MapObjectsToPreload *mapObjectsToPreload);
@@ -667,7 +667,7 @@ static void InitGraphicsAndManagers(FieldSystem *fieldSystem) {
     u16 moveModelBank = MapHeader_GetMoveModelBank(fieldSystem->location->mapId);
 
     GF_ASSERT(fieldSystem->mapObjectsToPreload == NULL);
-    fieldSystem->mapObjectsToPreload = FetchMapObjectsToPreload(HEAP_ID_FIELD1, moveModelBank);
+    fieldSystem->mapObjectsToPreload = FetchMapObjectsToPreload(HEAP_ID_FIELD1, moveModelBank, fieldSystem->location->mapId);
 
     fieldSystem->unkC8 = ov01_022041C4(HEAP_ID_FIELD1);
     fieldSystem->unkCC = ov01_0220460C(fieldSystem->unkC8);
@@ -785,7 +785,7 @@ static BOOL ov01_021E662C(void) {
     return CARD_SpiWaitGetStatus() == 170;
 }
 
-static MapObjectsToPreload *FetchMapObjectsToPreload(enum HeapID heapID, u16 modelBank) {
+static MapObjectsToPreload *FetchMapObjectsToPreload(enum HeapID heapID, u16 modelBank, u32 map) {
     int i;
     MapObjectsToPreload *result = Heap_Alloc(heapID, sizeof(MapObjectsToPreload));
     u16 *mapObjectsToPreload = AllocAtEndAndReadWholeNarcMemberByIdPair(NARC_a_0_9_2, modelBank, heapID);
@@ -809,6 +809,15 @@ static MapObjectsToPreload *FetchMapObjectsToPreload(enum HeapID heapID, u16 mod
         }
         if (!hasSabrina && i < MAX_MAP_OBJECTS_TO_PRELOAD - 1) {
             result->ids[i++] = SPRITE_GSLEADER10;
+            result->ids[i] = MAP_OBJECT_PRELOAD_SENTINEL;
+        }
+    }
+    if (map == MAP_VIOLET || map == MAP_GOLDENROD || map == MAP_ECRUTEAK || map == MAP_BLACKTHORN) {
+        int j;
+        BOOL present = FALSE;
+        for (j = 0; j < i; j++) { if (result->ids[j] == SPRITE_HEROINE) { present = TRUE; } }
+        if (!present && i < MAX_MAP_OBJECTS_TO_PRELOAD - 1) {
+            result->ids[i++] = SPRITE_HEROINE;
             result->ids[i] = MAP_OBJECT_PRELOAD_SENTINEL;
         }
     }

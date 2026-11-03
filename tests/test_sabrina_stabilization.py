@@ -10,6 +10,7 @@ def without_includes(text):
     return '\n'.join(x for x in text.splitlines() if not x.startswith('#include'))
 header=without_includes((ROOT/'include/sabrina_companion.h').read_text())
 header+='\n'+'\n'.join(line for line in (ROOT/'include/constants/flags.h').read_text().splitlines() if line.startswith('#define FLAG_SABRINA_COMPANION_'))
+header+='\n'+'\n'.join(line for line in (ROOT/'include/constants/sabrina_story.h').read_text().splitlines() if line.startswith('#define FLAG_'))
 trail=without_includes((ROOT/'include/sabrina_companion_trail.h').read_text())
 policy=(ROOT/'src/pokemon.c').read_text().split('/* Presentation only:')[1].split('int TrainerClassToBackpicID(int trainerClass')[0]
 policy='/* Presentation only:'+policy
@@ -128,6 +129,7 @@ static void fresh(void){
 static void moveMon(int px,int pz,int x,int z){manager.objects[1].px=px;manager.objects[1].pz=pz;manager.objects[1].x=x;manager.objects[1].z=z;manager.objects[0].x=x;manager.objects[0].z=z+1;}
 int main(void){
  LocalMapObject *a;SavedMapObject saved[12];SaveVarsFlags stored;SabrinaTrail trail;int i,before;
+ fresh();save.gender=1;SabrinaCompanion_InitializeIfNeeded(&save);CHECK(Save_VarsFlags_CheckFlagInArray(&save.flags,FLAG_STORY_DISABLED_FOR_FEMALE));CHECK(!SabrinaCompanion_IsJoined(&save));
  fresh();save.partyCount=0;monActive=0;tick(1);CHECK(!SabrinaCompanion_IsJoined(&save)&&!companion());
  save.partyCount=1;tick(1);CHECK(SabrinaCompanion_IsJoined(&save)&&!companion());
  monActive=1;tick(10);CHECK(companion()!=NULL);a=companion();

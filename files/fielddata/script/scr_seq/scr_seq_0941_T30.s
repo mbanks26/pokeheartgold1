@@ -1,4 +1,5 @@
 #include "constants/scrcmd.h"
+#include "constants/sabrina_story.h"
 #include "fielddata/script/scr_seq/event_T30.h"
 #include "msgdata/msg/msg_0629_T30.h"
 #include "macros/script.inc"
@@ -21,6 +22,7 @@
 	ScrDef scr_seq_T30_014
 	ScrDef scr_seq_T30_015
 	ScrDef scr_seq_T30_016
+	ScrDef scr_seq_T30_017
 	ScrDefEnd
 
 scr_seq_T30_005:
@@ -344,3 +346,46 @@ scr_seq_T30_015:
 	SimpleNPCMsg msg_0629_T30_00009
 	End
 	.balign 4, 0
+
+scr_seq_T30_017:
+    PlaySE SEQ_SE_DP_SELECT
+    LockAll
+    FacePlayer
+    GoToIfSet FLAG_SISTER_LATE_MET, T30_Sister_Later
+    NPCMsg msg_0629_T30_00015
+    TouchscreenMenuHide
+    GetMenuChoice VAR_SPECIAL_RESULT
+    TouchscreenMenuShow
+    Compare VAR_SPECIAL_RESULT, 0
+    GoToIfNe T30_Sister_Decline
+    CloseMsg
+    GoToIfSet FLAG_SISTER_RECEIVED_EEVEE, T30_Sister_WithEevee
+    TrainerBattle 741, 0, 0, 0
+    GoTo T30_Sister_Result
+T30_Sister_WithEevee:
+    TrainerBattle 742, 0, 0, 0
+T30_Sister_Result:
+    CheckBattleWon VAR_SPECIAL_RESULT
+    Compare VAR_SPECIAL_RESULT, 0
+    GoToIfEq T30_Sister_Lost
+    SetFlag FLAG_SISTER_LATE_MET
+    NPCMsg msg_0629_T30_00016
+    GoTo T30_Sister_End
+T30_Sister_Later:
+    GoToIfSet FLAG_SISTER_RECEIVED_EEVEE, T30_Sister_EeveeTalk
+    NPCMsg msg_0629_T30_00018
+    GoTo T30_Sister_End
+T30_Sister_EeveeTalk:
+    NPCMsg msg_0629_T30_00019
+    GoTo T30_Sister_End
+T30_Sister_Decline:
+    NPCMsg msg_0629_T30_00017
+T30_Sister_End:
+    WaitButton
+    CloseMsg
+    ReleaseAll
+    End
+T30_Sister_Lost:
+    WhiteOut
+    ReleaseAll
+    End

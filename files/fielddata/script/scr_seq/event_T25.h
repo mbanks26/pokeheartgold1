@@ -1,6 +1,8 @@
 #ifndef SCR_SEQ_T25_H_
 #define SCR_SEQ_T25_H_
 
+#include "constants/sabrina_story.h"
+
 #define _EV_scr_seq_T25_000 0
 #define _EV_scr_seq_T25_001 1
 #define _EV_scr_seq_T25_002 2
@@ -57,4 +59,5 @@
 #define obj_T25_gswoman2_3   19
 #define obj_T25_gswoman2_4   20
 
+#define _EV_scr_seq_T25_033 33
 #endif // SCR_SEQ_T25_H_

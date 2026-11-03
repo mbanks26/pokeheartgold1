@@ -271,6 +271,23 @@
             "x": 482,
             "z": 241,
             "y": 0
+        },
+        {
+            "id": "obj_story_sister_visiting",
+            "spriteId": "SPRITE_HEROINE",
+            "movement": 0,
+            "type": 0,
+            "eventFlag": "FLAG_STORY_DISABLED_FOR_FEMALE",
+            "scriptId": "_EV_scr_seq_T22_015 + 1",
+            "facingDirection": 1,
+            "param0": 0,
+            "param1": 0,
+            "param2": 0,
+            "xRange": 0,
+            "yRange": 0,
+            "x": 500,
+            "z": 273,
+            "y": 0
         }
     ],
     "warps": [

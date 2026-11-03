@@ -117,6 +117,26 @@
         "tired, it is better to avoid running,\f",
         "and go straight to a Pokémon Center."
       ]
+    },
+    {
+      "id": "msg_0629_T30_00015",
+      "en_US": "Sister: You made it through Ice\nPath! I only got lost twice.\rDo not look at me like that. One\nof those was on purpose.\rShall we compare our teams?"
+    },
+    {
+      "id": "msg_0629_T30_00016",
+      "en_US": "Sister: All right, you win.\nEnjoy it while you can.\rNext time I will have a plan. A\nbetter one, I mean."
+    },
+    {
+      "id": "msg_0629_T30_00017",
+      "en_US": "Sister: Fair enough. I am not\ngoing anywhere just yet."
+    },
+    {
+      "id": "msg_0629_T30_00018",
+      "en_US": "Sister: I have been training.\nYou had better keep up!"
+    },
+    {
+      "id": "msg_0629_T30_00019",
+      "en_US": "Sister: Eevee found my last\nPotion before I did.\rIt is getting very hard to\npretend I am in charge."
     }
   ]
 }
