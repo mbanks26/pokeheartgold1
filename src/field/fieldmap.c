@@ -234,6 +234,8 @@ BOOL FieldMap_Init(OverlayManager *man, int *state) {
     return ret;
 }
 
+#include "sabrina_companion.inc"
+
 BOOL FieldMap_Main(OverlayManager *man, int *state) {
     FieldSystem *fieldSystem = OverlayManager_GetArgs(man);
 
@@ -242,6 +244,7 @@ BOOL FieldMap_Main(OverlayManager *man, int *state) {
         FieldMap_ChangeZone(fieldSystem);
     }
 
+    SabrinaCompanion_Tick(fieldSystem);
     ov01_021E5FC0(fieldSystem, fieldSystem->unkBC);
 
     if (fieldSystem->runningFieldMap) {
@@ -792,6 +795,18 @@ static MapObjectsToPreload *FetchMapObjectsToPreload(enum HeapID heapID, u16 mod
         result->ids[i] = mapObjectsToPreload[i];
         if (mapObjectsToPreload[i] == MAP_OBJECT_PRELOAD_SENTINEL) {
             break;
+        }
+    }
+    /* Reserve a dynamic texture for the independent Sabrina companion. */
+    {
+        int j;
+        BOOL hasSabrina = FALSE;
+        for (j = 0; j < i; j++) {
+            if (result->ids[j] == SPRITE_GSLEADER10) { hasSabrina = TRUE; }
+        }
+        if (!hasSabrina && i < MAX_MAP_OBJECTS_TO_PRELOAD - 1) {
+            result->ids[i++] = SPRITE_GSLEADER10;
+            result->ids[i] = MAP_OBJECT_PRELOAD_SENTINEL;
         }
     }
     result->count = i;

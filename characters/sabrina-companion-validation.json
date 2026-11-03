@@ -1,0 +1,11 @@
+{
+  "rom_sha1": "544e5b9a59dab0656ab1c3fe28f0e4fe8f4fd8db",
+  "rom_size": 134217728,
+  "all_filesystem_asset_payloads_identical_to_graphics_checkpoint": true,
+  "arm7_identical_to_graphics_checkpoint": true,
+  "runtime_code_changed": true,
+  "native_build_passed": true,
+  "host_state_checks_passed": true,
+  "emulator_tested": false,
+  "status": "experimental - walking companion only; Manic EMU validation required"
+}
