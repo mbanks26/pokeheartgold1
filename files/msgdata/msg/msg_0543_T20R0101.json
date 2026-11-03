@@ -3,30 +3,7 @@
   "messages": [
     {
       "id": "msg_0543_T20R0101_00000",
-      "en_US": [
-        "Professor Elm: Hi, {STRVAR_1 3, 0, 0}!\n",
-        "I’ve been waiting for you!\r",
-        "Do you know anything about\n",
-        "my research?\r",
-        "As you know, Pokémon are carried\n",
-        "in Poké Balls these days.\r",
-        "But before the Poké Ball was invented,\n",
-        "people used to walk with Pokémon.\f",
-        "Just like your friend Lyra does!\r",
-        "Poké Balls are great because you can\n",
-        "carry many Pokémon.\r",
-        "But walking with Pokémon must have\n",
-        "some advantages.\r",
-        "It could have something to do with how\n",
-        "Pokémon grow or evolve...\r",
-        "So I’m going to give you a Pokémon!\r",
-        "Can you walk beside this Pokémon,\n",
-        "outside of its Poké Ball, to see if this\f",
-        "brings any special feelings or bonds\f",
-        "between Pokémon and people?\r",
-        "The device over there has some Pokémon\n",
-        "you could choose from...\r"
-      ]
+      "en_US": "Professor Elm: Hi, {STRVAR_1 3, 0, 0}!\nSabrina said you’d be along.\rA Gym Leader taking a holiday!\nWell, she’ll be good company.\rI’ve been studying the bond\nbetween people and Pokémon.\rBefore Poké Balls, people walked\nwith their Pokémon. Like Marill\rand your sister do now.\rI’d like you to try it, too.\nChoose a partner from that\rdevice.\rWalk together and tell me what\nyou notice. Will you help?"
     },
     {
       "id": "msg_0543_T20R0101_00001",

@@ -94,19 +94,7 @@
     },
     {
       "id": "msg_0542_T20_00015",
-      "en_US": [
-        "Lyra: {STRVAR_1 3, 0, 0}!\r",
-        "So you picked...\n",
-        "{STRVAR_1 0, 1, 0}!\r",
-        "That’s a cute Pokémon you have!\r",
-        "When you walk with it, it’ll become\n",
-        "more friendly.\r",
-        "You should turn around and talk to it\n",
-        "sometimes, too.\r",
-        "Oh, that’s right!\n",
-        "Why don’t you show it to your mom?\f",
-        "See ya!\r"
-      ]
+      "en_US": "Sister: You picked {STRVAR_1 0, 1, 0}! All\nright. A worthy rival.\rTalk to your Pokémon sometimes.\nMarill gets cross if I ignore\rit.\rAnd show Mom before you go!\nShe’ll want to meet your\rpartner."
     },
     {
       "id": "msg_0542_T20_00016",
@@ -244,6 +232,14 @@
     {
       "id": "msg_0542_T20_00037",
       "en_US": "{STRVAR_1 3, 0, 0}’s House"
+    },
+    {
+      "id": "msg_0542_T20_00038",
+      "en_US": "Sister: There you are! I thought\nyou’d gone back to bed.\rSabrina: I offered to wake him.\nShe insisted on waiting.\rSister: You’re welcome, brother.\nMarill and I are heading out.\rNo badges yet. We’re starting\neven. Let’s see who gets the\rfirst one!\rSabrina: Try not to race\nstraight into the tall grass.\rSister: I make no promises!"
+    },
+    {
+      "id": "msg_0542_T20_00039",
+      "en_US": "Sabrina: She means every word.\nEspecially the racing part.\rGo on. I’ll be here when Elm has\nfinished with you."
     }
   ]
 }

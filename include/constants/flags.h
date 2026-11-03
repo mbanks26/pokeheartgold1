@@ -2203,6 +2203,18 @@
 #define FLAG_UNK_B4D                                0xB4D
 #define FLAG_UNK_B4E                                0xB4E
 #define FLAG_UNK_B4F                                0xB4F
+/* Story flags occupy previously unreferenced existing save bits. */
+#define FLAG_SABRINA_STORY_INTRO_DONE 0xB50
+#define FLAG_SISTER_RECEIVED_EEVEE    0xB51
+#define FLAG_SABRINA_PARTNER_WELL     0xB52
+#define FLAG_SABRINA_PARTNER_TOWER    0xB53
+#define FLAG_SABRINA_PARTNER_KANTO    0xB54
+#define FLAG_SISTER_VIOLET_MET        0xB55
+#define FLAG_SISTER_ECRUTEAK_MET      0xB56
+#define FLAG_SISTER_LATE_MET          0xB57
+#define FLAG_SABRINA_COMPANION_INITIALIZED 0xB5E
+#define FLAG_SABRINA_COMPANION_JOINED      0xB5F
+
 #define FLAG_UNK_B50                                0xB50
 #define FLAG_UNK_B51                                0xB51
 #define FLAG_UNK_B52                                0xB52

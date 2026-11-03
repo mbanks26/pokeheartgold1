@@ -9,6 +9,7 @@ ROOT=Path(__file__).resolve().parents[1]
 def without_includes(text):
     return '\n'.join(x for x in text.splitlines() if not x.startswith('#include'))
 header=without_includes((ROOT/'include/sabrina_companion.h').read_text())
+header+='\n'+'\n'.join(line for line in (ROOT/'include/constants/flags.h').read_text().splitlines() if line.startswith('#define FLAG_SABRINA_COMPANION_'))
 trail=without_includes((ROOT/'include/sabrina_companion_trail.h').read_text())
 policy=(ROOT/'src/pokemon.c').read_text().split('/* Presentation only:')[1].split('int TrainerClassToBackpicID(int trainerClass')[0]
 policy='/* Presentation only:'+policy

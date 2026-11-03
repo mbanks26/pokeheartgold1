@@ -31,4 +31,8 @@
 #define obj_T20_var_1_2                    8
 #define obj_T20_tsure_poke_static_marill_2 9
 
+#define _EV_scr_seq_T20_018 18
+#define obj_story_sabrina 10
+#define obj_story_sister 11
+
 #endif // SCR_SEQ_T20_H_

@@ -212,6 +212,40 @@
             "x": 693,
             "z": 400,
             "y": 0
+        },
+        {
+            "id": "obj_story_sabrina",
+            "spriteId": "SPRITE_GSLEADER10",
+            "movement": 0,
+            "type": 0,
+            "eventFlag": "FLAG_SABRINA_STORY_INTRO_DONE",
+            "scriptId": "_EV_scr_seq_T20_018 + 1",
+            "facingDirection": 1,
+            "param0": 0,
+            "param1": 0,
+            "param2": 0,
+            "xRange": 0,
+            "yRange": 0,
+            "x": 685,
+            "z": 394,
+            "y": 0
+        },
+        {
+            "id": "obj_story_sister",
+            "spriteId": "SPRITE_VAR_1",
+            "movement": 0,
+            "type": 0,
+            "eventFlag": "FLAG_SABRINA_STORY_INTRO_DONE",
+            "scriptId": "_EV_scr_seq_T20_018 + 1",
+            "facingDirection": 1,
+            "param0": 0,
+            "param1": 0,
+            "param2": 0,
+            "xRange": 0,
+            "yRange": 0,
+            "x": 686,
+            "z": 394,
+            "y": 0
         }
     ],
     "warps": [
@@ -291,6 +325,16 @@
             "y": 0,
             "val": 2,
             "var": "VAR_SCENE_NEW_BARK_EAST_EXIT"
+        },
+        {
+            "scriptId": "_EV_scr_seq_T20_018 + 1",
+            "x": 684,
+            "z": 394,
+            "w": 1,
+            "h": 1,
+            "y": 0,
+            "val": 0,
+            "var": "VAR_SABRINA_STORY_INTRO"
         }
     ]
 }

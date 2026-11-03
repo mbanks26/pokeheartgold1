@@ -379,6 +379,8 @@
 #define VAR_UNK_416C                       0x416C
 #define VAR_UNK_416D                       0x416D
 #define VAR_UNK_416E                       0x416E
+#define VAR_SABRINA_STORY_INTRO 0x416F
+
 #define VAR_UNK_416F                       0x416F
 
 #define NUM_VARS (0x170)

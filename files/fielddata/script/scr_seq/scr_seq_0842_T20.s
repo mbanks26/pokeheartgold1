@@ -22,9 +22,11 @@
 	ScrDef scr_seq_T20_015
 	ScrDef scr_seq_T20_016
 	ScrDef scr_seq_T20_017
+	ScrDef scr_seq_T20_018
 	ScrDefEnd
 
 scr_seq_T20_006:
+	Call SabrinaStory_MapSetup
 	GetFriendSprite VAR_OBJ_0
 	GoToIfUnset FLAG_UNK_189, _005F
 	ClearFlag FLAG_UNK_189
@@ -1846,3 +1848,48 @@ scr_seq_T20_015:
 	SimpleNPCMsg msg_0542_T20_00012
 	End
 	.balign 4, 0
+
+/* Story setup is idempotent; old starter saves skip the new introduction. */
+SabrinaStory_MapSetup:
+    GetPlayerGender VAR_SPECIAL_RESULT
+    Compare VAR_SPECIAL_RESULT, 0
+    GoToIfNe SabrinaStory_AlreadyTraveling
+    GoToIfSet FLAG_GOT_STARTER, SabrinaStory_AlreadyTraveling
+    Return
+SabrinaStory_AlreadyTraveling:
+    SetFlag FLAG_SABRINA_STORY_INTRO_DONE
+    SetVar VAR_SABRINA_STORY_INTRO, 1
+    Return
+
+scr_seq_T20_018:
+    ScrCmd_609
+    LockAll
+    GoToIfSet FLAG_SABRINA_STORY_INTRO_DONE, SabrinaStory_IntroEnd
+    BufferPlayersName 0
+    NPCMsg msg_0542_T20_00038
+    CloseMsg
+    ApplyMovement obj_story_sister, SabrinaStory_SisterLeaves
+    WaitMovement
+    HidePerson obj_story_sister
+    NPCMsg msg_0542_T20_00039
+    CloseMsg
+    ApplyMovement obj_story_sabrina, SabrinaStory_StepAside
+    WaitMovement
+    SetFlag FLAG_SABRINA_STORY_INTRO_DONE
+    SetVar VAR_SABRINA_STORY_INTRO, 1
+    SetFlag FLAG_SABRINA_COMPANION_INITIALIZED
+    SetFlag FLAG_SABRINA_COMPANION_JOINED
+SabrinaStory_IntroEnd:
+    ReleaseAll
+    End
+
+    .balign 4, 0
+SabrinaStory_SisterLeaves:
+    WalkNormalSouth 4
+    WalkNormalWest 10
+    EndMovement
+    .balign 4, 0
+SabrinaStory_StepAside:
+    WalkNormalSouth
+    FaceNorth
+    EndMovement

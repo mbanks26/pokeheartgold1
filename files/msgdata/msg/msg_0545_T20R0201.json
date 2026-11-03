@@ -3,21 +3,7 @@
   "messages": [
     {
       "id": "msg_0545_T20R0201_00000",
-      "en_US": [
-        "Hi, {STRVAR_1 3, 0, 0}!\n",
-        "You’re finally awake.\f",
-        "Your friend Lyra was just here.\r",
-        "She was playing hide-and-seek with\n",
-        "her MARILL.\r",
-        "Oh, I almost forgot! Our acquaintance,\n",
-        "Professor Elm, was looking for you.\r",
-        "He said he had a favor to ask of you.\r",
-        "You know where the lab is, right?\n",
-        "It’s right next door to us.\r",
-        "By the way, do you have everything\n",
-        "you need to go out?\f",
-        "Here, use this Bag to carry things...\r"
-      ]
+      "en_US": "Hi, {STRVAR_1 3, 0, 0}! You’re finally\nawake.\rYour sister and Sabrina are\nwaiting near the lab.\rProfessor Elm has a favor to ask\nyou. Go and see what he needs.\rYou have everything? Here, use\nthis Bag..."
     },
     {
       "id": "msg_0545_T20R0201_00001",

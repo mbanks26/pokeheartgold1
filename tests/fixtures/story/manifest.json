@@ -1,0 +1,31 @@
+{
+  "pre-starter-lab.sav.gz": {
+    "raw_sha256": "6ff17972957e83c0e04d8dfdee3b74163edc8b015765d24f971dbe262e7d2fbf",
+    "raw_bytes": 524288,
+    "source": "own fresh CPDEX game on Stage A; native saves before choosing starter",
+    "slots": [
+      [
+        0,
+        2,
+        [
+          61,
+          -1,
+          4,
+          7,
+          0
+        ]
+      ],
+      [
+        262144,
+        1,
+        [
+          61,
+          -1,
+          4,
+          7,
+          0
+        ]
+      ]
+    ]
+  }
+}
