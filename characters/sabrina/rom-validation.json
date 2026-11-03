@@ -1,0 +1,17 @@
+{
+  "stages": [
+    "sabrina"
+  ],
+  "rom_sha1": "0311038a42c860ed01af4487a7f118cd32ec1cfd",
+  "rom_size": 134217728,
+  "changed_files": [
+    "a/0/5/8",
+    "a/0/8/1"
+  ],
+  "changed_overworld_members": [
+    163
+  ],
+  "all_other_ROM_bytes_identical_to_stock": true,
+  "gameplay_story_naming_following_Pokemon_unchanged": true,
+  "emulator_gameplay_tested": false
+}

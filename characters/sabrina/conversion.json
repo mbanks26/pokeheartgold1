@@ -1,0 +1,42 @@
+{
+  "character": "sabrina",
+  "overworld": [
+    {
+      "path": "files/data/mmodel/mmodel/mmodel_00000163.NSBTX",
+      "frames": [
+        "gsleader10.1",
+        "gsleader10.10",
+        "gsleader10.11",
+        "gsleader10.12",
+        "gsleader10.13",
+        "gsleader10.14",
+        "gsleader10.15",
+        "gsleader10.16",
+        "gsleader10.2",
+        "gsleader10.3",
+        "gsleader10.4",
+        "gsleader10.5",
+        "gsleader10.6",
+        "gsleader10.7",
+        "gsleader10.8",
+        "gsleader10.9"
+      ],
+      "sha256": "000e66b822fe804e60c94c9cc8aa5d45033251e93ed02104b5f9b2483aea8fb6"
+    }
+  ],
+  "battle": [
+    {
+      "archive": "files/a/0/5/8",
+      "class": 107,
+      "frames": 3,
+      "changed_members": [
+        535,
+        536,
+        539
+      ],
+      "NCER_NANR_preserved": true,
+      "NCGR_roundtrip": true,
+      "portrait_encryption_roundtrip": true
+    }
+  ]
+}
