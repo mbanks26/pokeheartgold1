@@ -24,11 +24,13 @@ Keep the stock ROM separately for the stronger, graphics-only validation below.
 ```sh
 source /workspace/.setup/activate.sh
 python3 tools/character_graphics.py apply sabrina
+python3 tools/character_graphics.py apply male
+python3 tools/character_graphics.py apply female
 make rom BUILD=build/recovery-verification
 python3 tools/character_graphics.py verify \
   --stock /workspace/pokeheartgold1/build/heartgold.us/pokeheartgold.us.nds \
   --rom build/recovery-verification/pokeheartgold.us.nds \
-  --stages sabrina --report characters/sabrina/rom-validation.json
+  --stages sabrina male female --report characters/female/rom-validation.json
 ```
 
 The converter requires Pillow. It reads the original resource templates from the
@@ -47,8 +49,6 @@ naming, following Pokemon, filesystem layout and all unrelated assets.
 - Manic EMU testing pending: Saffron Gym, talking/turning/walking, initial battle
   entrance and psychic gesture animation, rematch, palette/transparency and feet.
 
-## Scope
-
 ## Stage 2: Male protagonist
 
 - Normal walking/running bank: MMODEL_HERO, member 69 of a/0/8/1 (32 textures).
@@ -64,6 +64,46 @@ naming, following Pokemon, filesystem layout and all unrelated assets.
 - Separate cycling, surfing, HM-use, fishing, watering, ladder, saving/healing,
   Rocket-disguise, Pokeathlon, alternate-avatar and intro/Trainer Card graphics
   remain original. Those require later artwork/integration, not just playtesting.
+
+## Stage 3: Female character replacing Lyra
+
+- Normal walking/running bank: MMODEL_HEROINE, member 70 of a/0/8/1 (32 textures).
+  Run slots reuse the custom directional step artwork at original timings.
+- Front trainer sprite and encrypted portrait: class 1 of a/0/5/8.
+- Eight back battle throw poses and encrypted portraits in ordinary and link
+  variants: backpic IDs 1 and 16 of a/0/0/6.
+- Fair skin, white hair, red eyes and burgundy clothing adapted from the reference.
+- Naming and the original Lyra story role/character IDs are retained.
+- Conversion, main/sub checksums and combined graphics-only ROM checks passed;
+  see female/conversion.json and female/rom-validation.json.
+- Manic EMU testing pending: choose female, naming, all walking/running directions,
+  wild/trainer battles and throw animation, following Pokemon, save/load and story
+  interactions when she appears as the non-player counterpart.
+- The same separate special-state, alternate-avatar, intro and Trainer Card
+  graphics listed for the male character remain original and need later artwork.
+
+## Test on an iPhone with Manic EMU
+
+Download `heartgold-characters.bps` from this directory using GitHub's raw-file
+download. It contains the graphics changes only, not a full game ROM.
+Apply it to a **clean HeartGold US ROM** using a BPS-capable patcher, such as
+[Rom Patcher JS](https://www.marcrobledo.com/RomPatcher.js/) in Safari. Save the
+resulting `.nds` in Files and import it into Manic EMU as a separate test game.
+Keep your existing ROM and save backed up; start a fresh test save for each gender.
+
+- Required source ROM SHA-1: `4fcded0e2713dc03929845de631d0932ea2b5a37`.
+- Final graphics ROM SHA-1: `975662f2da5ebb213196881da807fa3ca4407dfb`.
+- The BPS patch has source/target/patch CRC checks and was applied back to the
+  stock source, reproducing the final built ROM byte for byte.
+- Patch generation: `python3 tools/make_character_patch.py STOCK.nds CUSTOM.nds characters/heartgold-characters.bps`.
+
+Check transparency, colors, direction order, foot alignment, clipping, battle
+animation timing and map transitions. Sabrina needs a save at Saffron Gym or her
+rematch. The player back animations retain original timing but use newly adapted
+art poses; hand/ball synchronization needs particular attention in gameplay.
+These visual checks have **not** been performed in Manic EMU.
+
+## Scope
 
 No dual follower system, gameplay changes, naming changes, story changes or
 following-Pokemon changes. No emulator gameplay validation has yet been claimed.
