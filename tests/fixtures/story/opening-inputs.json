@@ -1,0 +1,1079 @@
+{
+  "scope": "Native inputs from blank battery save through custom name CPDEX, Mother, opening, Elm and shiny Chikorita; no RAM writes. Female input replaces step 81 with touch [192,100].",
+  "commands": [
+    {
+      "frames": 600,
+      "shot": "boot.png"
+    },
+    {
+      "frames": 2,
+      "buttons": [
+        "A"
+      ]
+    },
+    {
+      "frames": 180,
+      "shot": "title.png"
+    },
+    {
+      "frames": 2,
+      "buttons": [
+        "A"
+      ]
+    },
+    {
+      "frames": 240,
+      "shot": "newgame.png"
+    },
+    {
+      "frames": 3,
+      "buttons": [
+        "A"
+      ]
+    },
+    {
+      "frames": 180,
+      "shot": "intro-info.png"
+    },
+    {
+      "frames": 3,
+      "touch": [
+        128,
+        153
+      ]
+    },
+    {
+      "frames": 180,
+      "shot": "oak-dialog.png"
+    },
+    {
+      "frames": 2,
+      "buttons": [
+        "A"
+      ]
+    },
+    {
+      "frames": 180,
+      "shot": "oak-next.png"
+    },
+    {
+      "frames": 2,
+      "buttons": [
+        "A"
+      ]
+    },
+    {
+      "frames": 180,
+      "shot": "oak-next2.png"
+    },
+    {
+      "frames": 300,
+      "shot": "oak-wait.png"
+    },
+    {
+      "frames": 2,
+      "buttons": [
+        "A"
+      ]
+    },
+    {
+      "frames": 150
+    },
+    {
+      "frames": 2,
+      "buttons": [
+        "A"
+      ]
+    },
+    {
+      "frames": 150
+    },
+    {
+      "frames": 2,
+      "buttons": [
+        "A"
+      ]
+    },
+    {
+      "frames": 150
+    },
+    {
+      "frames": 2,
+      "buttons": [
+        "A"
+      ]
+    },
+    {
+      "frames": 150
+    },
+    {
+      "frames": 2,
+      "buttons": [
+        "A"
+      ]
+    },
+    {
+      "frames": 150
+    },
+    {
+      "frames": 60,
+      "shot": "oak-five.png"
+    },
+    {
+      "frames": 2,
+      "buttons": [
+        "A"
+      ]
+    },
+    {
+      "frames": 150
+    },
+    {
+      "frames": 2,
+      "buttons": [
+        "A"
+      ]
+    },
+    {
+      "frames": 150
+    },
+    {
+      "frames": 2,
+      "buttons": [
+        "A"
+      ]
+    },
+    {
+      "frames": 150
+    },
+    {
+      "frames": 2,
+      "buttons": [
+        "A"
+      ]
+    },
+    {
+      "frames": 150
+    },
+    {
+      "frames": 1,
+      "shot": "oak-pokemon.png"
+    },
+    {
+      "frames": 3,
+      "touch": [
+        128,
+        97
+      ]
+    },
+    {
+      "frames": 240,
+      "shot": "oak-afterball.png"
+    },
+    {
+      "frames": 2,
+      "buttons": [
+        "A"
+      ]
+    },
+    {
+      "frames": 150
+    },
+    {
+      "frames": 2,
+      "buttons": [
+        "A"
+      ]
+    },
+    {
+      "frames": 150
+    },
+    {
+      "frames": 2,
+      "buttons": [
+        "A"
+      ]
+    },
+    {
+      "frames": 150
+    },
+    {
+      "frames": 1,
+      "shot": "oak-ballprompt.png"
+    },
+    {
+      "frames": 2,
+      "buttons": [
+        "A"
+      ]
+    },
+    {
+      "frames": 120
+    },
+    {
+      "frames": 2,
+      "buttons": [
+        "A"
+      ]
+    },
+    {
+      "frames": 120
+    },
+    {
+      "frames": 2,
+      "buttons": [
+        "A"
+      ]
+    },
+    {
+      "frames": 120
+    },
+    {
+      "frames": 2,
+      "buttons": [
+        "A"
+      ]
+    },
+    {
+      "frames": 120
+    },
+    {
+      "frames": 2,
+      "buttons": [
+        "A"
+      ]
+    },
+    {
+      "frames": 120
+    },
+    {
+      "frames": 2,
+      "buttons": [
+        "A"
+      ]
+    },
+    {
+      "frames": 120
+    },
+    {
+      "frames": 2,
+      "buttons": [
+        "A"
+      ]
+    },
+    {
+      "frames": 120
+    },
+    {
+      "frames": 2,
+      "buttons": [
+        "A"
+      ]
+    },
+    {
+      "frames": 120
+    },
+    {
+      "frames": 1,
+      "shot": "oak-8.png"
+    },
+    {
+      "frames": 2,
+      "buttons": [
+        "A"
+      ]
+    },
+    {
+      "frames": 120
+    },
+    {
+      "frames": 2,
+      "buttons": [
+        "A"
+      ]
+    },
+    {
+      "frames": 120
+    },
+    {
+      "frames": 2,
+      "buttons": [
+        "A"
+      ]
+    },
+    {
+      "frames": 120
+    },
+    {
+      "frames": 2,
+      "buttons": [
+        "A"
+      ]
+    },
+    {
+      "frames": 120
+    },
+    {
+      "frames": 2,
+      "buttons": [
+        "A"
+      ]
+    },
+    {
+      "frames": 120
+    },
+    {
+      "frames": 2,
+      "buttons": [
+        "A"
+      ]
+    },
+    {
+      "frames": 120
+    },
+    {
+      "frames": 2,
+      "buttons": [
+        "A"
+      ]
+    },
+    {
+      "frames": 120
+    },
+    {
+      "frames": 2,
+      "buttons": [
+        "A"
+      ]
+    },
+    {
+      "frames": 120
+    },
+    {
+      "frames": 1,
+      "shot": "oak-16.png"
+    },
+    {
+      "frames": 300,
+      "shot": "gender.png"
+    },
+    {
+      "frames": 2,
+      "buttons": [
+        "A"
+      ]
+    },
+    {
+      "frames": 200,
+      "shot": "gender-options.png"
+    },
+    {
+      "frames": 2,
+      "buttons": [
+        "A"
+      ]
+    },
+    {
+      "frames": 150,
+      "shot": "male-selected.png"
+    },
+    {
+      "frames": 3,
+      "touch": [
+        64,
+        100
+      ]
+    },
+    {
+      "frames": 200,
+      "shot": "male-confirm.png"
+    },
+    {
+      "frames": 2,
+      "buttons": [
+        "A"
+      ]
+    },
+    {
+      "frames": 120
+    },
+    {
+      "frames": 2,
+      "buttons": [
+        "A"
+      ]
+    },
+    {
+      "frames": 120
+    },
+    {
+      "frames": 2,
+      "buttons": [
+        "A"
+      ]
+    },
+    {
+      "frames": 120
+    },
+    {
+      "frames": 2,
+      "buttons": [
+        "A"
+      ]
+    },
+    {
+      "frames": 120
+    },
+    {
+      "frames": 1,
+      "shot": "name-entry.png"
+    },
+    {
+      "frames": 3,
+      "touch": [
+        66,
+        100
+      ]
+    },
+    {
+      "frames": 3
+    },
+    {
+      "frames": 3,
+      "touch": [
+        114,
+        119
+      ]
+    },
+    {
+      "frames": 3
+    },
+    {
+      "frames": 3,
+      "touch": [
+        82,
+        100
+      ]
+    },
+    {
+      "frames": 3
+    },
+    {
+      "frames": 3,
+      "touch": [
+        98,
+        100
+      ]
+    },
+    {
+      "frames": 3
+    },
+    {
+      "frames": 3,
+      "touch": [
+        82,
+        139
+      ]
+    },
+    {
+      "frames": 3
+    },
+    {
+      "frames": 60,
+      "shot": "custom-name.png"
+    },
+    {
+      "frames": 3,
+      "touch": [
+        216,
+        72
+      ]
+    },
+    {
+      "frames": 180,
+      "shot": "name-confirm.png"
+    },
+    {
+      "frames": 2,
+      "buttons": [
+        "A"
+      ]
+    },
+    {
+      "frames": 150
+    },
+    {
+      "frames": 2,
+      "buttons": [
+        "A"
+      ]
+    },
+    {
+      "frames": 150
+    },
+    {
+      "frames": 2,
+      "buttons": [
+        "A"
+      ]
+    },
+    {
+      "frames": 150
+    },
+    {
+      "frames": 2,
+      "buttons": [
+        "A"
+      ]
+    },
+    {
+      "frames": 150
+    },
+    {
+      "frames": 2,
+      "buttons": [
+        "A"
+      ]
+    },
+    {
+      "frames": 150
+    },
+    {
+      "frames": 2,
+      "buttons": [
+        "A"
+      ]
+    },
+    {
+      "frames": 150
+    },
+    {
+      "frames": 2,
+      "buttons": [
+        "A"
+      ]
+    },
+    {
+      "frames": 150
+    },
+    {
+      "frames": 2,
+      "buttons": [
+        "A"
+      ]
+    },
+    {
+      "frames": 150
+    },
+    {
+      "frames": 2,
+      "buttons": [
+        "A"
+      ]
+    },
+    {
+      "frames": 150
+    },
+    {
+      "frames": 2,
+      "buttons": [
+        "A"
+      ]
+    },
+    {
+      "frames": 150
+    },
+    {
+      "frames": 120,
+      "shot": "newgame-field.png",
+      "inspect": true
+    },
+    {
+      "frames": 8,
+      "buttons": [
+        "A"
+      ]
+    },
+    {
+      "frames": 600,
+      "inspect": true,
+      "shot": "fresh-game-field.png"
+    },
+    {
+      "frames": 32,
+      "buttons": [
+        "RIGHT"
+      ]
+    },
+    {
+      "frames": 32,
+      "buttons": [
+        "UP"
+      ]
+    },
+    {
+      "frames": 400,
+      "inspect": true,
+      "shot": "home-downstairs.png"
+    },
+    {
+      "frames": 1,
+      "inspect": true
+    },
+    {
+      "frames": 80,
+      "buttons": [
+        "LEFT"
+      ]
+    },
+    {
+      "frames": 16,
+      "buttons": [
+        "UP"
+      ]
+    },
+    {
+      "frames": 16,
+      "buttons": [
+        "LEFT"
+      ]
+    },
+    {
+      "frames": 400,
+      "inspect": true,
+      "shot": "mother-scene-start.png"
+    },
+    {
+      "frames": 16,
+      "buttons": [
+        "DOWN"
+      ]
+    },
+    {
+      "frames": 120,
+      "inspect": true,
+      "shot": "mother-dialogue.png"
+    },
+    {
+      "talk": 55,
+      "inspect": true,
+      "shot": "mother-scene-complete.png"
+    },
+    {
+      "frames": 96,
+      "buttons": [
+        "DOWN"
+      ]
+    },
+    {
+      "frames": 48,
+      "buttons": [
+        "RIGHT"
+      ]
+    },
+    {
+      "frames": 64,
+      "buttons": [
+        "DOWN"
+      ]
+    },
+    {
+      "frames": 500,
+      "inspect": true,
+      "shot": "first-new-bark.png"
+    },
+    {
+      "talk": 40,
+      "inspect": true,
+      "shot": "town-after-original-scene.png"
+    },
+    {
+      "frames": 16,
+      "buttons": [
+        "RIGHT"
+      ]
+    },
+    {
+      "frames": 64,
+      "buttons": [
+        "DOWN"
+      ]
+    },
+    {
+      "frames": 500,
+      "inspect": true,
+      "shot": "home-exit-test.png"
+    },
+    {
+      "frames": 64,
+      "buttons": [
+        "LEFT"
+      ]
+    },
+    {
+      "frames": 32,
+      "buttons": [
+        "DOWN"
+      ]
+    },
+    {
+      "frames": 500,
+      "inspect": true,
+      "shot": "town-opening-objects.png"
+    },
+    {
+      "talk": 30,
+      "inspect": true,
+      "shot": "original-marill-scene-finished.png"
+    },
+    {
+      "frames": 32,
+      "buttons": [
+        "DOWN"
+      ]
+    },
+    {
+      "frames": 176,
+      "buttons": [
+        "LEFT"
+      ]
+    },
+    {
+      "frames": 16,
+      "buttons": [
+        "UP"
+      ]
+    },
+    {
+      "frames": 120,
+      "inspect": true,
+      "shot": "story-introduction-start.png"
+    },
+    {
+      "frames": 64,
+      "buttons": [
+        "UP"
+      ]
+    },
+    {
+      "frames": 120,
+      "inspect": true,
+      "shot": "story-first-dialogue.png"
+    },
+    {
+      "talk": 55,
+      "inspect": true,
+      "shot": "story-opening-complete.png"
+    },
+    {
+      "frames": 32,
+      "buttons": [
+        "UP"
+      ]
+    },
+    {
+      "frames": 500,
+      "inspect": true,
+      "shot": "elm-lab-after-story.png"
+    },
+    {
+      "frames": 112,
+      "buttons": [
+        "UP"
+      ]
+    },
+    {
+      "frames": 240,
+      "inspect": true,
+      "shot": "elm-story-greeting.png"
+    },
+    {
+      "talk": 45,
+      "inspect": true,
+      "shot": "elm-introduction-complete.png"
+    },
+    {
+      "frames": 3,
+      "touch": [
+        45,
+        130
+      ]
+    },
+    {
+      "frames": 180,
+      "inspect": true,
+      "shot": "prestarter-save-question.png"
+    },
+    {
+      "frames": 1,
+      "inspect": true
+    },
+    {
+      "frames": 8,
+      "buttons": [
+        "B"
+      ]
+    },
+    {
+      "frames": 120
+    },
+    {
+      "frames": 3,
+      "touch": [
+        128,
+        74
+      ]
+    },
+    {
+      "frames": 180,
+      "shot": "prestarter-real-save-prompt.png"
+    },
+    {
+      "frames": 8,
+      "buttons": [
+        "A"
+      ]
+    },
+    {
+      "frames": 240
+    },
+    {
+      "frames": 8,
+      "buttons": [
+        "A"
+      ]
+    },
+    {
+      "frames": 1800,
+      "inspect": true,
+      "shot": "prestarter-save-written.png"
+    },
+    {
+      "frames": 8,
+      "buttons": [
+        "A"
+      ]
+    },
+    {
+      "frames": 120,
+      "inspect": true,
+      "shot": "prestarter-save-complete.png"
+    },
+    {
+      "frames": 3600,
+      "inspect": true,
+      "shot": "prestarter-save-finished.png"
+    },
+    {
+      "frames": 8,
+      "buttons": [
+        "A"
+      ]
+    },
+    {
+      "frames": 180,
+      "inspect": true,
+      "shot": "prestarter-return-to-field.png"
+    },
+    {
+      "talk": 12,
+      "inspect": true,
+      "shot": "prestarter-save-exit.png"
+    },
+    {
+      "frames": 8,
+      "buttons": [
+        "B"
+      ]
+    },
+    {
+      "frames": 240,
+      "inspect": true,
+      "shot": "prestarter-field-after-save.png"
+    },
+    {
+      "frames": 300
+    },
+    {
+      "frames": 8,
+      "buttons": [
+        "B"
+      ]
+    },
+    {
+      "frames": 120,
+      "inspect": true,
+      "shot": "prestarter-save-ui-closed.png"
+    },
+    {
+      "frames": 8,
+      "buttons": [
+        "X"
+      ]
+    },
+    {
+      "frames": 120,
+      "inspect": true,
+      "shot": "save-menu-closed-x.png"
+    },
+    {
+      "frames": 3,
+      "touch": [
+        32,
+        10
+      ]
+    },
+    {
+      "frames": 120,
+      "inspect": true,
+      "shot": "save-menu-closed-touch.png"
+    },
+    {
+      "frames": 48,
+      "buttons": [
+        "RIGHT"
+      ]
+    },
+    {
+      "frames": 16,
+      "buttons": [
+        "UP"
+      ]
+    },
+    {
+      "frames": 20
+    },
+    {
+      "frames": 8,
+      "buttons": [
+        "A"
+      ]
+    },
+    {
+      "frames": 300,
+      "inspect": true,
+      "shot": "stage-a-starter-selection.png"
+    },
+    {
+      "frames": 16,
+      "buttons": [
+        "RIGHT"
+      ]
+    },
+    {
+      "frames": 16,
+      "buttons": [
+        "UP"
+      ]
+    },
+    {
+      "frames": 20
+    },
+    {
+      "frames": 8,
+      "buttons": [
+        "A"
+      ]
+    },
+    {
+      "frames": 300,
+      "inspect": true,
+      "shot": "stage-a-starter-menu.png"
+    },
+    {
+      "frames": 3,
+      "touch": [
+        128,
+        110
+      ]
+    },
+    {
+      "frames": 180,
+      "shot": "stage-a-starter-choice.png"
+    },
+    {
+      "frames": 8,
+      "buttons": [
+        "A"
+      ]
+    },
+    {
+      "frames": 240,
+      "shot": "stage-a-starter-confirm.png",
+      "inspect": true
+    },
+    {
+      "frames": 3,
+      "touch": [
+        128,
+        110
+      ]
+    },
+    {
+      "frames": 180
+    },
+    {
+      "frames": 8,
+      "buttons": [
+        "A"
+      ]
+    },
+    {
+      "frames": 300,
+      "inspect": true,
+      "shot": "stage-a-starter-received.png"
+    },
+    {
+      "frames": 8,
+      "buttons": [
+        "A"
+      ]
+    },
+    {
+      "frames": 180,
+      "shot": "stage-a-nickname-prompt.png"
+    },
+    {
+      "frames": 8,
+      "buttons": [
+        "A"
+      ]
+    },
+    {
+      "frames": 150
+    },
+    {
+      "frames": 8,
+      "buttons": [
+        "B"
+      ]
+    },
+    {
+      "frames": 180,
+      "inspect": true,
+      "shot": "stage-a-after-nickname.png"
+    },
+    {
+      "talk": 45,
+      "inspect": true,
+      "shot": "stage-a-starter-event-finished.png"
+    },
+    {
+      "frames": 64,
+      "buttons": [
+        "LEFT"
+      ]
+    },
+    {
+      "frames": 32,
+      "buttons": [
+        "DOWN"
+      ]
+    },
+    {
+      "frames": 180,
+      "inspect": true,
+      "shot": "stage-a-dual-followers.png"
+    }
+  ]
+}

@@ -5,13 +5,22 @@ Crunch; Sabrina's actions are native AI. Requires companion_emulator_runner,
 DeSmuME libretro, matching ROM/symbols, and a prepared post-Marsh Saffron save.
 """
 from pathlib import Path
-import argparse,json,subprocess,sys,struct,binascii
+import argparse,json,subprocess,sys,struct,binascii,atexit
+from prepare_desmume_save import wrap_save
 
-p=argparse.ArgumentParser();p.add_argument('--core',type=Path,required=True);p.add_argument('--rom',type=Path,required=True);p.add_argument('--symbols',type=Path,required=True);p.add_argument('--output',type=Path,required=True);a=p.parse_args()
+p=argparse.ArgumentParser();p.add_argument('--core',type=Path,required=True);p.add_argument('--rom',type=Path,required=True);p.add_argument('--symbols',type=Path,required=True);p.add_argument('--output',type=Path,required=True);p.add_argument('--save-fixture',type=Path,help='Raw .sav or .sav.gz; requires a separate ROM path without an existing .dsv');a=p.parse_args()
 ROOT=Path(__file__).resolve().parents[1];out=a.output.resolve();out.mkdir(exist_ok=True)
+if a.save_fixture:
+    (out/'save-import.json').write_text(json.dumps(wrap_save(a.save_fixture,a.rom.with_suffix('.dsv')),indent=2)+'\n')
 
 def launch(label):
     proc=subprocess.Popen([sys.executable,'-u',str(ROOT/'tools/companion_emulator_runner.py'),'--core',str(a.core),'--rom',str(a.rom),'--symbols',str(a.symbols),'--output',str(out)],stdin=subprocess.PIPE,stdout=subprocess.PIPE,stderr=subprocess.STDOUT,text=True,bufsize=1)
+    def cleanup():
+        if proc.poll() is None:
+            proc.terminate()
+            try:proc.wait(timeout=10)
+            except subprocess.TimeoutExpired:proc.kill();proc.wait(timeout=10)
+    atexit.register(cleanup)
     log=(out/(label+'.stdout.log')).open('w')
     def response(ready=False):
         while True:
@@ -34,7 +43,9 @@ def close(proc,log,send):
     send({'exit':True});proc.wait(timeout=30);log.close();assert proc.returncode==0
 
 def won(send):
-    g=send({'frames':1,'inspect':True})['game'];addr=int(g['flag_address'],16)+0xb54//8
+    g=send({'frames':1,'inspect':True})['game']
+    assert 'flag_address' in g,'No field save loaded; use --save-fixture to import raw SAV with its required DSV footer'
+    addr=int(g['flag_address'],16)+0xb54//8
     return bool(int(send({'read':[hex(addr),1]})['read'],16)&0x10)
 
 def formation(send,shot):
