@@ -1,0 +1,11 @@
+{
+  "game_source_commit": "969ea00d1d443e3440d50bb4208811592438be0c",
+  "delivery_source_commit": "22e74d13d976562b559a4ec84451f4f41093ce67",
+  "deployment": "appgdep_6aeb755ce17c8191a4330a1d5ec33768",
+  "version": "appgprj_6aeb0b07b70881918b7c86492f99b451~appgver_d50bb0ad35048191aa69fe02d6608afb",
+  "status": "succeeded",
+  "url": "https://heartgold-rc1-manic-download.assuredkite.chatgpt.site",
+  "ROM_sha256": "a32a6b09a3895996f37bf05d1acbd2a7bf3712e56f46af43a017dfa6b44f72db",
+  "access": "Owner only; unchanged",
+  "scope": "Native deployment success; Node assembled exact ROM. New iPhone/Manic gameplay remains unverified."
+}

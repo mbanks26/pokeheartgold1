@@ -1,0 +1,1203 @@
+{
+  "pass": true,
+  "scope": "Native input from a compatible prior RC1 battery save; no runtime writes; Select repeated, A formation menu/Sabrina/native Pokemon/Cancel, real save and cold Continue, native approach/swapping past Pokemon then direct adjacent A",
+  "checkpoints": [
+    {
+      "name": "formation",
+      "task": "0x0",
+      "objects": [
+        {
+          "slot": 0,
+          "address": "0x22a2260",
+          "id": 255,
+          "sprite": 0,
+          "script": 0,
+          "xyz": [
+            557,
+            2,
+            404
+          ],
+          "previous": [
+            557,
+            2,
+            404
+          ],
+          "direction": 2,
+          "flags": "0x2000e411"
+        },
+        {
+          "slot": 1,
+          "address": "0x22a238c",
+          "id": 253,
+          "sprite": 581,
+          "script": 9700,
+          "xyz": [
+            558,
+            2,
+            404
+          ],
+          "previous": [
+            558,
+            2,
+            404
+          ],
+          "direction": 2,
+          "flags": "0x2004e401"
+        },
+        {
+          "slot": 5,
+          "address": "0x22a283c",
+          "id": 252,
+          "sprite": 369,
+          "script": 65535,
+          "xyz": [
+            559,
+            2,
+            404
+          ],
+          "previous": [
+            559,
+            2,
+            404
+          ],
+          "direction": 2,
+          "flags": "0x200ce021"
+        }
+      ]
+    },
+    {
+      "name": "select-0",
+      "task": "0x22c0460",
+      "objects": [
+        {
+          "slot": 0,
+          "address": "0x22a2260",
+          "id": 255,
+          "sprite": 0,
+          "script": 0,
+          "xyz": [
+            557,
+            2,
+            404
+          ],
+          "previous": [
+            557,
+            2,
+            404
+          ],
+          "direction": 2,
+          "flags": "0x2000e471"
+        },
+        {
+          "slot": 1,
+          "address": "0x22a238c",
+          "id": 253,
+          "sprite": 581,
+          "script": 9700,
+          "xyz": [
+            558,
+            2,
+            404
+          ],
+          "previous": [
+            558,
+            2,
+            404
+          ],
+          "direction": 2,
+          "flags": "0x2004e441"
+        },
+        {
+          "slot": 5,
+          "address": "0x22a283c",
+          "id": 252,
+          "sprite": 369,
+          "script": 65535,
+          "xyz": [
+            559,
+            2,
+            404
+          ],
+          "previous": [
+            559,
+            2,
+            404
+          ],
+          "direction": 2,
+          "flags": "0x200ce061"
+        }
+      ]
+    },
+    {
+      "name": "select-resumed-0",
+      "task": "0x0",
+      "objects": [
+        {
+          "slot": 0,
+          "address": "0x22a2260",
+          "id": 255,
+          "sprite": 0,
+          "script": 0,
+          "xyz": [
+            557,
+            2,
+            404
+          ],
+          "previous": [
+            557,
+            2,
+            404
+          ],
+          "direction": 2,
+          "flags": "0x2000e431"
+        },
+        {
+          "slot": 1,
+          "address": "0x22a238c",
+          "id": 253,
+          "sprite": 581,
+          "script": 9700,
+          "xyz": [
+            558,
+            2,
+            404
+          ],
+          "previous": [
+            558,
+            2,
+            404
+          ],
+          "direction": 2,
+          "flags": "0x2004e401"
+        },
+        {
+          "slot": 5,
+          "address": "0x22a283c",
+          "id": 252,
+          "sprite": 369,
+          "script": 65535,
+          "xyz": [
+            559,
+            2,
+            404
+          ],
+          "previous": [
+            559,
+            2,
+            404
+          ],
+          "direction": 2,
+          "flags": "0x200ce021"
+        }
+      ]
+    },
+    {
+      "name": "select-1",
+      "task": "0x22c0460",
+      "objects": [
+        {
+          "slot": 0,
+          "address": "0x22a2260",
+          "id": 255,
+          "sprite": 0,
+          "script": 0,
+          "xyz": [
+            557,
+            2,
+            404
+          ],
+          "previous": [
+            557,
+            2,
+            404
+          ],
+          "direction": 2,
+          "flags": "0x2000e471"
+        },
+        {
+          "slot": 1,
+          "address": "0x22a238c",
+          "id": 253,
+          "sprite": 581,
+          "script": 9700,
+          "xyz": [
+            558,
+            2,
+            404
+          ],
+          "previous": [
+            558,
+            2,
+            404
+          ],
+          "direction": 2,
+          "flags": "0x2004e441"
+        },
+        {
+          "slot": 5,
+          "address": "0x22a283c",
+          "id": 252,
+          "sprite": 369,
+          "script": 65535,
+          "xyz": [
+            559,
+            2,
+            404
+          ],
+          "previous": [
+            559,
+            2,
+            404
+          ],
+          "direction": 2,
+          "flags": "0x200ce061"
+        }
+      ]
+    },
+    {
+      "name": "select-resumed-1",
+      "task": "0x0",
+      "objects": [
+        {
+          "slot": 0,
+          "address": "0x22a2260",
+          "id": 255,
+          "sprite": 0,
+          "script": 0,
+          "xyz": [
+            557,
+            2,
+            404
+          ],
+          "previous": [
+            557,
+            2,
+            404
+          ],
+          "direction": 2,
+          "flags": "0x2000e411"
+        },
+        {
+          "slot": 1,
+          "address": "0x22a238c",
+          "id": 253,
+          "sprite": 581,
+          "script": 9700,
+          "xyz": [
+            558,
+            2,
+            404
+          ],
+          "previous": [
+            558,
+            2,
+            404
+          ],
+          "direction": 2,
+          "flags": "0x2004e401"
+        },
+        {
+          "slot": 5,
+          "address": "0x22a283c",
+          "id": 252,
+          "sprite": 369,
+          "script": 65535,
+          "xyz": [
+            559,
+            2,
+            404
+          ],
+          "previous": [
+            559,
+            2,
+            404
+          ],
+          "direction": 2,
+          "flags": "0x200ce021"
+        }
+      ]
+    },
+    {
+      "name": "select-2",
+      "task": "0x22c0460",
+      "objects": [
+        {
+          "slot": 0,
+          "address": "0x22a2260",
+          "id": 255,
+          "sprite": 0,
+          "script": 0,
+          "xyz": [
+            557,
+            2,
+            404
+          ],
+          "previous": [
+            557,
+            2,
+            404
+          ],
+          "direction": 2,
+          "flags": "0x2000e471"
+        },
+        {
+          "slot": 1,
+          "address": "0x22a238c",
+          "id": 253,
+          "sprite": 581,
+          "script": 9700,
+          "xyz": [
+            558,
+            2,
+            404
+          ],
+          "previous": [
+            558,
+            2,
+            404
+          ],
+          "direction": 2,
+          "flags": "0x2004e441"
+        },
+        {
+          "slot": 5,
+          "address": "0x22a283c",
+          "id": 252,
+          "sprite": 369,
+          "script": 65535,
+          "xyz": [
+            559,
+            2,
+            404
+          ],
+          "previous": [
+            559,
+            2,
+            404
+          ],
+          "direction": 2,
+          "flags": "0x200ce061"
+        }
+      ]
+    },
+    {
+      "name": "select-resumed-2",
+      "task": "0x0",
+      "objects": [
+        {
+          "slot": 0,
+          "address": "0x22a2260",
+          "id": 255,
+          "sprite": 0,
+          "script": 0,
+          "xyz": [
+            557,
+            2,
+            404
+          ],
+          "previous": [
+            557,
+            2,
+            404
+          ],
+          "direction": 2,
+          "flags": "0x2000e431"
+        },
+        {
+          "slot": 1,
+          "address": "0x22a238c",
+          "id": 253,
+          "sprite": 581,
+          "script": 9700,
+          "xyz": [
+            558,
+            2,
+            404
+          ],
+          "previous": [
+            558,
+            2,
+            404
+          ],
+          "direction": 2,
+          "flags": "0x2004e401"
+        },
+        {
+          "slot": 5,
+          "address": "0x22a283c",
+          "id": 252,
+          "sprite": 369,
+          "script": 65535,
+          "xyz": [
+            559,
+            2,
+            404
+          ],
+          "previous": [
+            559,
+            2,
+            404
+          ],
+          "direction": 2,
+          "flags": "0x200ce021"
+        }
+      ]
+    },
+    {
+      "name": "a-menu",
+      "task": "0x22c0460",
+      "objects": [
+        {
+          "slot": 0,
+          "address": "0x22a2260",
+          "id": 255,
+          "sprite": 0,
+          "script": 0,
+          "xyz": [
+            557,
+            2,
+            404
+          ],
+          "previous": [
+            557,
+            2,
+            404
+          ],
+          "direction": 3,
+          "flags": "0x2000e471"
+        },
+        {
+          "slot": 1,
+          "address": "0x22a238c",
+          "id": 253,
+          "sprite": 581,
+          "script": 9700,
+          "xyz": [
+            558,
+            2,
+            404
+          ],
+          "previous": [
+            558,
+            2,
+            404
+          ],
+          "direction": 2,
+          "flags": "0x2004e441"
+        },
+        {
+          "slot": 5,
+          "address": "0x22a283c",
+          "id": 252,
+          "sprite": 369,
+          "script": 65535,
+          "xyz": [
+            559,
+            2,
+            404
+          ],
+          "previous": [
+            559,
+            2,
+            404
+          ],
+          "direction": 2,
+          "flags": "0x200ce061"
+        }
+      ]
+    },
+    {
+      "name": "a-sabrina",
+      "task": "0x22c0460",
+      "objects": [
+        {
+          "slot": 0,
+          "address": "0x22a2260",
+          "id": 255,
+          "sprite": 0,
+          "script": 0,
+          "xyz": [
+            557,
+            2,
+            404
+          ],
+          "previous": [
+            557,
+            2,
+            404
+          ],
+          "direction": 3,
+          "flags": "0x2000e471"
+        },
+        {
+          "slot": 1,
+          "address": "0x22a238c",
+          "id": 253,
+          "sprite": 581,
+          "script": 9700,
+          "xyz": [
+            558,
+            2,
+            404
+          ],
+          "previous": [
+            558,
+            2,
+            404
+          ],
+          "direction": 2,
+          "flags": "0x2004e441"
+        },
+        {
+          "slot": 5,
+          "address": "0x22a283c",
+          "id": 252,
+          "sprite": 369,
+          "script": 65535,
+          "xyz": [
+            559,
+            2,
+            404
+          ],
+          "previous": [
+            559,
+            2,
+            404
+          ],
+          "direction": 2,
+          "flags": "0x200ce061"
+        }
+      ]
+    },
+    {
+      "name": "a-sabrina-resumed",
+      "task": "0x0",
+      "objects": [
+        {
+          "slot": 0,
+          "address": "0x22a2260",
+          "id": 255,
+          "sprite": 0,
+          "script": 0,
+          "xyz": [
+            557,
+            2,
+            404
+          ],
+          "previous": [
+            557,
+            2,
+            404
+          ],
+          "direction": 3,
+          "flags": "0x2000e411"
+        },
+        {
+          "slot": 1,
+          "address": "0x22a238c",
+          "id": 253,
+          "sprite": 581,
+          "script": 9700,
+          "xyz": [
+            558,
+            2,
+            404
+          ],
+          "previous": [
+            558,
+            2,
+            404
+          ],
+          "direction": 2,
+          "flags": "0x2004e401"
+        },
+        {
+          "slot": 5,
+          "address": "0x22a283c",
+          "id": 252,
+          "sprite": 369,
+          "script": 65535,
+          "xyz": [
+            559,
+            2,
+            404
+          ],
+          "previous": [
+            559,
+            2,
+            404
+          ],
+          "direction": 2,
+          "flags": "0x200ce021"
+        }
+      ]
+    },
+    {
+      "name": "a-menu",
+      "task": "0x22c0460",
+      "objects": [
+        {
+          "slot": 0,
+          "address": "0x22a2260",
+          "id": 255,
+          "sprite": 0,
+          "script": 0,
+          "xyz": [
+            557,
+            2,
+            404
+          ],
+          "previous": [
+            557,
+            2,
+            404
+          ],
+          "direction": 3,
+          "flags": "0x2000e471"
+        },
+        {
+          "slot": 1,
+          "address": "0x22a238c",
+          "id": 253,
+          "sprite": 581,
+          "script": 9700,
+          "xyz": [
+            558,
+            2,
+            404
+          ],
+          "previous": [
+            558,
+            2,
+            404
+          ],
+          "direction": 2,
+          "flags": "0x2004e441"
+        },
+        {
+          "slot": 5,
+          "address": "0x22a283c",
+          "id": 252,
+          "sprite": 369,
+          "script": 65535,
+          "xyz": [
+            559,
+            2,
+            404
+          ],
+          "previous": [
+            559,
+            2,
+            404
+          ],
+          "direction": 2,
+          "flags": "0x200ce061"
+        }
+      ]
+    },
+    {
+      "name": "a-pokemon",
+      "task": "0x22c03fc",
+      "objects": [
+        {
+          "slot": 0,
+          "address": "0x22a2260",
+          "id": 255,
+          "sprite": 0,
+          "script": 0,
+          "xyz": [
+            557,
+            2,
+            404
+          ],
+          "previous": [
+            557,
+            2,
+            404
+          ],
+          "direction": 3,
+          "flags": "0x2000e471"
+        },
+        {
+          "slot": 1,
+          "address": "0x22a238c",
+          "id": 253,
+          "sprite": 581,
+          "script": 9700,
+          "xyz": [
+            558,
+            2,
+            404
+          ],
+          "previous": [
+            558,
+            2,
+            404
+          ],
+          "direction": 2,
+          "flags": "0x2004e441"
+        },
+        {
+          "slot": 5,
+          "address": "0x22a283c",
+          "id": 252,
+          "sprite": 369,
+          "script": 65535,
+          "xyz": [
+            559,
+            2,
+            404
+          ],
+          "previous": [
+            559,
+            2,
+            404
+          ],
+          "direction": 2,
+          "flags": "0x200ce061"
+        }
+      ]
+    },
+    {
+      "name": "a-pokemon-resumed",
+      "task": "0x0",
+      "objects": [
+        {
+          "slot": 0,
+          "address": "0x22a2260",
+          "id": 255,
+          "sprite": 0,
+          "script": 0,
+          "xyz": [
+            557,
+            2,
+            404
+          ],
+          "previous": [
+            557,
+            2,
+            404
+          ],
+          "direction": 3,
+          "flags": "0x2000e411"
+        },
+        {
+          "slot": 1,
+          "address": "0x22a238c",
+          "id": 253,
+          "sprite": 581,
+          "script": 9700,
+          "xyz": [
+            558,
+            2,
+            404
+          ],
+          "previous": [
+            558,
+            2,
+            404
+          ],
+          "direction": 2,
+          "flags": "0x2004e401"
+        },
+        {
+          "slot": 5,
+          "address": "0x22a283c",
+          "id": 252,
+          "sprite": 369,
+          "script": 65535,
+          "xyz": [
+            559,
+            2,
+            404
+          ],
+          "previous": [
+            559,
+            2,
+            404
+          ],
+          "direction": 2,
+          "flags": "0x200ce021"
+        }
+      ]
+    },
+    {
+      "name": "a-menu",
+      "task": "0x22c0460",
+      "objects": [
+        {
+          "slot": 0,
+          "address": "0x22a2260",
+          "id": 255,
+          "sprite": 0,
+          "script": 0,
+          "xyz": [
+            557,
+            2,
+            404
+          ],
+          "previous": [
+            557,
+            2,
+            404
+          ],
+          "direction": 3,
+          "flags": "0x2000e471"
+        },
+        {
+          "slot": 1,
+          "address": "0x22a238c",
+          "id": 253,
+          "sprite": 581,
+          "script": 9700,
+          "xyz": [
+            558,
+            2,
+            404
+          ],
+          "previous": [
+            558,
+            2,
+            404
+          ],
+          "direction": 2,
+          "flags": "0x2004e441"
+        },
+        {
+          "slot": 5,
+          "address": "0x22a283c",
+          "id": 252,
+          "sprite": 369,
+          "script": 65535,
+          "xyz": [
+            559,
+            2,
+            404
+          ],
+          "previous": [
+            559,
+            2,
+            404
+          ],
+          "direction": 2,
+          "flags": "0x200ce061"
+        }
+      ]
+    },
+    {
+      "name": "a-cancel",
+      "task": "0x0",
+      "objects": [
+        {
+          "slot": 0,
+          "address": "0x22a2260",
+          "id": 255,
+          "sprite": 0,
+          "script": 0,
+          "xyz": [
+            557,
+            2,
+            404
+          ],
+          "previous": [
+            557,
+            2,
+            404
+          ],
+          "direction": 3,
+          "flags": "0x2000e411"
+        },
+        {
+          "slot": 1,
+          "address": "0x22a238c",
+          "id": 253,
+          "sprite": 581,
+          "script": 9700,
+          "xyz": [
+            558,
+            2,
+            404
+          ],
+          "previous": [
+            558,
+            2,
+            404
+          ],
+          "direction": 2,
+          "flags": "0x2004e401"
+        },
+        {
+          "slot": 5,
+          "address": "0x22a283c",
+          "id": 252,
+          "sprite": 369,
+          "script": 65535,
+          "xyz": [
+            559,
+            2,
+            404
+          ],
+          "previous": [
+            559,
+            2,
+            404
+          ],
+          "direction": 2,
+          "flags": "0x200ce021"
+        }
+      ]
+    },
+    {
+      "name": "cold-restored",
+      "task": "0x0",
+      "objects": [
+        {
+          "slot": 0,
+          "address": "0x22a2228",
+          "id": 255,
+          "sprite": 0,
+          "script": 0,
+          "xyz": [
+            557,
+            2,
+            404
+          ],
+          "previous": [
+            557,
+            2,
+            404
+          ],
+          "direction": 2,
+          "flags": "0x2000e411"
+        },
+        {
+          "slot": 1,
+          "address": "0x22a2354",
+          "id": 253,
+          "sprite": 581,
+          "script": 9700,
+          "xyz": [
+            558,
+            2,
+            404
+          ],
+          "previous": [
+            558,
+            2,
+            404
+          ],
+          "direction": 2,
+          "flags": "0x2004e401"
+        },
+        {
+          "slot": 5,
+          "address": "0x22a2804",
+          "id": 252,
+          "sprite": 369,
+          "script": 65535,
+          "xyz": [
+            559,
+            2,
+            404
+          ],
+          "previous": [
+            559,
+            2,
+            404
+          ],
+          "direction": 2,
+          "flags": "0x200ce021"
+        }
+      ]
+    },
+    {
+      "name": "direct-approach",
+      "task": "0x0",
+      "objects": [
+        {
+          "slot": 0,
+          "address": "0x22a2228",
+          "id": 255,
+          "sprite": 0,
+          "script": 0,
+          "xyz": [
+            558,
+            2,
+            404
+          ],
+          "previous": [
+            558,
+            2,
+            404
+          ],
+          "direction": 3,
+          "flags": "0x2000e411"
+        },
+        {
+          "slot": 1,
+          "address": "0x22a2354",
+          "id": 253,
+          "sprite": 581,
+          "script": 9700,
+          "xyz": [
+            557,
+            2,
+            404
+          ],
+          "previous": [
+            557,
+            2,
+            404
+          ],
+          "direction": 2,
+          "flags": "0x2004e401"
+        },
+        {
+          "slot": 5,
+          "address": "0x22a2804",
+          "id": 252,
+          "sprite": 369,
+          "script": 65535,
+          "xyz": [
+            559,
+            2,
+            404
+          ],
+          "previous": [
+            559,
+            2,
+            404
+          ],
+          "direction": 2,
+          "flags": "0x200ce021"
+        }
+      ]
+    },
+    {
+      "name": "direct-a-sabrina",
+      "task": "0x22c0428",
+      "objects": [
+        {
+          "slot": 0,
+          "address": "0x22a2228",
+          "id": 255,
+          "sprite": 0,
+          "script": 0,
+          "xyz": [
+            558,
+            2,
+            404
+          ],
+          "previous": [
+            558,
+            2,
+            404
+          ],
+          "direction": 3,
+          "flags": "0x2000e471"
+        },
+        {
+          "slot": 1,
+          "address": "0x22a2354",
+          "id": 253,
+          "sprite": 581,
+          "script": 9700,
+          "xyz": [
+            557,
+            2,
+            404
+          ],
+          "previous": [
+            557,
+            2,
+            404
+          ],
+          "direction": 2,
+          "flags": "0x2004e441"
+        },
+        {
+          "slot": 5,
+          "address": "0x22a2804",
+          "id": 252,
+          "sprite": 369,
+          "script": 65535,
+          "xyz": [
+            559,
+            2,
+            404
+          ],
+          "previous": [
+            559,
+            2,
+            404
+          ],
+          "direction": 2,
+          "flags": "0x200ce061"
+        }
+      ]
+    },
+    {
+      "name": "direct-a-resumed",
+      "task": "0x0",
+      "objects": [
+        {
+          "slot": 0,
+          "address": "0x22a2228",
+          "id": 255,
+          "sprite": 0,
+          "script": 0,
+          "xyz": [
+            558,
+            2,
+            404
+          ],
+          "previous": [
+            558,
+            2,
+            404
+          ],
+          "direction": 3,
+          "flags": "0x2000e431"
+        },
+        {
+          "slot": 1,
+          "address": "0x22a2354",
+          "id": 253,
+          "sprite": 581,
+          "script": 9700,
+          "xyz": [
+            557,
+            2,
+            404
+          ],
+          "previous": [
+            557,
+            2,
+            404
+          ],
+          "direction": 2,
+          "flags": "0x2004e401"
+        },
+        {
+          "slot": 5,
+          "address": "0x22a2804",
+          "id": 252,
+          "sprite": 369,
+          "script": 65535,
+          "xyz": [
+            559,
+            2,
+            404
+          ],
+          "previous": [
+            559,
+            2,
+            404
+          ],
+          "direction": 2,
+          "flags": "0x200ce021"
+        }
+      ]
+    }
+  ]
+}

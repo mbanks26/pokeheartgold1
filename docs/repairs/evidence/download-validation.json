@@ -1,0 +1,9 @@
+{
+  "byte_identical_finished_ROM": true,
+  "bytes": 134217728,
+  "sha256": "a32a6b09a3895996f37bf05d1acbd2a7bf3712e56f46af43a017dfa6b44f72db",
+  "all_8_parts_verified": true,
+  "corrupted_part_rejected": true,
+  "HTML_login_response_rejected": true,
+  "scope": "Node Web Streams transport/assembly validation; actual iPhone browser and Manic testing remain unverified"
+}

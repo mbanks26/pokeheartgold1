@@ -13,8 +13,8 @@ on `development/release-candidate-20261104`, descended from graphics milestones
 and story/partner integration `110f4acf`.
 
 Repairs are isolated on **`development/manic-repairs-20261104`**. No master merge,
-reset, branch deletion or force push. This document's containing repair commit
-is the exact game-source checkpoint; `DELIVERY.md` records final publication SHAs.
+reset, branch deletion or force push. Game-source checkpoint: `969ea00d1d443e3440d50bb4208811592438be0c`;
+`DELIVERY.md` records publication and archival follow-ups.
 Commercial ROM bytes and emulator memory/save states are excluded from Git.
 
 ## Fixes and root causes
