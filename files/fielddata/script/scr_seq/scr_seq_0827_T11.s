@@ -1,4 +1,5 @@
 #include "constants/scrcmd.h"
+#include "constants/sabrina_story.h"
 #include "fielddata/script/scr_seq/event_T11.h"
 #include "msgdata/msg/msg_0529_T11.h"
 #include "macros/script.inc"
@@ -21,6 +22,7 @@
 	ScrDef scr_seq_T11_014
 	ScrDef scr_seq_T11_015
 	ScrDef scr_seq_T11_016
+	ScrDef scr_seq_T11_017
 	ScrDefEnd
 
 scr_seq_T11_016:
@@ -327,3 +329,42 @@ scr_seq_T11_013:
 	TrainerTipsEx 2, msg_0529_T11_00014
 	End
 	.balign 4, 0
+
+scr_seq_T11_017:
+    PlaySE SEQ_SE_DP_SELECT
+    LockAll
+    FacePlayer
+    GoToIfSet FLAG_SABRINA_PARTNER_KANTO, SabrinaStudents_After
+    GoToIfUnset FLAG_SABRINA_COMPANION_JOINED, SabrinaStudents_NotYet
+    CheckBadge BADGE_MARSH, VAR_SPECIAL_RESULT
+    Compare VAR_SPECIAL_RESULT, 0
+    GoToIfEq SabrinaStudents_NotYet
+    NPCMsg msg_0529_T11_00015
+    TouchscreenMenuHide
+    GetMenuChoice VAR_SPECIAL_RESULT
+    TouchscreenMenuShow
+    Compare VAR_SPECIAL_RESULT, 0
+    GoToIfNe SabrinaStudents_Decline
+    CloseMsg
+    MultiBattle TRAINER_SABRINA_PARTNER_LATE, TRAINER_SABRINA_STUDENT_REI, TRAINER_SABRINA_STUDENT_NORI, 1
+    CheckBattleWon VAR_SPECIAL_RESULT
+    Compare VAR_SPECIAL_RESULT, 0
+    GoToIfEq SabrinaStudents_Lost
+    SetFlag FLAG_SABRINA_PARTNER_KANTO
+SabrinaStudents_After:
+    NPCMsg msg_0529_T11_00016
+    GoTo SabrinaStudents_End
+SabrinaStudents_NotYet:
+    NPCMsg msg_0529_T11_00017
+    GoTo SabrinaStudents_End
+SabrinaStudents_Decline:
+    NPCMsg msg_0529_T11_00018
+SabrinaStudents_End:
+    WaitButton
+    CloseMsg
+    ReleaseAll
+    End
+SabrinaStudents_Lost:
+    WhiteOut
+    ReleaseAll
+    End

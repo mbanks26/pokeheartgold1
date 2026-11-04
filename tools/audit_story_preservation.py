@@ -11,7 +11,8 @@ for line in git('ls-tree','-r',base).decode().splitlines():
 actual=git('hash-object','--stdin-paths',input=('\n'.join(p for p,_ in rows)+'\n').encode()).decode().splitlines();assert len(actual)==len(rows);assert all(want==got for(_,want),got in zip(rows,actual))
 before=members(git('show',base+':files/a/0/0/6'));after=members((root/'files/a/0/0/6').read_bytes());assert after[:len(before)]==before
 original=json.loads(git('show',base+':files/poketool/trainer/trainers.json'))['trainers'];current=json.loads((root/'files/poketool/trainer/trainers.json').read_text())['trainers'];assert current[:len(original)]==original
-protected=['files/fielddata/script/scr_seq/scr_seq_0892_T25R0401.s','files/fielddata/script/scr_seq/scr_seq_0090_D35R0103.s']
+protected=['files/fielddata/script/scr_seq/scr_seq_0892_T25R0401.s','files/fielddata/script/scr_seq/scr_seq_0090_D35R0103.s','files/fielddata/script/scr_seq/scr_seq_0829_T11GYM0101.s',
+           'include/save_vars_flags.h','src/save_vars_flags.c','include/player_data.h','src/player_data.c']
 for p in protected:assert git('show',base+':'+p)==(root/p).read_bytes(),p
 report={'baseline':base,'unchanged_existing_graphics':len(rows),'preserved_back_members':len(before),'appended_partner_members':len(after)-len(before),'unchanged_original_trainers':len(original),'appended_trainers':len(current)-len(original),'player_Bill_Eevee_event':'unchanged','Lance_partner_event':'unchanged','save_structure':'unchanged','changed_files':git('diff','--name-only',base).decode().splitlines()}
 if len(sys.argv)>1:(root/sys.argv[1]).write_text(json.dumps(report,indent=2)+'\n')

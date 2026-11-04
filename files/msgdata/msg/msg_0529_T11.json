@@ -127,6 +127,22 @@
         "Don’t Call Me Uncle Psychic!\n",
         "Mr. Psychic’s House"
       ]
+    },
+    {
+      "id": "msg_0529_T11_00015",
+      "en_US": "Rei: Sabrina said you might\npractice a Multi Battle with us.\rSabrina: Only if you want to.\nReady to work together?"
+    },
+    {
+      "id": "msg_0529_T11_00016",
+      "en_US": "Nori: We have a lot to learn.\rSabrina: So do we. That is why\nwe keep practicing."
+    },
+    {
+      "id": "msg_0529_T11_00017",
+      "en_US": "Rei: We train at Saffron Gym.\nCome back after your challenge."
+    },
+    {
+      "id": "msg_0529_T11_00018",
+      "en_US": "Rei: Another time, then. We will\nkeep training."
     }
   ]
 }

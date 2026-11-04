@@ -1,15 +1,21 @@
 # Story and partner integration
 
-Branch: development/story-partner-integration-20261103.
-Protected baseline: bcf2f8fd. See [audit](AUDIT.md), [request](REQUEST.md) and
-[Stage A results](STAGE-A.md). [Stage B results](STAGE-B.md) and
-[Stage B test patch](stage-b-sister-journey.bps) are now available. [Stage C results](STAGE-C.md) and [Stage C test patch](stage-c-shiny-starters.bps)
-are available. [Stage D results](STAGE-D.md) and [Stage D patch](stage-d-context-dialogue.bps)
-are available. Later stages remain in development until their
-reports explicitly record validation. All previous patches are preserved.
+Use [the latest stable story/partner patch](stage-e-release.bps),
+[implementation and tests](STAGE-E.md), [RTC persistence correction](RTC-PERSISTENCE.md)
+and [iPhone gameplay checklist](MANIC-CHECKLIST.md).
 
-On iPhone, apply the stage patch to your own clean US HeartGold ROM
-(SHA-1 4fcded0e2713dc03929845de631d0932ea2b5a37) using Safari
+Development branch: development/story-partner-integration-20261103 in
+mbanks26/pokeheartgold1, the repository containing the validated recovered build.
+Master and all prior commits/builds remain preserved.
+
+On iPhone, download the patch and apply it to your own clean US HeartGold ROM
+(SHA-1 4fcded0e2713dc03929845de631d0932ea2b5a37) with Safari's
 [Rom Patcher JS](https://www.marcrobledo.com/RomPatcher.js/). Import the resulting
 .nds as a separate Manic EMU test entry. Back up your normal battery save first.
-Use native battery saves, never another ROM build's emulator save state.
+Use native battery saves across versions. Emulator save states require their exact
+ROM. A new game exercises the revised opening and guaranteed shiny starter choice;
+existing saves retain their Pokemon and skip the new opening safely.
+
+Historical checkpoints remain available: [audit](AUDIT.md), [request](REQUEST.md),
+[Stage A](STAGE-A.md), [Stage B](STAGE-B.md), [Stage C](STAGE-C.md) and [Stage D](STAGE-D.md).
+Their patches are archival; the latest patch includes the daily-reset persistence fix.

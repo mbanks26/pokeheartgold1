@@ -1,4 +1,5 @@
 #include "constants/scrcmd.h"
+#include "constants/sabrina_story.h"
 #include "fielddata/script/scr_seq/event_D23R0105.h"
 #include "msgdata/msg/msg_0069_D23R0105.h"
 #include "macros/script.inc"
@@ -120,10 +121,22 @@ _01DA:
 	WaitMovement
 	NPCMsg msg_0069_D23R0105_00003
 	CloseMsg
+    GoToIfUnset FLAG_SABRINA_COMPANION_JOINED, SabrinaPartner_D23R0105_Original
+    NPCMsg msg_0069_D23R0105_00009
+    CloseMsg
+    MultiBattle TRAINER_SABRINA_PARTNER_MID, TRAINER_EXECUTIVE_PETREL_PETREL, TRAINER_SABRINA_TOWER_GRUNT, 1
+    GoTo SabrinaPartner_D23R0105_Check
+SabrinaPartner_D23R0105_Original:
 	TrainerBattle TRAINER_EXECUTIVE_PETREL_PETREL, 0, 0, 0
+SabrinaPartner_D23R0105_Check:
 	CheckBattleWon VAR_SPECIAL_RESULT
 	Compare VAR_SPECIAL_RESULT, 0
 	GoToIfEq _021D
+    GoToIfUnset FLAG_SABRINA_COMPANION_JOINED, SabrinaPartner_D23R0105_After
+    SetFlag FLAG_SABRINA_PARTNER_TOWER
+    NPCMsg msg_0069_D23R0105_00010
+    CloseMsg
+SabrinaPartner_D23R0105_After:
 	NPCMsg msg_0069_D23R0105_00004
 	SetVar VAR_SPECIAL_x8004, ITEM_BASEMENT_KEY
 	SetVar VAR_SPECIAL_x8005, 1

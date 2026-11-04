@@ -1,0 +1,662 @@
+{
+  "well": [
+    {
+      "setup_address": "0x22a8974",
+      "battle_type": "0x4b TRAINER|DOUBLES|MULTI|AI",
+      "trainer_ids": [
+        0,
+        486,
+        743,
+        746
+      ],
+      "parties_player_enemy_ally_enemy2": [
+        [
+          {
+            "held_item": 0,
+            "species": 160,
+            "level": 100,
+            "ability": 67,
+            "experience": 1059860,
+            "moves": [
+              103,
+              57,
+              127,
+              70
+            ],
+            "PP": [
+              40,
+              15,
+              15,
+              15
+            ],
+            "PID": 2789238736,
+            "OT_ID": 3438256915,
+            "nature": 11,
+            "shiny_xor": 44652,
+            "genuinely_shiny": false,
+            "checksum_valid": true,
+            "HP": 350,
+            "max_HP": 350
+          }
+        ],
+        [
+          {
+            "held_item": 0,
+            "species": 41,
+            "level": 8,
+            "ability": 39,
+            "experience": 512,
+            "moves": [
+              141,
+              48,
+              0,
+              0
+            ],
+            "PP": [
+              15,
+              20,
+              0,
+              0
+            ],
+            "PID": 12144008,
+            "OT_ID": 4208637259,
+            "nature": 8,
+            "shiny_xor": 672,
+            "genuinely_shiny": false,
+            "checksum_valid": true,
+            "HP": 25,
+            "max_HP": 25
+          },
+          {
+            "held_item": 0,
+            "species": 109,
+            "level": 12,
+            "ability": 26,
+            "experience": 1728,
+            "moves": [
+              139,
+              33,
+              123,
+              108
+            ],
+            "PP": [
+              40,
+              35,
+              20,
+              20
+            ],
+            "PID": 3170440,
+            "OT_ID": 457631108,
+            "nature": 15,
+            "shiny_xor": 40570,
+            "genuinely_shiny": false,
+            "checksum_valid": true,
+            "HP": 33,
+            "max_HP": 33
+          }
+        ],
+        [
+          {
+            "held_item": 0,
+            "species": 64,
+            "level": 16,
+            "ability": 28,
+            "experience": 2535,
+            "moves": [
+              93,
+              134,
+              115,
+              182
+            ],
+            "PP": [
+              25,
+              15,
+              20,
+              10
+            ],
+            "PID": 3240056,
+            "OT_ID": 1535889742,
+            "nature": 6,
+            "shiny_xor": 64140,
+            "genuinely_shiny": false,
+            "checksum_valid": true,
+            "HP": 40,
+            "max_HP": 40
+          }
+        ],
+        [
+          {
+            "held_item": 0,
+            "species": 19,
+            "level": 11,
+            "ability": 50,
+            "experience": 1331,
+            "moves": [
+              33,
+              39,
+              98,
+              116
+            ],
+            "PP": [
+              35,
+              30,
+              30,
+              30
+            ],
+            "PID": 1776264,
+            "OT_ID": 2543792849,
+            "nature": 14,
+            "shiny_xor": 49117,
+            "genuinely_shiny": false,
+            "checksum_valid": true,
+            "HP": 28,
+            "max_HP": 28
+          }
+        ]
+      ]
+    }
+  ],
+  "tower": [
+    {
+      "setup_address": "0x22a8ae0",
+      "battle_type": "0x4b TRAINER|DOUBLES|MULTI|AI",
+      "trainer_ids": [
+        0,
+        487,
+        744,
+        747
+      ],
+      "parties_player_enemy_ally_enemy2": [
+        [
+          {
+            "held_item": 0,
+            "species": 160,
+            "level": 100,
+            "ability": 67,
+            "experience": 1059860,
+            "moves": [
+              242,
+              57,
+              127,
+              70
+            ],
+            "PP": [
+              15,
+              15,
+              15,
+              15
+            ],
+            "PID": 2789238736,
+            "OT_ID": 3438256915,
+            "nature": 11,
+            "shiny_xor": 44652,
+            "genuinely_shiny": false,
+            "checksum_valid": true,
+            "HP": 350,
+            "max_HP": 350
+          }
+        ],
+        [
+          {
+            "held_item": 0,
+            "species": 109,
+            "level": 30,
+            "ability": 26,
+            "experience": 27000,
+            "moves": [
+              33,
+              120,
+              124,
+              108
+            ],
+            "PP": [
+              35,
+              5,
+              20,
+              20
+            ],
+            "PID": 5156744,
+            "OT_ID": 734514815,
+            "nature": 19,
+            "shiny_xor": 19070,
+            "genuinely_shiny": false,
+            "checksum_valid": true,
+            "HP": 67,
+            "max_HP": 67
+          },
+          {
+            "held_item": 0,
+            "species": 109,
+            "level": 30,
+            "ability": 26,
+            "experience": 27000,
+            "moves": [
+              33,
+              120,
+              124,
+              108
+            ],
+            "PP": [
+              35,
+              5,
+              20,
+              20
+            ],
+            "PID": 5156744,
+            "OT_ID": 734514815,
+            "nature": 19,
+            "shiny_xor": 19070,
+            "genuinely_shiny": false,
+            "checksum_valid": true,
+            "HP": 67,
+            "max_HP": 67
+          },
+          {
+            "held_item": 0,
+            "species": 109,
+            "level": 30,
+            "ability": 26,
+            "experience": 27000,
+            "moves": [
+              33,
+              120,
+              124,
+              108
+            ],
+            "PP": [
+              35,
+              5,
+              20,
+              20
+            ],
+            "PID": 5156744,
+            "OT_ID": 734514815,
+            "nature": 19,
+            "shiny_xor": 19070,
+            "genuinely_shiny": false,
+            "checksum_valid": true,
+            "HP": 67,
+            "max_HP": 67
+          },
+          {
+            "held_item": 0,
+            "species": 110,
+            "level": 32,
+            "ability": 26,
+            "experience": 32768,
+            "moves": [
+              33,
+              153,
+              124,
+              108
+            ],
+            "PP": [
+              35,
+              5,
+              20,
+              20
+            ],
+            "PID": 15075208,
+            "OT_ID": 673173465,
+            "nature": 8,
+            "shiny_xor": 57512,
+            "genuinely_shiny": false,
+            "checksum_valid": true,
+            "HP": 87,
+            "max_HP": 87
+          },
+          {
+            "held_item": 0,
+            "species": 109,
+            "level": 30,
+            "ability": 26,
+            "experience": 27000,
+            "moves": [
+              33,
+              120,
+              124,
+              108
+            ],
+            "PP": [
+              35,
+              5,
+              20,
+              20
+            ],
+            "PID": 5156744,
+            "OT_ID": 734514815,
+            "nature": 19,
+            "shiny_xor": 19070,
+            "genuinely_shiny": false,
+            "checksum_valid": true,
+            "HP": 67,
+            "max_HP": 67
+          },
+          {
+            "held_item": 0,
+            "species": 109,
+            "level": 30,
+            "ability": 26,
+            "experience": 27000,
+            "moves": [
+              33,
+              123,
+              124,
+              108
+            ],
+            "PP": [
+              35,
+              20,
+              20,
+              20
+            ],
+            "PID": 5156744,
+            "OT_ID": 734514815,
+            "nature": 19,
+            "shiny_xor": 19070,
+            "genuinely_shiny": false,
+            "checksum_valid": true,
+            "HP": 67,
+            "max_HP": 67
+          }
+        ],
+        [
+          {
+            "held_item": 0,
+            "species": 65,
+            "level": 32,
+            "ability": 28,
+            "experience": 27021,
+            "moves": [
+              94,
+              247,
+              115,
+              105
+            ],
+            "PP": [
+              10,
+              15,
+              20,
+              10
+            ],
+            "PID": 8216952,
+            "OT_ID": 1686662061,
+            "nature": 2,
+            "shiny_xor": 28192,
+            "genuinely_shiny": false,
+            "checksum_valid": true,
+            "HP": 81,
+            "max_HP": 81
+          },
+          {
+            "held_item": 0,
+            "species": 122,
+            "level": 30,
+            "ability": 43,
+            "experience": 27000,
+            "moves": [
+              60,
+              115,
+              113,
+              227
+            ],
+            "PP": [
+              20,
+              20,
+              30,
+              5
+            ],
+            "PID": 5714808,
+            "OT_ID": 3340510955,
+            "nature": 8,
+            "shiny_xor": 53976,
+            "genuinely_shiny": false,
+            "checksum_valid": true,
+            "HP": 67,
+            "max_HP": 67
+          }
+        ],
+        [
+          {
+            "held_item": 0,
+            "species": 20,
+            "level": 27,
+            "ability": 50,
+            "experience": 19683,
+            "moves": [
+              158,
+              228,
+              98,
+              184
+            ],
+            "PP": [
+              15,
+              20,
+              30,
+              10
+            ],
+            "PID": 2473864,
+            "OT_ID": 4281934121,
+            "nature": 14,
+            "shiny_xor": 25021,
+            "genuinely_shiny": false,
+            "checksum_valid": true,
+            "HP": 69,
+            "max_HP": 69
+          }
+        ]
+      ]
+    }
+  ],
+  "kanto": [
+    {
+      "setup_address": "0x22a8c48",
+      "battle_type": "0x4b TRAINER|DOUBLES|MULTI|AI",
+      "trainer_ids": [
+        0,
+        748,
+        745,
+        749
+      ],
+      "parties_player_enemy_ally_enemy2": [
+        [
+          {
+            "held_item": 0,
+            "species": 160,
+            "level": 100,
+            "ability": 67,
+            "experience": 1059860,
+            "moves": [
+              242,
+              57,
+              127,
+              70
+            ],
+            "PP": [
+              12,
+              15,
+              15,
+              15
+            ],
+            "PID": 2789238736,
+            "OT_ID": 3438256915,
+            "nature": 11,
+            "shiny_xor": 44652,
+            "genuinely_shiny": false,
+            "checksum_valid": true,
+            "HP": 350,
+            "max_HP": 350
+          }
+        ],
+        [
+          {
+            "held_item": 0,
+            "species": 64,
+            "level": 45,
+            "ability": 28,
+            "experience": 83335,
+            "moves": [
+              94,
+              115,
+              105,
+              247
+            ],
+            "PP": [
+              10,
+              20,
+              10,
+              15
+            ],
+            "PID": 576648,
+            "OT_ID": 3322872466,
+            "nature": 23,
+            "shiny_xor": 2077,
+            "genuinely_shiny": false,
+            "checksum_valid": true,
+            "HP": 96,
+            "max_HP": 96
+          },
+          {
+            "held_item": 0,
+            "species": 80,
+            "level": 44,
+            "ability": 12,
+            "experience": 85184,
+            "moves": [
+              57,
+              94,
+              347,
+              182
+            ],
+            "PP": [
+              15,
+              10,
+              20,
+              10
+            ],
+            "PID": 4481928,
+            "OT_ID": 730526198,
+            "nature": 3,
+            "shiny_xor": 47536,
+            "genuinely_shiny": false,
+            "checksum_valid": true,
+            "HP": 142,
+            "max_HP": 142
+          }
+        ],
+        [
+          {
+            "held_item": 0,
+            "species": 65,
+            "level": 50,
+            "ability": 28,
+            "experience": 117360,
+            "moves": [
+              94,
+              247,
+              412,
+              105
+            ],
+            "PP": [
+              10,
+              15,
+              10,
+              10
+            ],
+            "PID": 12538232,
+            "OT_ID": 3038966317,
+            "nature": 7,
+            "shiny_xor": 5832,
+            "genuinely_shiny": false,
+            "checksum_valid": true,
+            "HP": 121,
+            "max_HP": 121
+          },
+          {
+            "held_item": 0,
+            "species": 122,
+            "level": 48,
+            "ability": 43,
+            "experience": 110592,
+            "moves": [
+              94,
+              115,
+              113,
+              227
+            ],
+            "PP": [
+              10,
+              20,
+              30,
+              5
+            ],
+            "PID": 10036088,
+            "OT_ID": 397847915,
+            "nature": 13,
+            "shiny_xor": 39228,
+            "genuinely_shiny": false,
+            "checksum_valid": true,
+            "HP": 102,
+            "max_HP": 102
+          }
+        ],
+        [
+          {
+            "held_item": 0,
+            "species": 203,
+            "level": 45,
+            "ability": 39,
+            "experience": 91125,
+            "moves": [
+              94,
+              372,
+              97,
+              226
+            ],
+            "PP": [
+              10,
+              10,
+              30,
+              40
+            ],
+            "PID": 1193592,
+            "OT_ID": 3123345720,
+            "nature": 17,
+            "shiny_xor": 62840,
+            "genuinely_shiny": false,
+            "checksum_valid": true,
+            "HP": 123,
+            "max_HP": 123
+          },
+          {
+            "held_item": 0,
+            "species": 122,
+            "level": 44,
+            "ability": 43,
+            "experience": 85184,
+            "moves": [
+              60,
+              115,
+              113,
+              227
+            ],
+            "PP": [
+              20,
+              20,
+              30,
+              5
+            ],
+            "PID": 11618424,
+            "OT_ID": 3638316660,
+            "nature": 24,
+            "shiny_xor": 56929,
+            "genuinely_shiny": false,
+            "checksum_valid": true,
+            "HP": 94,
+            "max_HP": 94
+          }
+        ]
+      ]
+    }
+  ]
+}

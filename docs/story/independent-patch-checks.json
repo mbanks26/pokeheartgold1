@@ -1,0 +1,40 @@
+[
+  {
+    "file": "stage-a-opening.bps",
+    "sha1": "805e990425d5a89b0bb3a5096a6c2cb9d74d03b6",
+    "source_target_CRCs": "PASS",
+    "independent_decoder": "RomPatcherJS"
+  },
+  {
+    "file": "stage-b-sister-journey.bps",
+    "sha1": "69cbc8f225649c927e3e1c5687c2d87a275fc641",
+    "source_target_CRCs": "PASS",
+    "independent_decoder": "RomPatcherJS"
+  },
+  {
+    "file": "stage-c-shiny-starters.bps",
+    "sha1": "333f655dccebb1f753fa6c8346fb88ef9895e76d",
+    "source_target_CRCs": "PASS",
+    "independent_decoder": "RomPatcherJS"
+  },
+  {
+    "file": "stage-d-context-dialogue.bps",
+    "sha1": "c25a9fb6e6db58d9cf2e663ad6d5592ddf5049b4",
+    "source_target_CRCs": "PASS",
+    "independent_decoder": "RomPatcherJS"
+  },
+  {
+    "file": "archived c794 validation candidate (workspace)",
+    "sha1": "c794f957edb5656e7298b50548afcaf4a5497c25",
+    "source_target_CRCs": "PASS",
+    "independent_decoder": "RomPatcherJS",
+    "published": false
+  },
+  {
+    "file": "stage-e-release.bps",
+    "sha1": "4f4e203c2b52967d2739c762360ed0065b458d59",
+    "source_target_CRCs": "PASS",
+    "independent_decoder": "RomPatcherJS",
+    "published": true
+  }
+]

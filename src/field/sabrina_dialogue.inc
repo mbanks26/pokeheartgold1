@@ -11,7 +11,7 @@ static u16 SabrinaStory_Dialogue(FieldSystem *fs) {
     case MAPSEC_NEW_BARK_TOWN: page = 0; break;
     case MAPSEC_CHERRYGROVE_CITY: page = *Save_VarsFlags_GetVarAddr(flags, VAR_SCENE_CHERRYGROVE_CITY_OW) >= 4 ? 25 : 1; break;
     case MAPSEC_VIOLET_CITY: page = PlayerProfile_TestBadgeFlag(profile, BADGE_ZEPHYR) ? 3 : 2; break;
-    case MAPSEC_AZALEA_TOWN: page = Save_VarsFlags_CheckFlagInArray(flags, FLAG_SABRINA_PARTNER_WELL) ? 5 : 4; break;
+    case MAPSEC_AZALEA_TOWN: page = Save_VarsFlags_CheckFlagInArray(flags, FLAG_BEAT_AZALEA_ROCKETS) ? 5 : 4; break;
     case MAPSEC_GOLDENROD_CITY:
     case MAPSEC_GOLDENROD_TUNNEL: page = Save_VarsFlags_CheckFlagInArray(flags, FLAG_BEAT_RADIO_TOWER_ROCKETS) ? 7 : 6; break;
     case MAPSEC_ECRUTEAK_CITY: page = *Save_VarsFlags_GetVarAddr(flags, VAR_UNK_40A1) ? 26 : 8; break;

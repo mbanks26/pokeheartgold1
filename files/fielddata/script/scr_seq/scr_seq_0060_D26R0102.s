@@ -1,4 +1,5 @@
 #include "constants/scrcmd.h"
+#include "constants/sabrina_story.h"
 #include "fielddata/script/scr_seq/event_D26R0102.h"
 #include "fielddata/script/scr_seq/event_D36R0101.h"
 #include "msgdata/msg/msg_0091_D26R0102.h"
@@ -42,10 +43,22 @@ scr_seq_D26R0102_002:
 	FacePlayer
 	NPCMsg msg_0091_D26R0102_00001
 	CloseMsg
+    GoToIfUnset FLAG_SABRINA_COMPANION_JOINED, SabrinaPartner_D26R0102_Original
+    NPCMsg msg_0091_D26R0102_00006
+    CloseMsg
+    MultiBattle TRAINER_SABRINA_PARTNER_EARLY, TRAINER_EXECUTIVE_PROTON_PROTON, TRAINER_SABRINA_WELL_GRUNT, 1
+    GoTo SabrinaPartner_D26R0102_Check
+SabrinaPartner_D26R0102_Original:
 	TrainerBattle TRAINER_EXECUTIVE_PROTON_PROTON, 0, 0, 0
+SabrinaPartner_D26R0102_Check:
 	CheckBattleWon VAR_SPECIAL_RESULT
 	Compare VAR_SPECIAL_RESULT, 0
 	GoToIfEq _0193
+    GoToIfUnset FLAG_SABRINA_COMPANION_JOINED, SabrinaPartner_D26R0102_After
+    SetFlag FLAG_SABRINA_PARTNER_WELL
+    NPCMsg msg_0091_D26R0102_00007
+    CloseMsg
+SabrinaPartner_D26R0102_After:
 	NPCMsg msg_0091_D26R0102_00002
 	CloseMsg
 	FadeScreen 6, 1, 0, RGB_BLACK

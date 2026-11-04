@@ -34656,6 +34656,237 @@
         }
       ],
       "messages": []
+    },
+    {
+      "type": "TRTYPE_MON_MOVES",
+      "class": "TRAINERCLASS_LEADER_SABRINA",
+      "name": "{TRNAME}Sabrina",
+      "items": [],
+      "ai_flags": 7,
+      "double": 0,
+      "party": [
+        {
+          "difficulty": 100,
+          "genderOverride": "TRPOKE_GENDER_OVERRIDE_OFF",
+          "abilityOverride": "TRPOKE_ABILITY_OVERRIDE_OFF",
+          "level": 16,
+          "species": "SPECIES_KADABRA",
+          "moves": [
+            "MOVE_CONFUSION",
+            "MOVE_KINESIS",
+            "MOVE_REFLECT",
+            "MOVE_PROTECT"
+          ],
+          "capsule": 0
+        }
+      ],
+      "messages": []
+    },
+    {
+      "type": "TRTYPE_MON_MOVES",
+      "class": "TRAINERCLASS_LEADER_SABRINA",
+      "name": "{TRNAME}Sabrina",
+      "items": [],
+      "ai_flags": 7,
+      "double": 0,
+      "party": [
+        {
+          "difficulty": 100,
+          "genderOverride": "TRPOKE_GENDER_OVERRIDE_OFF",
+          "abilityOverride": "TRPOKE_ABILITY_OVERRIDE_OFF",
+          "level": 32,
+          "species": "SPECIES_ALAKAZAM",
+          "moves": [
+            "MOVE_PSYCHIC",
+            "MOVE_SHADOW_BALL",
+            "MOVE_REFLECT",
+            "MOVE_RECOVER"
+          ],
+          "capsule": 0
+        },
+        {
+          "difficulty": 100,
+          "genderOverride": "TRPOKE_GENDER_OVERRIDE_OFF",
+          "abilityOverride": "TRPOKE_ABILITY_OVERRIDE_OFF",
+          "level": 30,
+          "species": "SPECIES_MR_MIME",
+          "moves": [
+            "MOVE_PSYBEAM",
+            "MOVE_REFLECT",
+            "MOVE_LIGHT_SCREEN",
+            "MOVE_ENCORE"
+          ],
+          "capsule": 0
+        }
+      ],
+      "messages": []
+    },
+    {
+      "type": "TRTYPE_MON_MOVES",
+      "class": "TRAINERCLASS_LEADER_SABRINA",
+      "name": "{TRNAME}Sabrina",
+      "items": [],
+      "ai_flags": 7,
+      "double": 0,
+      "party": [
+        {
+          "difficulty": 100,
+          "genderOverride": "TRPOKE_GENDER_OVERRIDE_OFF",
+          "abilityOverride": "TRPOKE_ABILITY_OVERRIDE_OFF",
+          "level": 50,
+          "species": "SPECIES_ALAKAZAM",
+          "moves": [
+            "MOVE_PSYCHIC",
+            "MOVE_SHADOW_BALL",
+            "MOVE_ENERGY_BALL",
+            "MOVE_RECOVER"
+          ],
+          "capsule": 0
+        },
+        {
+          "difficulty": 100,
+          "genderOverride": "TRPOKE_GENDER_OVERRIDE_OFF",
+          "abilityOverride": "TRPOKE_ABILITY_OVERRIDE_OFF",
+          "level": 48,
+          "species": "SPECIES_MR_MIME",
+          "moves": [
+            "MOVE_PSYCHIC",
+            "MOVE_REFLECT",
+            "MOVE_LIGHT_SCREEN",
+            "MOVE_ENCORE"
+          ],
+          "capsule": 0
+        }
+      ],
+      "messages": []
+    },
+    {
+      "type": "TRTYPE_MON_MOVES",
+      "class": "TRAINERCLASS_TEAM_ROCKET",
+      "name": "{TRNAME}Grunt",
+      "items": [],
+      "ai_flags": 7,
+      "double": 0,
+      "party": [
+        {
+          "difficulty": 100,
+          "genderOverride": "TRPOKE_GENDER_OVERRIDE_OFF",
+          "abilityOverride": "TRPOKE_ABILITY_OVERRIDE_OFF",
+          "level": 11,
+          "species": "SPECIES_RATTATA",
+          "moves": [
+            "MOVE_TACKLE",
+            "MOVE_TAIL_WHIP",
+            "MOVE_QUICK_ATTACK",
+            "MOVE_FOCUS_ENERGY"
+          ],
+          "capsule": 0
+        }
+      ],
+      "messages": []
+    },
+    {
+      "type": "TRTYPE_MON_MOVES",
+      "class": "TRAINERCLASS_TEAM_ROCKET",
+      "name": "{TRNAME}Grunt",
+      "items": [],
+      "ai_flags": 7,
+      "double": 0,
+      "party": [
+        {
+          "difficulty": 100,
+          "genderOverride": "TRPOKE_GENDER_OVERRIDE_OFF",
+          "abilityOverride": "TRPOKE_ABILITY_OVERRIDE_OFF",
+          "level": 27,
+          "species": "SPECIES_RATICATE",
+          "moves": [
+            "MOVE_HYPER_FANG",
+            "MOVE_PURSUIT",
+            "MOVE_QUICK_ATTACK",
+            "MOVE_SCARY_FACE"
+          ],
+          "capsule": 0
+        }
+      ],
+      "messages": []
+    },
+    {
+      "type": "TRTYPE_MON_MOVES",
+      "class": "TRAINERCLASS_PSYCHIC_M",
+      "name": "{TRNAME}Rei",
+      "items": [],
+      "ai_flags": 7,
+      "double": 0,
+      "party": [
+        {
+          "difficulty": 100,
+          "genderOverride": "TRPOKE_GENDER_OVERRIDE_OFF",
+          "abilityOverride": "TRPOKE_ABILITY_OVERRIDE_OFF",
+          "level": 45,
+          "species": "SPECIES_KADABRA",
+          "moves": [
+            "MOVE_PSYCHIC",
+            "MOVE_REFLECT",
+            "MOVE_RECOVER",
+            "MOVE_SHADOW_BALL"
+          ],
+          "capsule": 0
+        },
+        {
+          "difficulty": 100,
+          "genderOverride": "TRPOKE_GENDER_OVERRIDE_OFF",
+          "abilityOverride": "TRPOKE_ABILITY_OVERRIDE_OFF",
+          "level": 44,
+          "species": "SPECIES_SLOWBRO",
+          "moves": [
+            "MOVE_SURF",
+            "MOVE_PSYCHIC",
+            "MOVE_CALM_MIND",
+            "MOVE_PROTECT"
+          ],
+          "capsule": 0
+        }
+      ],
+      "messages": []
+    },
+    {
+      "type": "TRTYPE_MON_MOVES",
+      "class": "TRAINERCLASS_PSYCHIC_F",
+      "name": "{TRNAME}Nori",
+      "items": [],
+      "ai_flags": 7,
+      "double": 0,
+      "party": [
+        {
+          "difficulty": 100,
+          "genderOverride": "TRPOKE_GENDER_OVERRIDE_OFF",
+          "abilityOverride": "TRPOKE_ABILITY_OVERRIDE_OFF",
+          "level": 45,
+          "species": "SPECIES_GIRAFARIG",
+          "moves": [
+            "MOVE_PSYCHIC",
+            "MOVE_ASSURANCE",
+            "MOVE_AGILITY",
+            "MOVE_BATON_PASS"
+          ],
+          "capsule": 0
+        },
+        {
+          "difficulty": 100,
+          "genderOverride": "TRPOKE_GENDER_OVERRIDE_OFF",
+          "abilityOverride": "TRPOKE_ABILITY_OVERRIDE_OFF",
+          "level": 44,
+          "species": "SPECIES_MR_MIME",
+          "moves": [
+            "MOVE_PSYBEAM",
+            "MOVE_REFLECT",
+            "MOVE_LIGHT_SCREEN",
+            "MOVE_ENCORE"
+          ],
+          "capsule": 0
+        }
+      ],
+      "messages": []
     }
   ]
 }

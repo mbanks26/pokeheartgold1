@@ -30,4 +30,7 @@
 #define obj_T11_gsmiddleman1_2 8
 #define obj_T11_gsmiddleman1_3 9
 
+#define _EV_scr_seq_T11_017 17
+#define obj_story_partner_student 240
+#define obj_story_partner_student_2 241
 #endif // SCR_SEQ_T11_H_

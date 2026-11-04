@@ -1,6 +1,6 @@
 """Read actual encrypted Pokemon data from isolated emulator RAM or battery saves."""
 from pathlib import Path
-import struct,json,re,argparse
+import struct,json,re,argparse,gzip
 ROOT=Path(__file__).resolve().parents[1]
 source=(ROOT/'src/pokemon.c').read_text();table=source.split('static const u8 offsets[32][4] = {')[1].split('};')[0]
 OFFSETS=[tuple(int(x,16)for x in re.findall('0x[0-9A-Fa-f]+',row))for row in re.findall(r'\{([^}]+)\}',table)]
@@ -23,7 +23,7 @@ def inspect_ram(raw,symbols):
  return {'player_OT_ID':u(player+4+16),'party':[decode_mon(raw[party+8+i*236-0x2000000:party+8+(i+1)*236-0x2000000])for i in range(u(party+4))]}
 
 if __name__=='__main__':
- p=argparse.ArgumentParser();p.add_argument('ram',type=Path);p.add_argument('--symbols',type=Path,required=True);p.add_argument('--output',type=Path);p.add_argument('--species',type=int);a=p.parse_args();r=inspect_ram(a.ram.read_bytes(),a.symbols.read_text())
+ p=argparse.ArgumentParser();p.add_argument('ram',type=Path);p.add_argument('--symbols',type=Path,required=True);p.add_argument('--output',type=Path);p.add_argument('--species',type=int);a=p.parse_args();raw=a.ram.read_bytes();r=inspect_ram(gzip.decompress(raw) if a.ram.suffix=='.gz' else raw,a.symbols.read_text())
  if a.species is not None:
   m=r['party'][0];assert m['species']==a.species and m['level']==5 and m['genuinely_shiny'] and m['OT_ID']==r['player_OT_ID'];assert m['held_item']==0;assert m['ability']=={152:65,155:66,158:67}[a.species];assert m['moves']=={152:[33,45,0,0],155:[33,43,0,0],158:[10,43,0,0]}[a.species]
  if a.output:a.output.write_text(json.dumps(r,indent=2)+'\n')

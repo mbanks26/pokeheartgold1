@@ -1,0 +1,18 @@
+{
+  "well": {
+    "native_completion_flag": "0xb52",
+    "set": true,
+    "field_task": "0x0"
+  },
+  "tower": {
+    "native_completion_flag": "0xb53",
+    "set": true,
+    "field_task": "0x0",
+    "native_Basement_Key_quantity": 1
+  },
+  "kanto": {
+    "native_completion_flag": "0xb54",
+    "set": true,
+    "field_task": "0x0"
+  }
+}

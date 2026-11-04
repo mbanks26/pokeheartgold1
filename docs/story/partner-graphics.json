@@ -1,0 +1,19 @@
+{
+  "source": "characters/sabrina/battle-front.png",
+  "source_sha256": "5958c0eaea6b84d1f50eb70122b4502f72d12e80c04e0ca698a8c61fe6d6aeab",
+  "source_poses": [
+    0,
+    0,
+    1,
+    1,
+    2,
+    2,
+    1,
+    0
+  ],
+  "original_members_preserved": 95,
+  "appended_backpic_id": 19,
+  "NCGR_OAM_roundtrip": "PASS",
+  "new_design_drawn": false,
+  "presentation_limit": "Existing front/profile psychic poses are reused in the partner slot; no dedicated newly drawn back/throw sheet."
+}

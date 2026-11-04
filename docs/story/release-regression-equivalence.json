@@ -1,0 +1,28 @@
+{
+  "native_regression_rom_sha1": "c794f957edb5656e7298b50548afcaf4a5497c25",
+  "final_release_sha1": "4f4e203c2b52967d2739c762360ed0065b458d59",
+  "all_game_resource_files_identical": true,
+  "trainer_AI_overlay_10_identical": true,
+  "battle_engine_overlay_12_identical": true,
+  "linker_relocated_overlay_IDs": [
+    1,
+    2,
+    3,
+    4,
+    19,
+    22,
+    25,
+    27,
+    28,
+    30,
+    34,
+    114,
+    115,
+    116,
+    117,
+    118,
+    119,
+    120
+  ],
+  "only_source_adjustment_since_regression": "Azalea dialogue uses native FLAG_BEAT_AZALEA_ROCKETS instead of custom partner-win flag."
+}

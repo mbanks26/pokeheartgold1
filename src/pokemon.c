@@ -4177,6 +4177,7 @@ int TrainerClassToBackpicID(int trainerClass, BOOL isLink) {
     if (trainerClass == TRAINERCLASS_PKMN_TRAINER_ETHAN && !sSabrinaPairedBattleArt) {
         return isLink ? SABRINA_SOLO_LINK_BACKPIC : SABRINA_SOLO_BACKPIC;
     }
+    if (trainerClass == TRAINERCLASS_LEADER_SABRINA) { return SABRINA_PARTNER_BACKPIC; }
     switch (trainerClass) {
     case TRAINERCLASS_PKMN_TRAINER_ETHAN:
     case TRAINERCLASS_PKMN_TRAINER_LYRA:
