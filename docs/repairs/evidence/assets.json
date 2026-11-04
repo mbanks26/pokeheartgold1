@@ -1,0 +1,726 @@
+{
+  "ROM_sha1": "1a25bbefb79311a8ef12cc1a8dbbe029aac757a7",
+  "ROM_bytes": 134217728,
+  "filesystem_files": 384,
+  "NARC_archives_checked": 308,
+  "NARC_members_checked": 56728,
+  "custom_overworld_textures": [
+    {
+      "index": 69,
+      "frames": 32,
+      "effective_pixel_palette_and_metadata": "PASS",
+      "compiled_ROM_matches": true,
+      "native_shared_frames": [
+        [
+          "hero.1",
+          "hero.3"
+        ],
+        [
+          "hero.11",
+          "hero.9"
+        ],
+        [
+          "hero.13",
+          "hero.15"
+        ],
+        [
+          "hero.17",
+          "hero.19"
+        ],
+        [
+          "hero.21",
+          "hero.23"
+        ],
+        [
+          "hero.25",
+          "hero.27"
+        ],
+        [
+          "hero.29",
+          "hero.31"
+        ],
+        [
+          "hero.5",
+          "hero.7"
+        ]
+      ],
+      "alias_policy": "Recovered dictionary-order last write, native addresses preserved"
+    },
+    {
+      "index": 70,
+      "frames": 32,
+      "effective_pixel_palette_and_metadata": "PASS",
+      "compiled_ROM_matches": true,
+      "native_shared_frames": [
+        [
+          "heroine.1",
+          "heroine.3"
+        ],
+        [
+          "heroine.11",
+          "heroine.9"
+        ],
+        [
+          "heroine.13",
+          "heroine.15"
+        ],
+        [
+          "heroine.17",
+          "heroine.19"
+        ],
+        [
+          "heroine.21",
+          "heroine.23"
+        ],
+        [
+          "heroine.25",
+          "heroine.27"
+        ],
+        [
+          "heroine.29",
+          "heroine.31"
+        ],
+        [
+          "heroine.5",
+          "heroine.7"
+        ]
+      ],
+      "alias_policy": "Recovered dictionary-order last write, native addresses preserved"
+    },
+    {
+      "index": 71,
+      "frames": 24,
+      "effective_pixel_palette_and_metadata": "PASS",
+      "compiled_ROM_matches": true,
+      "native_shared_frames": [
+        [
+          "cyclehero.11",
+          "cyclehero.9"
+        ],
+        [
+          "cyclehero.13",
+          "cyclehero.15"
+        ]
+      ],
+      "alias_policy": "Recovered dictionary-order last write, native addresses preserved"
+    },
+    {
+      "index": 72,
+      "frames": 24,
+      "effective_pixel_palette_and_metadata": "PASS",
+      "compiled_ROM_matches": true,
+      "native_shared_frames": [
+        [
+          "cycleheroine.1",
+          "cycleheroine.3"
+        ],
+        [
+          "cycleheroine.11",
+          "cycleheroine.9"
+        ],
+        [
+          "cycleheroine.13",
+          "cycleheroine.15"
+        ],
+        [
+          "cycleheroine.5",
+          "cycleheroine.7"
+        ]
+      ],
+      "alias_policy": "Recovered dictionary-order last write, native addresses preserved"
+    },
+    {
+      "index": 73,
+      "frames": 4,
+      "effective_pixel_palette_and_metadata": "PASS",
+      "compiled_ROM_matches": true,
+      "native_shared_frames": [],
+      "alias_policy": "Recovered dictionary-order last write, native addresses preserved"
+    },
+    {
+      "index": 74,
+      "frames": 4,
+      "effective_pixel_palette_and_metadata": "PASS",
+      "compiled_ROM_matches": true,
+      "native_shared_frames": [],
+      "alias_policy": "Recovered dictionary-order last write, native addresses preserved"
+    },
+    {
+      "index": 75,
+      "frames": 4,
+      "effective_pixel_palette_and_metadata": "PASS",
+      "compiled_ROM_matches": true,
+      "native_shared_frames": [],
+      "alias_policy": "Recovered dictionary-order last write, native addresses preserved"
+    },
+    {
+      "index": 76,
+      "frames": 4,
+      "effective_pixel_palette_and_metadata": "PASS",
+      "compiled_ROM_matches": true,
+      "native_shared_frames": [],
+      "alias_policy": "Recovered dictionary-order last write, native addresses preserved"
+    },
+    {
+      "index": 77,
+      "frames": 7,
+      "effective_pixel_palette_and_metadata": "PASS",
+      "compiled_ROM_matches": true,
+      "native_shared_frames": [
+        [
+          "waterhero.1",
+          "waterhero.3",
+          "waterhero.5"
+        ]
+      ],
+      "alias_policy": "Recovered dictionary-order last write, native addresses preserved"
+    },
+    {
+      "index": 78,
+      "frames": 7,
+      "effective_pixel_palette_and_metadata": "PASS",
+      "compiled_ROM_matches": true,
+      "native_shared_frames": [
+        [
+          "waterheroine.1",
+          "waterheroine.3",
+          "waterheroine.5"
+        ]
+      ],
+      "alias_policy": "Recovered dictionary-order last write, native addresses preserved"
+    },
+    {
+      "index": 79,
+      "frames": 16,
+      "effective_pixel_palette_and_metadata": "PASS",
+      "compiled_ROM_matches": true,
+      "native_shared_frames": [],
+      "alias_policy": "Recovered dictionary-order last write, native addresses preserved"
+    },
+    {
+      "index": 80,
+      "frames": 16,
+      "effective_pixel_palette_and_metadata": "PASS",
+      "compiled_ROM_matches": true,
+      "native_shared_frames": [],
+      "alias_policy": "Recovered dictionary-order last write, native addresses preserved"
+    },
+    {
+      "index": 81,
+      "frames": 6,
+      "effective_pixel_palette_and_metadata": "PASS",
+      "compiled_ROM_matches": true,
+      "native_shared_frames": [],
+      "alias_policy": "Recovered dictionary-order last write, native addresses preserved"
+    },
+    {
+      "index": 82,
+      "frames": 6,
+      "effective_pixel_palette_and_metadata": "PASS",
+      "compiled_ROM_matches": true,
+      "native_shared_frames": [],
+      "alias_policy": "Recovered dictionary-order last write, native addresses preserved"
+    },
+    {
+      "index": 85,
+      "frames": 12,
+      "effective_pixel_palette_and_metadata": "PASS",
+      "compiled_ROM_matches": true,
+      "native_shared_frames": [],
+      "alias_policy": "Recovered dictionary-order last write, native addresses preserved"
+    },
+    {
+      "index": 86,
+      "frames": 12,
+      "effective_pixel_palette_and_metadata": "PASS",
+      "compiled_ROM_matches": true,
+      "native_shared_frames": [],
+      "alias_policy": "Recovered dictionary-order last write, native addresses preserved"
+    },
+    {
+      "index": 87,
+      "frames": 2,
+      "effective_pixel_palette_and_metadata": "PASS",
+      "compiled_ROM_matches": true,
+      "native_shared_frames": [],
+      "alias_policy": "Recovered dictionary-order last write, native addresses preserved"
+    },
+    {
+      "index": 88,
+      "frames": 2,
+      "effective_pixel_palette_and_metadata": "PASS",
+      "compiled_ROM_matches": true,
+      "native_shared_frames": [],
+      "alias_policy": "Recovered dictionary-order last write, native addresses preserved"
+    },
+    {
+      "index": 89,
+      "frames": 12,
+      "effective_pixel_palette_and_metadata": "PASS",
+      "compiled_ROM_matches": true,
+      "native_shared_frames": [
+        [
+          "banzaihero.1",
+          "banzaihero.11"
+        ],
+        [
+          "banzaihero.10",
+          "banzaihero.2"
+        ],
+        [
+          "banzaihero.12",
+          "banzaihero.6"
+        ],
+        [
+          "banzaihero.3",
+          "banzaihero.9"
+        ],
+        [
+          "banzaihero.4",
+          "banzaihero.8"
+        ],
+        [
+          "banzaihero.5",
+          "banzaihero.7"
+        ]
+      ],
+      "alias_policy": "Recovered dictionary-order last write, native addresses preserved"
+    },
+    {
+      "index": 90,
+      "frames": 12,
+      "effective_pixel_palette_and_metadata": "PASS",
+      "compiled_ROM_matches": true,
+      "native_shared_frames": [
+        [
+          "banzaiheroine.1",
+          "banzaiheroine.11"
+        ],
+        [
+          "banzaiheroine.10",
+          "banzaiheroine.2"
+        ],
+        [
+          "banzaiheroine.12",
+          "banzaiheroine.6"
+        ],
+        [
+          "banzaiheroine.3",
+          "banzaiheroine.9"
+        ],
+        [
+          "banzaiheroine.4",
+          "banzaiheroine.8"
+        ],
+        [
+          "banzaiheroine.5",
+          "banzaiheroine.7"
+        ]
+      ],
+      "alias_policy": "Recovered dictionary-order last write, native addresses preserved"
+    },
+    {
+      "index": 95,
+      "frames": 32,
+      "effective_pixel_palette_and_metadata": "PASS",
+      "compiled_ROM_matches": true,
+      "native_shared_frames": [
+        [
+          "rhero.1",
+          "rhero.3"
+        ],
+        [
+          "rhero.11",
+          "rhero.9"
+        ],
+        [
+          "rhero.13",
+          "rhero.15"
+        ],
+        [
+          "rhero.17",
+          "rhero.19"
+        ],
+        [
+          "rhero.21",
+          "rhero.23"
+        ],
+        [
+          "rhero.5",
+          "rhero.7"
+        ]
+      ],
+      "alias_policy": "Recovered dictionary-order last write, native addresses preserved"
+    },
+    {
+      "index": 96,
+      "frames": 32,
+      "effective_pixel_palette_and_metadata": "PASS",
+      "compiled_ROM_matches": true,
+      "native_shared_frames": [
+        [
+          "rheroine.11",
+          "rheroine.9"
+        ],
+        [
+          "rheroine.13",
+          "rheroine.15"
+        ],
+        [
+          "rheroine.17",
+          "rheroine.19"
+        ],
+        [
+          "rheroine.21",
+          "rheroine.23"
+        ],
+        [
+          "rheroine.25",
+          "rheroine.27"
+        ],
+        [
+          "rheroine.29",
+          "rheroine.31"
+        ],
+        [
+          "rheroine.5",
+          "rheroine.7"
+        ]
+      ],
+      "alias_policy": "Recovered dictionary-order last write, native addresses preserved"
+    },
+    {
+      "index": 97,
+      "frames": 12,
+      "effective_pixel_palette_and_metadata": "PASS",
+      "compiled_ROM_matches": true,
+      "native_shared_frames": [
+        [
+          "rbanzaihero.1",
+          "rbanzaihero.11"
+        ],
+        [
+          "rbanzaihero.10",
+          "rbanzaihero.2"
+        ],
+        [
+          "rbanzaihero.12",
+          "rbanzaihero.4",
+          "rbanzaihero.8"
+        ],
+        [
+          "rbanzaihero.3",
+          "rbanzaihero.9"
+        ],
+        [
+          "rbanzaihero.5",
+          "rbanzaihero.7"
+        ]
+      ],
+      "alias_policy": "Recovered dictionary-order last write, native addresses preserved"
+    },
+    {
+      "index": 98,
+      "frames": 12,
+      "effective_pixel_palette_and_metadata": "PASS",
+      "compiled_ROM_matches": true,
+      "native_shared_frames": [
+        [
+          "rbanzaiine.1",
+          "rbanzaiine.11"
+        ],
+        [
+          "rbanzaiine.10",
+          "rbanzaiine.2"
+        ],
+        [
+          "rbanzaiine.12",
+          "rbanzaiine.6"
+        ],
+        [
+          "rbanzaiine.3",
+          "rbanzaiine.9"
+        ],
+        [
+          "rbanzaiine.4",
+          "rbanzaiine.8"
+        ],
+        [
+          "rbanzaiine.5",
+          "rbanzaiine.7"
+        ]
+      ],
+      "alias_policy": "Recovered dictionary-order last write, native addresses preserved"
+    },
+    {
+      "index": 99,
+      "frames": 32,
+      "effective_pixel_palette_and_metadata": "PASS",
+      "compiled_ROM_matches": true,
+      "native_shared_frames": [
+        [
+          "pkthhero.1",
+          "pkthhero.17",
+          "pkthhero.19",
+          "pkthhero.3"
+        ],
+        [
+          "pkthhero.18",
+          "pkthhero.2"
+        ],
+        [
+          "pkthhero.20",
+          "pkthhero.4"
+        ],
+        [
+          "pkthhero.21",
+          "pkthhero.23"
+        ],
+        [
+          "pkthhero.5",
+          "pkthhero.7"
+        ]
+      ],
+      "alias_policy": "Recovered dictionary-order last write, native addresses preserved"
+    },
+    {
+      "index": 100,
+      "frames": 32,
+      "effective_pixel_palette_and_metadata": "PASS",
+      "compiled_ROM_matches": true,
+      "native_shared_frames": [
+        [
+          "pkthheroine.1",
+          "pkthheroine.17",
+          "pkthheroine.19",
+          "pkthheroine.3"
+        ],
+        [
+          "pkthheroine.10",
+          "pkthheroine.26"
+        ],
+        [
+          "pkthheroine.11",
+          "pkthheroine.27"
+        ],
+        [
+          "pkthheroine.12",
+          "pkthheroine.28"
+        ],
+        [
+          "pkthheroine.13",
+          "pkthheroine.29"
+        ],
+        [
+          "pkthheroine.14",
+          "pkthheroine.30"
+        ],
+        [
+          "pkthheroine.15",
+          "pkthheroine.31"
+        ],
+        [
+          "pkthheroine.16",
+          "pkthheroine.32"
+        ],
+        [
+          "pkthheroine.18",
+          "pkthheroine.2"
+        ],
+        [
+          "pkthheroine.20",
+          "pkthheroine.4"
+        ],
+        [
+          "pkthheroine.21",
+          "pkthheroine.23",
+          "pkthheroine.5",
+          "pkthheroine.7"
+        ],
+        [
+          "pkthheroine.22",
+          "pkthheroine.6"
+        ],
+        [
+          "pkthheroine.24",
+          "pkthheroine.8"
+        ],
+        [
+          "pkthheroine.25",
+          "pkthheroine.9"
+        ]
+      ],
+      "alias_policy": "Recovered dictionary-order last write, native addresses preserved"
+    },
+    {
+      "index": 163,
+      "frames": 16,
+      "effective_pixel_palette_and_metadata": "PASS",
+      "compiled_ROM_matches": true,
+      "native_shared_frames": [
+        [
+          "gsleader10.1",
+          "gsleader10.3"
+        ],
+        [
+          "gsleader10.11",
+          "gsleader10.9"
+        ],
+        [
+          "gsleader10.13",
+          "gsleader10.15"
+        ],
+        [
+          "gsleader10.5",
+          "gsleader10.7"
+        ]
+      ],
+      "alias_policy": "Recovered dictionary-order last write, native addresses preserved"
+    },
+    {
+      "index": 207,
+      "frames": 8,
+      "effective_pixel_palette_and_metadata": "PASS",
+      "compiled_ROM_matches": true,
+      "native_shared_frames": [],
+      "alias_policy": "Recovered dictionary-order last write, native addresses preserved"
+    },
+    {
+      "index": 208,
+      "frames": 8,
+      "effective_pixel_palette_and_metadata": "PASS",
+      "compiled_ROM_matches": true,
+      "native_shared_frames": [],
+      "alias_policy": "Recovered dictionary-order last write, native addresses preserved"
+    },
+    {
+      "index": 213,
+      "frames": 32,
+      "effective_pixel_palette_and_metadata": "PASS",
+      "compiled_ROM_matches": true,
+      "native_shared_frames": [
+        [
+          "hero.1",
+          "hero.3"
+        ],
+        [
+          "hero.11",
+          "hero.9"
+        ],
+        [
+          "hero.13",
+          "hero.15"
+        ],
+        [
+          "hero.17",
+          "hero.19"
+        ],
+        [
+          "hero.21",
+          "hero.23"
+        ],
+        [
+          "hero.25",
+          "hero.27"
+        ],
+        [
+          "hero.29",
+          "hero.31"
+        ],
+        [
+          "hero.5",
+          "hero.7"
+        ]
+      ],
+      "alias_policy": "Recovered dictionary-order last write, native addresses preserved"
+    },
+    {
+      "index": 214,
+      "frames": 32,
+      "effective_pixel_palette_and_metadata": "PASS",
+      "compiled_ROM_matches": true,
+      "native_shared_frames": [
+        [
+          "heroine.1",
+          "heroine.3"
+        ],
+        [
+          "heroine.11",
+          "heroine.9"
+        ],
+        [
+          "heroine.13",
+          "heroine.15"
+        ],
+        [
+          "heroine.17",
+          "heroine.19"
+        ],
+        [
+          "heroine.21",
+          "heroine.23"
+        ],
+        [
+          "heroine.25",
+          "heroine.27"
+        ],
+        [
+          "heroine.29",
+          "heroine.31"
+        ],
+        [
+          "heroine.5",
+          "heroine.7"
+        ]
+      ],
+      "alias_policy": "Recovered dictionary-order last write, native addresses preserved"
+    },
+    {
+      "index": 248,
+      "frames": 2,
+      "effective_pixel_palette_and_metadata": "PASS",
+      "compiled_ROM_matches": true,
+      "native_shared_frames": [],
+      "alias_policy": "Recovered dictionary-order last write, native addresses preserved"
+    },
+    {
+      "index": 249,
+      "frames": 2,
+      "effective_pixel_palette_and_metadata": "PASS",
+      "compiled_ROM_matches": true,
+      "native_shared_frames": [],
+      "alias_policy": "Recovered dictionary-order last write, native addresses preserved"
+    }
+  ],
+  "battle_and_card_archives": {
+    "a/0/0/6": {
+      "members": 100,
+      "sha256": "576068893767eaf62483685f9a5521d581f45a44fd23b7d1fc357bf7d0c0ca0e",
+      "compiled_ROM_matches": true
+    },
+    "a/0/4/9": {
+      "members": 78,
+      "sha256": "95d7afc746d52d978ccbb362a0b29463874f667b9c46168c2e33e4a9d6aa8c0e",
+      "compiled_ROM_matches": true
+    },
+    "a/0/5/8": {
+      "members": 645,
+      "sha256": "7b5e5d66850ae5f46701bbb15093ac235b4c8b7174dc1702b2cac157a8f6edd5",
+      "compiled_ROM_matches": true
+    }
+  },
+  "intro_custom_slots": 8,
+  "stock_Bag_3D_models": [
+    {
+      "member": 55,
+      "status": "Original 3D model; custom 2D graphics do not replace it",
+      "sha256": "d70f31585fcf91c9be4097c04a23b186b44726efbe86812a16acabd5a288f12c"
+    },
+    {
+      "member": 74,
+      "status": "Original 3D model; custom 2D graphics do not replace it",
+      "sha256": "3efee4056d4564c4386f89f2ccabac103fbd0a838da6107747712a1e2a6b73d4"
+    }
+  ],
+  "scope": "Static actual-ROM and source pixel checks; does not prove action animation alignment or gameplay"
+}

@@ -34509,7 +34509,7 @@
     {
       "type": "TRTYPE_MON",
       "class": "TRAINERCLASS_PKMN_TRAINER_LYRA",
-      "name": "{TRNAME}Sister",
+      "name": "{TRNAME}Lyra",
       "items": [],
       "ai_flags": 7,
       "double": 0,
@@ -34536,7 +34536,7 @@
     {
       "type": "TRTYPE_MON",
       "class": "TRAINERCLASS_PKMN_TRAINER_LYRA",
-      "name": "{TRNAME}Sister",
+      "name": "{TRNAME}Lyra",
       "items": [],
       "ai_flags": 7,
       "double": 0,
@@ -34563,7 +34563,7 @@
     {
       "type": "TRTYPE_MON",
       "class": "TRAINERCLASS_PKMN_TRAINER_LYRA",
-      "name": "{TRNAME}Sister",
+      "name": "{TRNAME}Lyra",
       "items": [],
       "ai_flags": 7,
       "double": 0,
@@ -34598,7 +34598,7 @@
     {
       "type": "TRTYPE_MON",
       "class": "TRAINERCLASS_PKMN_TRAINER_LYRA",
-      "name": "{TRNAME}Sister",
+      "name": "{TRNAME}Lyra",
       "items": [],
       "ai_flags": 7,
       "double": 0,
@@ -34625,7 +34625,7 @@
     {
       "type": "TRTYPE_MON",
       "class": "TRAINERCLASS_PKMN_TRAINER_LYRA",
-      "name": "{TRNAME}Sister",
+      "name": "{TRNAME}Lyra",
       "items": [],
       "ai_flags": 7,
       "double": 0,

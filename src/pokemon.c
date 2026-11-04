@@ -4167,7 +4167,7 @@ void SabrinaCompanion_PrepareBattle(SaveData *save, u32 map, u32 type, int enemy
     SabrinaCompanion_InitializeIfNeeded(save);
     sSabrinaPairedBattleArt = male && SabrinaCompanion_IsJoined(save)
         && map != MAP_SAFFRON_GYM
-        && !(type & (BATTLE_TYPE_DOUBLES | BATTLE_TYPE_MULTI | BATTLE_TYPE_LINK | BATTLE_TYPE_FRONTIER | BATTLE_TYPE_TUTORIAL))
+        && !(type & (BATTLE_TYPE_MULTI | BATTLE_TYPE_LINK | BATTLE_TYPE_FRONTIER | BATTLE_TYPE_TUTORIAL))
         && enemy1 != TRAINER_LEADER_SABRINA_SABRINA && enemy2 != TRAINER_LEADER_SABRINA_SABRINA
         && enemy1 != TRAINER_LEADER_SABRINA_SABRINA_2 && enemy2 != TRAINER_LEADER_SABRINA_SABRINA_2;
 }

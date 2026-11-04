@@ -33,6 +33,8 @@ typedef unsigned u32; typedef int s32; typedef signed char s8; typedef int BOOL;
 #define MAP_NOTHING 1
 #define MAP_SAFFRON_GYM 410
 #define MOVEMENT_RUN_UP 16
+#define MOVEMENT_STEP_UP 12
+#define AVATAR_MOVE_STATE_MOVING 1
 #define DIR_NORTH 0
 #define DIR_SOUTH 1
 #define DIR_WEST 2
@@ -55,7 +57,7 @@ typedef struct {LocalMapObject objects[12];} MapObjectManager;
 typedef struct {unsigned char bits[364];} SaveVarsFlags;
 typedef struct SaveData {SaveVarsFlags flags;int gender,partyCount;} SaveData;
 typedef SaveData PlayerProfile; typedef SaveData Party;
-typedef struct {int gender,state,x,z;LocalMapObject *object;} Avatar;
+typedef struct {int gender,state,x,z,facing;LocalMapObject *object;} Avatar;
 typedef struct {int count,ids[24];} Preload;
 typedef struct {u32 mapId;} Location;
 typedef struct FieldSystem {MapObjectManager *mapObjectManager;Avatar *playerAvatar;Preload *mapObjectsToPreload;Location *location;SaveData *saveData;} FieldSystem;
@@ -97,8 +99,12 @@ static BOOL MapObject_CheckVisible(LocalMapObject*o){return !!(o->flags&HIDDEN);
 static BOOL MapObject_CheckMovementPaused(LocalMapObject*o){return o->paused;}
 static BOOL MapObject_CheckSingleMovement(LocalMapObject*o){return o->busy;}
 static BOOL MapObject_ClearHeldMovementIfActive(LocalMapObject*o){return !o->busy;}
-static void MapObject_SetHeldMovement(LocalMapObject*o,u32 cmd){steps++;lastCommand=cmd;o->px=o->x;o->pz=o->z;o->busy=1;switch(cmd-16){case 0:o->z--;break;case 1:o->z++;break;case 2:o->x--;break;case 3:o->x++;break;}}
+static void MapObject_SetHeldMovement(LocalMapObject*o,u32 cmd){steps++;lastCommand=cmd;o->px=o->x;o->pz=o->z;o->busy=1;switch(cmd&3){case 0:o->z--;break;case 1:o->z++;break;case 2:o->x--;break;case 3:o->x++;break;}}
 static void MapObject_SetPositionFromXYZAndDirection(LocalMapObject*o,u32 x,u32 y,u32 z,u32 d){o->x=x;o->y=y;o->z=z;o->dir=d;warps++;}
+static void MapObject_UnpauseMovement(LocalMapObject*o){o->paused=0;}
+static u32 MapObject_GetMovementCommand(LocalMapObject*o){return 12;}
+static u32 PlayerAvatar_GetFacingDirection(Avatar*a){return a->facing;}
+static u32 PlayerAvatar_GetMoveState(Avatar*a){return 0;}
 static BOOL FieldSystem_TaskIsRunning(FieldSystem*f){return task;}
 static BOOL FollowMon_IsActive(FieldSystem*f){return monActive;}
 static LocalMapObject *FollowMon_GetMapObject(FieldSystem*f){return &f->mapObjectManager->objects[1];}
@@ -121,7 +127,7 @@ static void fresh(void){
  memset(&manager,0,sizeof(manager));memset(&save,0,sizeof(save));memset(&avatar,0,sizeof(avatar));memset(&preload,0,sizeof(preload));
  manager.objects[0]=(LocalMapObject){.x=10,.z=11,.id=255,.flags=1};
  manager.objects[1]=(LocalMapObject){.x=10,.z=10,.px=10,.pz=9,.id=253,.flags=1};
- avatar.object=&manager.objects[0];preload.count=1;preload.ids[0]=369;location.mapId=59;
+ avatar.facing=255;avatar.object=&manager.objects[0];preload.count=1;preload.ids[0]=369;location.mapId=59;
  fs=(FieldSystem){&manager,&avatar,&preload,&location,&save};save.partyCount=1;
  monActive=1;task=createFail=terrainBlocked=heightDelta=nativeBlocked=steps=warps=creates=deletes=0;
  SabrinaCompanion_Reset();
@@ -136,17 +142,18 @@ int main(void){
  CHECK(!(a->flags&HIDDEN));CHECK(a->flags&(1<<18));CHECK(a->flags&(1<<19));CHECK(!SabrinaCompanion_IsSolid(a));CHECK(creates==1);
  FieldSystem_SyncMapObjectsToSaveEx(&fs,&manager,saved,12);CHECK(saved[0].objId==255&&saved[1].objId==253&&saved[2].objId==0);
  tick(5);CHECK(creates==1&&steps==0);CHECK(!a->keep);
- moveMon(10,10,10,11);tick(1);CHECK(lastCommand==17&&steps==1);
+ moveMon(10,10,10,11);tick(1);CHECK(lastCommand==13&&steps==1);
  moveMon(11,10,11,11);tick(1);CHECK(steps==1&&sSabrinaCompanion.trail.count==1);
- a->busy=0;tick(1);CHECK(lastCommand==19&&steps==2);a->busy=0;tick(3);CHECK(steps==2);
- a->busy=0;moveMon(11,9,11,8);manager.objects[0].x=20;manager.objects[0].z=20;tick(1);CHECK(lastCommand==16&&steps==3);
- a->busy=0;moveMon(10,9,9,9);manager.objects[0].x=20;manager.objects[0].z=20;tick(1);CHECK(lastCommand==18&&steps==4);a->busy=0;
+ a->busy=0;tick(1);CHECK(lastCommand==15&&steps==2);a->busy=0;tick(3);CHECK(steps==2);
+ a->busy=0;moveMon(11,9,11,8);manager.objects[0].x=20;manager.objects[0].z=20;tick(1);CHECK(lastCommand==12&&steps==3);
+ a->busy=0;moveMon(10,9,9,9);manager.objects[0].x=20;manager.objects[0].z=20;tick(1);CHECK(lastCommand==14&&steps==4);a->busy=0;
  /* A real reverse-turn collision must discard the human rather than block. */
  manager.objects[0].x=a->x;manager.objects[0].z=a->z;tick(1);CHECK(!companion());
  /* Native idle completion resets previous coordinates onto the occupied tile. */
  fresh();tick(1);a=companion();manager.objects[1].px=manager.objects[1].x;manager.objects[1].pz=manager.objects[1].z;
  tick(180);CHECK(companion()==a&&creates==1&&deletes==0&&steps==0);CHECK(a->dir==DIR_SOUTH);
  fresh();manager.objects[1].px=manager.objects[1].x;manager.objects[1].pz=manager.objects[1].z;tick(20);CHECK(!companion()&&SabrinaCompanion_IsJoined(&save));
+ fresh();tick(1);a=companion();SabrinaCompanion_BeginConversation(&fs);task=1;tick(60);CHECK(companion()==a&&creates==1&&deletes==0);task=0;tick(1);CHECK(companion()==a);
  fresh();tick(1);task=1;tick(1);CHECK(!companion()&&SabrinaCompanion_IsJoined(&save));task=0;tick(10);CHECK(companion()!=NULL);
  fresh();tick(1);manager.objects[1].paused=1;tick(1);CHECK(!companion());manager.objects[1].paused=0;tick(10);CHECK(companion()!=NULL);
  fresh();tick(1);avatar.state=1;tick(1);CHECK(!companion());avatar.state=0;tick(10);CHECK(companion()!=NULL);
@@ -157,7 +164,7 @@ int main(void){
  fresh();manager.objects[1].px=-1;tick(1);CHECK(!companion());
  fresh();moveMon(10,10,10,10);tick(1);CHECK(!companion());
  fresh();tick(1);a=companion();nativeBlocked=1;moveMon(10,10,10,11);tick(3);CHECK(companion()==a&&steps==0&&deletes==0);
- nativeBlocked=0;tick(1);CHECK(companion()==a&&steps==1&&lastCommand==17&&deletes==0);
+ nativeBlocked=0;tick(1);CHECK(companion()==a&&steps==1&&lastCommand==13&&deletes==0);
  fresh();tick(1);nativeBlocked=1;moveMon(10,10,10,11);tick(121);CHECK(!companion()&&steps==0);
  fresh();tick(1);moveMon(11,11,12,11);tick(1);CHECK(!companion()&&steps==0);tick(10);CHECK(companion()!=NULL);
  fresh();tick(1);a=companion();moveMon(10,10,10,11);tick(1);CHECK(a->busy);tick(121);CHECK(!companion());
@@ -175,7 +182,8 @@ int main(void){
  SabrinaCompanion_PrepareBattle(&save,410,1,258,0,1);CHECK(!sSabrinaPairedBattleArt&&SabrinaCompanion_IsJoined(&save));
  SabrinaCompanion_PrepareBattle(&save,398,1,725,0,1);CHECK(!sSabrinaPairedBattleArt);
  SabrinaCompanion_PrepareBattle(&save,59,1,0,725,1);CHECK(!sSabrinaPairedBattleArt);
- for(i=1;i<=1024;i*=2){if(i&(2|4|8|128|1024)){SabrinaCompanion_PrepareBattle(&save,59,i,0,0,1);CHECK(!sSabrinaPairedBattleArt);}}
+ SabrinaCompanion_PrepareBattle(&save,59,3,0,0,1);CHECK(sSabrinaPairedBattleArt);
+ for(i=1;i<=1024;i*=2){if(i&(4|8|128|1024)){SabrinaCompanion_PrepareBattle(&save,59,i,0,0,1);CHECK(!sSabrinaPairedBattleArt);}}
  SabrinaCompanion_SetJoined(&save,0);SabrinaCompanion_PrepareBattle(&save,59,0,0,0,1);CHECK(!sSabrinaPairedBattleArt);
  SabrinaCompanion_SetJoined(&save,1);SabrinaCompanion_PrepareBattle(&save,59,0,0,0,0);CHECK(!sSabrinaPairedBattleArt);
  SabrinaCompanion_PrepareBattle(&save,59,0,0,0,1);SabrinaCompanion_ClearBattlePresentation();CHECK(!sSabrinaPairedBattleArt);

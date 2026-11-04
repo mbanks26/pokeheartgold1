@@ -257,6 +257,7 @@ int FieldInput_Process(FieldInput *fieldInput, FieldSystem *fieldSystem) {
     if (fieldInput->interact) {
         LocalMapObject *mapObject;
         if (sub_0203DC64(fieldSystem, &mapObject) == TRUE) {
+            if (SabrinaStory_TryAConversation(fieldSystem, mapObject, TRUE)) { return 1; }
             if (sub_0205CF60(fieldSystem->playerAvatar) == TRUE) {
                 sub_0205CFBC(fieldSystem->playerAvatar, PlayerAvatar_GetFacingDirection(fieldSystem->playerAvatar));
             }
@@ -288,6 +289,8 @@ int FieldInput_Process(FieldInput *fieldInput, FieldSystem *fieldSystem) {
             return 1;
         }
     }
+
+    if (fieldInput->interact && SabrinaStory_TryAConversation(fieldSystem, NULL, FALSE)) { return 1; }
 
     if (fieldInput->mapTransition && FieldSystem_CheckMapTransition(fieldSystem, fieldInput) == TRUE) {
         FieldSystem_TrySetMapConnection(fieldSystem);

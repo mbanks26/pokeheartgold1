@@ -1,0 +1,131 @@
+{
+  "source_sha256": "7fcc4cf28c011d8de3cc6f71def60655b8c0ce45391d1f02f38ec6cd88d23481",
+  "fixed_crop": [
+    18,
+    96,
+    393,
+    433
+  ],
+  "fixed_scale": 0.208,
+  "fixed_size": [
+    78,
+    70
+  ],
+  "palette": [
+    [
+      0,
+      0,
+      0
+    ],
+    [
+      8,
+      8,
+      8
+    ],
+    [
+      25,
+      25,
+      25
+    ],
+    [
+      58,
+      49,
+      49
+    ],
+    [
+      90,
+      82,
+      82
+    ],
+    [
+      247,
+      247,
+      239
+    ],
+    [
+      140,
+      90,
+      58
+    ],
+    [
+      181,
+      123,
+      82
+    ],
+    [
+      90,
+      58,
+      33
+    ],
+    [
+      189,
+      66,
+      66
+    ],
+    [
+      99,
+      33,
+      58
+    ],
+    [
+      25,
+      49,
+      49
+    ],
+    [
+      58,
+      82,
+      74
+    ],
+    [
+      156,
+      58,
+      90
+    ],
+    [
+      222,
+      189,
+      165
+    ],
+    [
+      222,
+      173,
+      74
+    ]
+  ],
+  "reserved_skin_indices": [
+    6,
+    7,
+    8
+  ],
+  "frames": 8,
+  "conversion": [
+    {
+      "archive": "files/a/0/0/6",
+      "class": 0,
+      "frames": 8,
+      "changed_members": [
+        0,
+        1,
+        4
+      ],
+      "NCER_NANR_preserved": true,
+      "NCGR_roundtrip": true,
+      "portrait_encryption_roundtrip": true
+    },
+    {
+      "archive": "files/a/0/0/6",
+      "class": 15,
+      "frames": 8,
+      "changed_members": [
+        75,
+        76,
+        79
+      ],
+      "NCER_NANR_preserved": true,
+      "NCGR_roundtrip": true,
+      "portrait_encryption_roundtrip": true
+    }
+  ],
+  "scope": "Conversion checks, not proof of rendered visual quality"
+}

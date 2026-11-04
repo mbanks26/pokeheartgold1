@@ -12,6 +12,7 @@
 // are for use in event scripts.
 
 #define std_sabrina_conversation 2072
+#define std_sabrina_companion_menu 2073
 
 #define _std_misc                      2000
 #define std_signpost                   2000

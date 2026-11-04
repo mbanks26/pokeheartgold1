@@ -8,6 +8,7 @@
 #include "constants/sprites.h"
 #include "constants/global_fieldmap.h"
 #include "constants/maps.h"
+#include "constants/player_avatar.h"
 
 extern u32 sub_02060BB8(LocalMapObject *object, u32 direction);
 static struct {
@@ -18,10 +19,12 @@ static struct {
     int stepFrames;
     int blockedFrames;
     int cooldown;
+    int conversation;
 } sSabrinaCompanion;
 
 static void SabrinaCompanion_Reset(void) {
     sSabrinaCompanion.owner = NULL;
+    sSabrinaCompanion.conversation = 0;
     sSabrinaCompanion.manager = NULL;
     SabrinaTrail_Reset(&sSabrinaCompanion.trail);
     sSabrinaCompanion.stepFrames = sSabrinaCompanion.blockedFrames = sSabrinaCompanion.cooldown = 0;
@@ -35,10 +38,14 @@ static void SabrinaCompanion_RemoveObjects(FieldSystem *fs) {
     }
 }
 static void SabrinaCompanion_Drop(FieldSystem *fs) {
+    sSabrinaCompanion.conversation = 0;
     SabrinaCompanion_RemoveObjects(fs);
     SabrinaTrail_Reset(&sSabrinaCompanion.trail);
     sSabrinaCompanion.stepFrames = sSabrinaCompanion.blockedFrames = 0;
     sSabrinaCompanion.cooldown = 8;
+}
+void SabrinaCompanion_BeginConversation(FieldSystem *fs) {
+    if (sSabrinaCompanion.owner == fs) { sSabrinaCompanion.conversation = 8; }
 }
 static void SabrinaCompanion_OnMapExit(FieldSystem *fs) {
     SabrinaCompanion_RemoveObjects(fs);
@@ -107,8 +114,31 @@ static void SabrinaCompanion_Tick(FieldSystem *fs) {
         || !FollowMon_IsActive(fs) || !FollowMon_IsVisible(fs) || !SabrinaCompanion_HasTexture(fs)
         || PlayerAvatar_GetState(fs->playerAvatar) != PLAYER_STATE_WALKING
         || fs->location->mapId == MAP_SAFFRON_GYM || SabrinaCompanion_HasCanonicalNPC(fs)
-        || FieldSystem_TaskIsRunning(fs)) {
+        || (FieldSystem_TaskIsRunning(fs) && !sSabrinaCompanion.conversation)) {
         SabrinaCompanion_Drop(fs); return;
+    }
+    if (sSabrinaCompanion.conversation) {
+        sabrina = MapObjectManager_GetFirstActiveObjectByID(fs->mapObjectManager, SABRINA_COMPANION_OBJECT_ID);
+        if (FieldSystem_TaskIsRunning(fs)) {
+            sSabrinaCompanion.conversation = -1;
+        } else if (sSabrinaCompanion.conversation < 0 || --sSabrinaCompanion.conversation == 0) {
+            sSabrinaCompanion.conversation = 0;
+        }
+        if (sabrina != NULL && sSabrinaCompanion.conversation) {
+            if (!MapObject_ClearHeldMovementIfActive(sabrina)) {
+                MapObject_UnpauseMovement(sabrina); /* Finish the current tile, then hold position. */
+            } else {
+                LocalMapObject *player = PlayerAvatar_GetMapObject(fs->playerAvatar);
+                dx = (int)MapObject_GetXCoord(player) - (int)MapObject_GetXCoord(sabrina);
+                dz = (int)MapObject_GetZCoord(player) - (int)MapObject_GetZCoord(sabrina);
+                if (dx || dz) {
+                    direction = SabrinaTrail_Abs(dx) > SabrinaTrail_Abs(dz)
+                        ? (dx > 0 ? DIR_EAST : DIR_WEST) : (dz > 0 ? DIR_SOUTH : DIR_NORTH);
+                    MapObject_SetOrQueueFacing(sabrina, direction);
+                }
+            }
+            return; /* Conversation freezes the existing human; never delete/recreate it. */
+        }
     }
     mon = FollowMon_GetMapObject(fs);
     if (mon == NULL || MapObject_CheckMovementPaused(mon)) { SabrinaCompanion_Drop(fs); return; }
@@ -162,6 +192,19 @@ static void SabrinaCompanion_Tick(FieldSystem *fs) {
         return;
     }
     sSabrinaCompanion.stepFrames = 0;
+    {
+        LocalMapObject *player = PlayerAvatar_GetMapObject(fs->playerAvatar);
+        int facing = PlayerAvatar_GetFacingDirection(fs->playerAvatar);
+        dx = here.x - (int)MapObject_GetXCoord(player);
+        dz = here.z - (int)MapObject_GetZCoord(player);
+        if ((dx == 0 && dz < 0 && dz >= -2 && facing == DIR_NORTH)
+            || (dx == 0 && dz > 0 && dz <= 2 && facing == DIR_SOUTH)
+            || (dz == 0 && dx < 0 && dx >= -2 && facing == DIR_WEST)
+            || (dz == 0 && dx > 0 && dx <= 2 && facing == DIR_EAST)) {
+            MapObject_SetOrQueueFacing(sabrina, facing ^ 1);
+            return; /* Stop evading a player approaching her to speak with A. */
+        }
+    }
     next = SabrinaTrail_First(&sSabrinaCompanion.trail);
     while (next != NULL && SabrinaTrail_Same(*next, here)) {
         SabrinaTrail_Pop(&sSabrinaCompanion.trail);
@@ -180,6 +223,13 @@ static void SabrinaCompanion_Tick(FieldSystem *fs) {
         return;
     }
     dx = next->x - here.x; dz = next->z - here.z;
+    {
+        LocalMapObject *player = PlayerAvatar_GetMapObject(fs->playerAvatar);
+        if ((MapObject_GetXCoord(player) == next->x && MapObject_GetZCoord(player) == next->z)
+            || (MapObject_GetXCoord(mon) == next->x && MapObject_GetZCoord(mon) == next->z)) {
+            return; /* Wait for a companion to vacate the trail; never walk through or blink out. */
+        }
+    }
     if (SabrinaTrail_Abs(dx) + SabrinaTrail_Abs(dz) != 1 || SabrinaTrail_Abs(next->y - here.y) > 1
         || !SabrinaCompanion_SafeTile(fs, sabrina, *next)) {
         SabrinaCompanion_Drop(fs); return;
@@ -192,6 +242,10 @@ static void SabrinaCompanion_Tick(FieldSystem *fs) {
         return;
     }
     sSabrinaCompanion.blockedFrames = 0;
-    MapObject_SetHeldMovement(sabrina, MOVEMENT_RUN_UP + direction);
+    {
+        u32 playerMovement = MapObject_GetMovementCommand(PlayerAvatar_GetMapObject(fs->playerAvatar));
+        BOOL running = playerMovement >= MOVEMENT_RUN_UP && playerMovement < MOVEMENT_RUN_UP + 8;
+        MapObject_SetHeldMovement(sabrina, (running || sSabrinaCompanion.trail.count > 2 ? MOVEMENT_RUN_UP : MOVEMENT_STEP_UP) + direction);
+    }
     SabrinaTrail_Pop(&sSabrinaCompanion.trail);
 }

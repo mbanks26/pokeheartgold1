@@ -39,6 +39,32 @@ static BOOL SabrinaStory_TryConversation(FieldSystem *fs, FieldInput *input) {
         return FALSE;
     }
     *Save_VarsFlags_GetVarAddr(Save_VarsFlags_Get(fs->saveData), VAR_STORY_DIALOGUE_TEXT) = SabrinaStory_Dialogue(fs);
+    SabrinaCompanion_BeginConversation(fs);
     StartMapSceneScript(fs, std_sabrina_conversation, NULL);
+    return TRUE;
+}
+
+/* Normal NPCs/objects retain priority. Only the formation's own objects qualify. */
+static BOOL SabrinaStory_TryAConversation(FieldSystem *fs, LocalMapObject *target, BOOL menu) {
+    LocalMapObject *human = MapObjectManager_GetFirstActiveObjectByID(fs->mapObjectManager, SABRINA_COMPANION_OBJECT_ID);
+    LocalMapObject *player = PlayerAvatar_GetMapObject(fs->playerAvatar);
+    int dx, dz, facing;
+    if (!SabrinaCompanion_IsJoined(fs->saveData) || human == NULL || SabrinaCompanion_IsSolid(human)
+        || PlayerAvatar_GetState(fs->playerAvatar) != PLAYER_STATE_WALKING) { return FALSE; }
+    if (menu) {
+        if (target != FollowMon_GetMapObject(fs)) { return FALSE; }
+    } else {
+        dx = (int)MapObject_GetXCoord(human) - (int)MapObject_GetXCoord(player);
+        dz = (int)MapObject_GetZCoord(human) - (int)MapObject_GetZCoord(player);
+        facing = PlayerAvatar_GetFacingDirection(fs->playerAvatar);
+        if (MapObject_GetYCoord(human) != MapObject_GetYCoord(player)
+            || !((dx == 0 && dz == -1 && facing == DIR_NORTH)
+                || (dx == 0 && dz == 1 && facing == DIR_SOUTH)
+                || (dx == -1 && dz == 0 && facing == DIR_WEST)
+                || (dx == 1 && dz == 0 && facing == DIR_EAST))) { return FALSE; }
+    }
+    *Save_VarsFlags_GetVarAddr(Save_VarsFlags_Get(fs->saveData), VAR_STORY_DIALOGUE_TEXT) = SabrinaStory_Dialogue(fs);
+    SabrinaCompanion_BeginConversation(fs);
+    StartMapSceneScript(fs, menu ? std_sabrina_companion_menu : std_sabrina_conversation, menu ? target : NULL);
     return TRUE;
 }

@@ -1,0 +1,429 @@
+{
+  "pass": true,
+  "scope": "Native Right approach past the Pokemon from a prior RC1 battery; direct A opens shared Sabrina dialogue without chooser; no runtime writes",
+  "checkpoints": [
+    {
+      "field_system": "0x22a04a0",
+      "battle_paired": 0,
+      "map": 67,
+      "task": "0x0",
+      "avatar_state": 0,
+      "gender": 0,
+      "objects": [
+        {
+          "slot": 0,
+          "address": "0x22a2238",
+          "id": 255,
+          "sprite": 0,
+          "script": 0,
+          "xyz": [
+            558,
+            2,
+            404
+          ],
+          "previous": [
+            558,
+            2,
+            404
+          ],
+          "direction": 3,
+          "flags": "0x2000e411"
+        },
+        {
+          "slot": 1,
+          "address": "0x22a2364",
+          "id": 253,
+          "sprite": 581,
+          "script": 9700,
+          "xyz": [
+            557,
+            2,
+            404
+          ],
+          "previous": [
+            557,
+            2,
+            404
+          ],
+          "direction": 2,
+          "flags": "0x2004e401"
+        },
+        {
+          "slot": 2,
+          "address": "0x22a2490",
+          "id": 1,
+          "sprite": 146,
+          "script": 8,
+          "xyz": [
+            554,
+            2,
+            399
+          ],
+          "previous": [
+            554,
+            2,
+            399
+          ],
+          "direction": 3,
+          "flags": "0xc001"
+        },
+        {
+          "slot": 3,
+          "address": "0x22a25bc",
+          "id": 2,
+          "sprite": 325,
+          "script": 9,
+          "xyz": [
+            561,
+            2,
+            407
+          ],
+          "previous": [
+            561,
+            2,
+            407
+          ],
+          "direction": 2,
+          "flags": "0xc001"
+        },
+        {
+          "slot": 4,
+          "address": "0x22a26e8",
+          "id": 3,
+          "sprite": 332,
+          "script": 5,
+          "xyz": [
+            530,
+            2,
+            406
+          ],
+          "previous": [
+            530,
+            2,
+            406
+          ],
+          "direction": 3,
+          "flags": "0x4104021"
+        },
+        {
+          "slot": 5,
+          "address": "0x22a2814",
+          "id": 252,
+          "sprite": 369,
+          "script": 65535,
+          "xyz": [
+            559,
+            2,
+            404
+          ],
+          "previous": [
+            559,
+            2,
+            404
+          ],
+          "direction": 2,
+          "flags": "0x200ce021"
+        }
+      ],
+      "joined": true,
+      "initialized": true,
+      "save_address": "0x227c4b8",
+      "flag_address": "0x227d58c",
+      "party_address": "0x227c558",
+      "party_header": "0600000001000000",
+      "controller": [
+        36308128,
+        36315372,
+        67,
+        1,
+        1,
+        1,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "field_system": "0x22a04a0",
+      "battle_paired": 0,
+      "map": 67,
+      "task": "0x22c0438",
+      "avatar_state": 0,
+      "gender": 0,
+      "objects": [
+        {
+          "slot": 0,
+          "address": "0x22a2238",
+          "id": 255,
+          "sprite": 0,
+          "script": 0,
+          "xyz": [
+            558,
+            2,
+            404
+          ],
+          "previous": [
+            558,
+            2,
+            404
+          ],
+          "direction": 3,
+          "flags": "0x2000e471"
+        },
+        {
+          "slot": 1,
+          "address": "0x22a2364",
+          "id": 253,
+          "sprite": 581,
+          "script": 9700,
+          "xyz": [
+            557,
+            2,
+            404
+          ],
+          "previous": [
+            557,
+            2,
+            404
+          ],
+          "direction": 2,
+          "flags": "0x2004e441"
+        },
+        {
+          "slot": 2,
+          "address": "0x22a2490",
+          "id": 1,
+          "sprite": 146,
+          "script": 8,
+          "xyz": [
+            554,
+            2,
+            399
+          ],
+          "previous": [
+            554,
+            2,
+            399
+          ],
+          "direction": 3,
+          "flags": "0xc041"
+        },
+        {
+          "slot": 3,
+          "address": "0x22a25bc",
+          "id": 2,
+          "sprite": 325,
+          "script": 9,
+          "xyz": [
+            561,
+            2,
+            407
+          ],
+          "previous": [
+            561,
+            2,
+            407
+          ],
+          "direction": 2,
+          "flags": "0xc041"
+        },
+        {
+          "slot": 4,
+          "address": "0x22a26e8",
+          "id": 3,
+          "sprite": 332,
+          "script": 5,
+          "xyz": [
+            530,
+            2,
+            406
+          ],
+          "previous": [
+            530,
+            2,
+            406
+          ],
+          "direction": 3,
+          "flags": "0x4104061"
+        },
+        {
+          "slot": 5,
+          "address": "0x22a2814",
+          "id": 252,
+          "sprite": 369,
+          "script": 65535,
+          "xyz": [
+            559,
+            2,
+            404
+          ],
+          "previous": [
+            559,
+            2,
+            404
+          ],
+          "direction": 2,
+          "flags": "0x200ce061"
+        }
+      ],
+      "joined": true,
+      "initialized": true,
+      "save_address": "0x227c4b8",
+      "flag_address": "0x227d58c",
+      "party_address": "0x227c558",
+      "party_header": "0600000001000000",
+      "controller": [
+        36308128,
+        36315372,
+        67,
+        1,
+        1,
+        1,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "field_system": "0x22a04a0",
+      "battle_paired": 0,
+      "map": 67,
+      "task": "0x0",
+      "avatar_state": 0,
+      "gender": 0,
+      "objects": [
+        {
+          "slot": 0,
+          "address": "0x22a2238",
+          "id": 255,
+          "sprite": 0,
+          "script": 0,
+          "xyz": [
+            558,
+            2,
+            404
+          ],
+          "previous": [
+            558,
+            2,
+            404
+          ],
+          "direction": 3,
+          "flags": "0x2000e431"
+        },
+        {
+          "slot": 1,
+          "address": "0x22a2364",
+          "id": 253,
+          "sprite": 581,
+          "script": 9700,
+          "xyz": [
+            557,
+            2,
+            404
+          ],
+          "previous": [
+            557,
+            2,
+            404
+          ],
+          "direction": 2,
+          "flags": "0x2004e401"
+        },
+        {
+          "slot": 2,
+          "address": "0x22a2490",
+          "id": 1,
+          "sprite": 146,
+          "script": 8,
+          "xyz": [
+            554,
+            2,
+            399
+          ],
+          "previous": [
+            554,
+            2,
+            399
+          ],
+          "direction": 3,
+          "flags": "0xc001"
+        },
+        {
+          "slot": 3,
+          "address": "0x22a25bc",
+          "id": 2,
+          "sprite": 325,
+          "script": 9,
+          "xyz": [
+            561,
+            2,
+            407
+          ],
+          "previous": [
+            562,
+            2,
+            407
+          ],
+          "direction": 2,
+          "flags": "0xc003"
+        },
+        {
+          "slot": 4,
+          "address": "0x22a26e8",
+          "id": 3,
+          "sprite": 332,
+          "script": 5,
+          "xyz": [
+            530,
+            2,
+            406
+          ],
+          "previous": [
+            530,
+            2,
+            406
+          ],
+          "direction": 3,
+          "flags": "0x4104021"
+        },
+        {
+          "slot": 5,
+          "address": "0x22a2814",
+          "id": 252,
+          "sprite": 369,
+          "script": 65535,
+          "xyz": [
+            559,
+            2,
+            404
+          ],
+          "previous": [
+            559,
+            2,
+            404
+          ],
+          "direction": 2,
+          "flags": "0x200ce021"
+        }
+      ],
+      "joined": true,
+      "initialized": true,
+      "save_address": "0x227c4b8",
+      "flag_address": "0x227d58c",
+      "party_address": "0x227c558",
+      "party_header": "0600000001000000",
+      "controller": [
+        36308128,
+        36315372,
+        67,
+        1,
+        1,
+        1,
+        0,
+        0,
+        0
+      ]
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "format": "BPS",
+  "independent_decoder": "Rom Patcher JS BPS v20240821",
+  "base_region": "NTR-IPKE-USA",
+  "base_revision": 0,
+  "base": {
+    "bytes": 134217728,
+    "sha1": "4fcded0e2713dc03929845de631d0932ea2b5a37",
+    "sha256": "65f02a56842b75aa92d775d56d657a56fe3fa993550b04dc20704ab82d760105"
+  },
+  "target": {
+    "bytes": 134217728,
+    "sha1": "1a25bbefb79311a8ef12cc1a8dbbe029aac757a7",
+    "sha256": "a32a6b09a3895996f37bf05d1acbd2a7bf3712e56f46af43a017dfa6b44f72db"
+  },
+  "patch": {
+    "bytes": 3956510,
+    "sha1": "e14d90cc0ff20d9e9b87146fbf987bbcff23397c",
+    "sha256": "c9594b9a6de0eb88ba212e9aa655d30460c5ad7e127c4055c5674fee21d8e7fb"
+  },
+  "source_crc32": "c180a0e9",
+  "target_crc32": "bb76eaab",
+  "patch_crc32": "c6afb209",
+  "metadata": "HeartGold Manic repairs RC2; development/manic-repairs-20261104; US IPKE revision 0; known throwing-pose overlap remains",
+  "independent_byte_identical": true,
+  "wrong_base_rejected": true,
+  "corrupt_patch_rejected": true
+}

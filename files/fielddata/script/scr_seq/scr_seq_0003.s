@@ -79,6 +79,7 @@
 	ScrDef scr_seq_0003_070
 	ScrDef scr_seq_0003_071
 	ScrDef scr_seq_0003_072
+	ScrDef scr_seq_0003_073
 	ScrDefEnd
 
 scr_seq_0003_002:
@@ -1757,6 +1758,37 @@ scr_seq_0003_064:
 scr_seq_0003_072:
     PlaySE SEQ_SE_DP_SELECT
     LockAll
+    NonNPCMsgVar VAR_STORY_DIALOGUE_TEXT
+    WaitButton
+    CloseMsg
+    ReleaseAll
+    End
+
+	.balign 4, 0
+scr_seq_0003_073:
+    PlaySE SEQ_SE_DP_SELECT
+    LockAll
+    NonNPCMsg msg_0040_00145
+    TouchscreenMenuHide
+    MenuInit 1, 1, 0, 1, VAR_SPECIAL_RESULT
+    MenuItemAdd msg_0040_00146, 255, 0
+    MenuItemAdd msg_0040_00147, 255, 1
+    MenuItemAdd msg_0040_00148, 255, 2
+    MenuExec
+    TouchscreenMenuShow
+    CloseMsg
+    Compare VAR_SPECIAL_RESULT, 0
+    GoToIfEq SabrinaMenu_Pokemon
+    Compare VAR_SPECIAL_RESULT, 1
+    GoToIfEq SabrinaMenu_Human
+    ReleaseAll
+    End
+SabrinaMenu_Pokemon:
+    FollowMonFacePlayer
+    FollowMonInteract
+    ReleaseAll
+    End
+SabrinaMenu_Human:
     NonNPCMsgVar VAR_STORY_DIALOGUE_TEXT
     WaitButton
     CloseMsg

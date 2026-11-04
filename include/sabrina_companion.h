@@ -11,6 +11,8 @@
 #define SABRINA_SOLO_BACKPIC 17
 #define SABRINA_SOLO_LINK_BACKPIC 18
 
+void SabrinaCompanion_BeginConversation(FieldSystem *fs);
+
 BOOL SabrinaCompanion_IsJoined(SaveData *save);
 void SabrinaCompanion_SetJoined(SaveData *save, BOOL joined);
 void SabrinaCompanion_InitializeIfNeeded(SaveData *save);

@@ -871,6 +871,22 @@
     {
       "id": "msg_0040_00144",
       "en_US": "Sabrina: The lake feels calmer.\nI can hear myself think again."
+    },
+    {
+      "id": "msg_0040_00145",
+      "en_US": "Who would you like to talk to?"
+    },
+    {
+      "id": "msg_0040_00146",
+      "en_US": "Pokémon"
+    },
+    {
+      "id": "msg_0040_00147",
+      "en_US": "Sabrina"
+    },
+    {
+      "id": "msg_0040_00148",
+      "en_US": "Cancel"
     }
   ]
 }
