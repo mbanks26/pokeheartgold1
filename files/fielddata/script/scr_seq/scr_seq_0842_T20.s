@@ -1851,6 +1851,8 @@ scr_seq_T20_015:
 
 /* Story setup is idempotent; old starter saves skip the new introduction. */
 SabrinaStory_MapSetup:
+    Compare VAR_SABRINA_STORY_INTRO, 0
+    GoToIfNe SabrinaStory_AlreadyTraveling
     GetPlayerGender VAR_SPECIAL_RESULT
     Compare VAR_SPECIAL_RESULT, 0
     GoToIfNe SabrinaStory_AlreadyTraveling

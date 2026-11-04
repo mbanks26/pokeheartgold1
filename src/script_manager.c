@@ -411,8 +411,16 @@ void ClearDailyFlags(FieldSystem *fieldSystem) {
     u8 *flags;
 
     SaveVarsFlags *state = Save_VarsFlags_Get(fieldSystem->saveData);
+    /* Existing companion saves use the otherwise unused B50-B5F tail.
+     * Preserve our story bits across RTC rollover without changing saves.
+     * Native daily events and the unused B58-B5C bits still reset. */
+    u8 *story = Save_VarsFlags_GetFlagAddr(state, FLAG_SABRINA_STORY_INTRO_DONE);
+    u8 storyProgress = story[0];
+    u8 companionStatus = story[1] & 0xE0;
     flags = Save_VarsFlags_GetFlagAddr(state, DAILY_FLAG_BASE);
     memset(flags, 0, NUM_DAILY_FLAGS / 8);
+    story[0] = storyProgress;
+    story[1] = companionStatus;
 }
 
 void FieldMove_SetArgs(FieldSystem *fieldSystem, u16 v8000, u16 v8001, u16 v8002, u16 v8003) {
