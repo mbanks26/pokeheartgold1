@@ -1,0 +1,38 @@
+[
+  {
+    "suite": "sabrina_stabilization",
+    "exit_code": 0,
+    "seconds": 0.576,
+    "result": "PASS: 90 assertions on actual controller, queue, persistence and battle-presentation code (host stubs; not emulator gameplay)\n"
+  },
+  {
+    "suite": "sabrina_dialogue",
+    "exit_code": 0,
+    "seconds": 0.205,
+    "result": "PASS 27 context/input assertions (host engine stubs)\nPASS new conversation pagination and original common-text preservation\n"
+  },
+  {
+    "suite": "shiny_starters",
+    "exit_code": 0,
+    "seconds": 0.201,
+    "result": "PASS 300000 native shiny-PID generations across all starter choices; ordinary XOR threshold remains 8/65536\n"
+  },
+  {
+    "suite": "sabrina_partner",
+    "exit_code": 0,
+    "seconds": 0.108,
+    "result": "PASS 44 legal partner/opponent moves, 7 separate trainer records, native AI/Multi route and preserved graphics\n"
+  },
+  {
+    "suite": "story_daily_persistence",
+    "exit_code": 0,
+    "seconds": 0.206,
+    "result": "PASS 8192 native daily-reset cases: story, joined/deactivated status and female guard persist; ordinary daily flags clear\n"
+  },
+  {
+    "suite": "desmume_save_import",
+    "exit_code": 0,
+    "seconds": 0.037,
+    "result": "PASS raw-save CRC validation, DSV footer and refusal to overwrite saves\n"
+  }
+]

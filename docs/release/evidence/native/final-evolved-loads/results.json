@@ -1,0 +1,125 @@
+[
+  {
+    "starter": 152,
+    "loaded_Pokemon": {
+      "held_item": 0,
+      "species": 153,
+      "level": 16,
+      "ability": 65,
+      "experience": 2535,
+      "moves": [
+        33,
+        45,
+        0,
+        0
+      ],
+      "PP": [
+        35,
+        40,
+        0,
+        0
+      ],
+      "PID": 1681199130,
+      "OT_ID": 3484597151,
+      "nature": 5,
+      "shiny_xor": 2,
+      "genuinely_shiny": true,
+      "checksum_valid": true,
+      "HP": 46,
+      "max_HP": 46
+    },
+    "followers": [
+      [
+        253,
+        582
+      ],
+      [
+        252,
+        369
+      ]
+    ],
+    "final_ROM_cold_load": "PASS"
+  },
+  {
+    "starter": 155,
+    "loaded_Pokemon": {
+      "held_item": 0,
+      "species": 156,
+      "level": 14,
+      "ability": 66,
+      "experience": 1612,
+      "moves": [
+        33,
+        43,
+        0,
+        0
+      ],
+      "PP": [
+        35,
+        30,
+        0,
+        0
+      ],
+      "PID": 1261846302,
+      "OT_ID": 3484597151,
+      "nature": 2,
+      "shiny_xor": 5,
+      "genuinely_shiny": true,
+      "checksum_valid": true,
+      "HP": 41,
+      "max_HP": 41
+    },
+    "followers": [
+      [
+        253,
+        586
+      ],
+      [
+        252,
+        369
+      ]
+    ],
+    "final_ROM_cold_load": "PASS"
+  },
+  {
+    "starter": 158,
+    "loaded_Pokemon": {
+      "held_item": 0,
+      "species": 159,
+      "level": 18,
+      "ability": 67,
+      "experience": 3798,
+      "moves": [
+        10,
+        43,
+        0,
+        0
+      ],
+      "PP": [
+        35,
+        30,
+        0,
+        0
+      ],
+      "PID": 884359323,
+      "OT_ID": 3484597151,
+      "nature": 23,
+      "shiny_xor": 0,
+      "genuinely_shiny": true,
+      "checksum_valid": true,
+      "HP": 56,
+      "max_HP": 56
+    },
+    "followers": [
+      [
+        253,
+        589
+      ],
+      [
+        252,
+        369
+      ]
+    ],
+    "final_ROM_cold_load": "PASS"
+  }
+]

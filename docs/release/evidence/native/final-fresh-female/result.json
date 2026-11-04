@@ -1,0 +1,46 @@
+{
+  "gender": "female",
+  "scope": "Fresh native opening through starter; no authored progress or RAM writes",
+  "custom_name_input": "CPDEX",
+  "counts": {
+    "252": 0,
+    "253": 1
+  },
+  "joined": false,
+  "pokemon": {
+    "player_OT_ID": 2158797645,
+    "party": [
+      {
+        "held_item": 0,
+        "species": 152,
+        "level": 5,
+        "ability": 65,
+        "experience": 135,
+        "moves": [
+          33,
+          45,
+          0,
+          0
+        ],
+        "PP": [
+          35,
+          40,
+          0,
+          0
+        ],
+        "PID": 3713334966,
+        "OT_ID": 2158797645,
+        "nature": 16,
+        "shiny_xor": 3,
+        "genuinely_shiny": true,
+        "checksum_valid": true,
+        "HP": 20,
+        "max_HP": 20
+      }
+    ]
+  },
+  "female_story_guard": true,
+  "frames": 34296,
+  "native_poststarter_save_and_cold_Continue": "PASS",
+  "save_counter": 1
+}

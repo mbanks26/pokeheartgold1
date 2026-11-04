@@ -1,0 +1,31 @@
+{
+  "ROM_sha1": "9670376e2a700d5c910648e18304ca3193c33e9c",
+  "scope": "Native fresh male Cherrygrove save after Guide Gent; held B plus four directions, no runtime writes. This checks movement/formation, not measured speed or performance.",
+  "positions": [
+    [
+      561,
+      2,
+      404
+    ],
+    [
+      558,
+      2,
+      404
+    ],
+    [
+      558,
+      2,
+      406
+    ],
+    [
+      558,
+      2,
+      402
+    ]
+  ],
+  "counts": {
+    "252": 1,
+    "253": 1
+  },
+  "pass": true
+}

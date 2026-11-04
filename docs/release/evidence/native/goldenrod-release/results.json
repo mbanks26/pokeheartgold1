@@ -1,0 +1,20 @@
+[
+  {
+    "joined": true,
+    "sister_Eevee_record_retained": true,
+    "player_Bill_gift_flag_unchanged": true,
+    "player_Pokemon_data_unchanged": true,
+    "native_save_and_cold_Continue": "PASS",
+    "expected_page_2": "Sabrina: A formidable opponent.",
+    "scope": "Native post-Eevee conversation; joined status authored in older native save; screenshot review verifies selected text"
+  },
+  {
+    "joined": false,
+    "sister_Eevee_record_retained": true,
+    "player_Bill_gift_flag_unchanged": true,
+    "player_Pokemon_data_unchanged": true,
+    "native_save_and_cold_Continue": "PASS",
+    "expected_page_2": "It looks so innocent while I trip over myself.",
+    "scope": "Native post-Eevee conversation; joined status authored in older native save; screenshot review verifies selected text"
+  }
+]

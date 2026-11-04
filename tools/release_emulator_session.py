@@ -36,7 +36,9 @@ class EmulatorSession:
         return result
 
     def save(self):
-        for command in [{'frames':8,'buttons':['X']},{'frames':180},
+        for command in [{'frames':8,'buttons':['B']},{'frames':120},
+                {'frames':8,'buttons':['B']},{'frames':120},
+                {'frames':8,'buttons':['X']},{'frames':180},
                 {'frames':2,'touch':[128,74]},{'frames':360},
                 {'frames':8,'buttons':['A']},{'frames':360},
                 {'frames':8,'buttons':['A']},{'frames':2400},

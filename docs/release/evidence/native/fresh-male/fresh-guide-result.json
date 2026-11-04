@@ -1,0 +1,38 @@
+{
+  "scope": "Continuous fresh male adventure, native inputs only; earlier opening and Route 29 navigation provenance retained in command log",
+  "Cherrygrove_scene_4073": 1,
+  "party": {
+    "player_OT_ID": 1811138273,
+    "party": [
+      {
+        "held_item": 0,
+        "species": 152,
+        "level": 6,
+        "ability": 65,
+        "experience": 198,
+        "moves": [
+          33,
+          45,
+          75,
+          0
+        ],
+        "PP": [
+          25,
+          40,
+          25,
+          0
+        ],
+        "PID": 2520005415,
+        "OT_ID": 1811138273,
+        "nature": 15,
+        "shiny_xor": 1,
+        "genuinely_shiny": true,
+        "checksum_valid": true,
+        "HP": 10,
+        "max_HP": 21
+      }
+    ]
+  },
+  "native_save_and_cold_Continue": "PASS",
+  "both_followers_restored": true
+}

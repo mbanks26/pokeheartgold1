@@ -1,0 +1,198 @@
+{
+  "emulator": "DeSmuME 0.9.12 libretro, JIT/HLE; software rendering, WiFi disabled",
+  "core_sha256": "554e67b3f5ba12f83fbe2bac2189c94c9224b85dbd82d14f00fba8303bd7ed08",
+  "cases": [
+    {
+      "folder": "fresh-male",
+      "ROM_sha1": "4f4e203c2b52967d2739c762360ed0065b458d59",
+      "scope": "Fresh blank-save opening and continuous native progression through Guide Gent in Cherrygrove; no runtime progress writes",
+      "selected_results_and_images": [
+        "fresh-guide-result.json",
+        "fresh-cherrygrove-cold.png",
+        "fresh-guide-finished.png",
+        "campaign-wild-battle.png"
+      ]
+    },
+    {
+      "folder": "final-fresh-female",
+      "ROM_sha1": "9670376e2a700d5c910648e18304ca3193c33e9c",
+      "scope": "Fresh blank-save opening, shiny Chikorita, native save and cold Continue",
+      "selected_results_and_images": [
+        "result.json",
+        "fresh-opening.png",
+        "stage-a-starter-selection.png"
+      ]
+    },
+    {
+      "folder": "starters",
+      "ROM_sha1": "4f4e203c2b52967d2739c762360ed0065b458d59",
+      "scope": "Native selection/save/cold reload of all choices from a native pre-starter save",
+      "selected_results_and_images": [
+        "results.json",
+        "152/shiny-preview.png",
+        "155/shiny-preview.png",
+        "158/shiny-preview.png"
+      ]
+    },
+    {
+      "folder": "evolution-verified/152",
+      "ROM_sha1": "7e4e21c5945a4f7eaab887adebc21a9042b9d840",
+      "scope": "Authored legal pre-evolution EXP/level/stats and Rare Candy; native evolution/save/cold",
+      "selected_results_and_images": [
+        "result.json",
+        "evolved.png"
+      ]
+    },
+    {
+      "folder": "evolution-remaining/155",
+      "ROM_sha1": "7e4e21c5945a4f7eaab887adebc21a9042b9d840",
+      "scope": "Authored legal pre-evolution EXP/level/stats and Rare Candy; native evolution/save/cold",
+      "selected_results_and_images": [
+        "result.json",
+        "evolved.png"
+      ]
+    },
+    {
+      "folder": "evolution-remaining/158",
+      "ROM_sha1": "7e4e21c5945a4f7eaab887adebc21a9042b9d840",
+      "scope": "Authored legal pre-evolution EXP/level/stats and Rare Candy; native evolution/save/cold",
+      "selected_results_and_images": [
+        "result.json",
+        "evolved.png"
+      ]
+    },
+    {
+      "folder": "final-evolved-loads",
+      "ROM_sha1": "9670376e2a700d5c910648e18304ca3193c33e9c",
+      "scope": "Final-ROM cold Continue of all three native evolved saves",
+      "selected_results_and_images": [
+        "results.json",
+        "152/final-evolved-followers.png",
+        "155/final-evolved-followers.png",
+        "158/final-evolved-followers.png"
+      ]
+    },
+    {
+      "folder": "gym-confirmed",
+      "ROM_sha1": "4f4e203c2b52967d2739c762360ed0065b458d59",
+      "scope": "Authored party/location/subtrainer prerequisites; native doors, teleporter puzzle, Sabrina Single, win/loss, rewards, restoration and save",
+      "selected_results_and_images": [
+        "results.json",
+        "victory/before-gym-battle.png",
+        "victory/gym-single-menu.png",
+        "victory/outside-followers.png",
+        "defeat/final-defeat.png"
+      ]
+    },
+    {
+      "folder": "rematch",
+      "ROM_sha1": "7e4e21c5945a4f7eaab887adebc21a9042b9d840",
+      "scope": "Native Gym-victory save plus authored location/phone appointment; native Dojo entry, original rematch, victory, save/cold. Natural phone scheduling not tested",
+      "selected_results_and_images": [
+        "result.json",
+        "before-rematch.png",
+        "rematch-battle.png",
+        "rematch-restored.png",
+        "rematch-cold.png"
+      ]
+    },
+    {
+      "folder": "partner-final",
+      "ROM_sha1": "9670376e2a700d5c910648e18304ca3193c33e9c",
+      "scope": "Authored late-practice prerequisites; native AI Multi battle, victory, reward flags, save and cold Continue",
+      "selected_results_and_images": [
+        "roundtrip-result.json",
+        "practice-native-battle.png",
+        "practice-victory-formation.png",
+        "practice-cold-continued-formation.png"
+      ]
+    },
+    {
+      "folder": "actions",
+      "ROM_sha1": "4f4e203c2b52967d2739c762360ed0065b458d59",
+      "scope": "Authored items/badge/party/Repel; native cycling, eight corner loops, Surf and restoration",
+      "selected_results_and_images": [
+        "results.json",
+        "cycling.png",
+        "cycling-restored.png",
+        "surfing.png",
+        "surfing-restored.png",
+        "corner-loop-7.png"
+      ]
+    },
+    {
+      "folder": "fishing-card",
+      "ROM_sha1": "4f4e203c2b52967d2739c762360ed0065b458d59",
+      "scope": "Authored rod prerequisite; native casting and restoration, native male Trainer Card. Catching a fish not tested",
+      "selected_results_and_images": [
+        "fishing-cast.png",
+        "fishing-restored.png",
+        "male-trainer-card.png"
+      ]
+    },
+    {
+      "folder": "female-card",
+      "ROM_sha1": "4f4e203c2b52967d2739c762360ed0065b458d59",
+      "scope": "Female native post-starter save, native Trainer Card",
+      "selected_results_and_images": [
+        "female-trainer-card.png"
+      ]
+    },
+    {
+      "folder": "calendar-final",
+      "ROM_sha1": "4f4e203c2b52967d2739c762360ed0065b458d59",
+      "scope": "Stored day moved 1/8 days into past, all-badge/GameClear prerequisites authored; native daily callbacks, save/cold. Not a Champion playthrough",
+      "selected_results_and_images": [
+        "results.json",
+        "1-day/result.json",
+        "8-day/result.json"
+      ]
+    },
+    {
+      "folder": "goldenrod-release",
+      "ROM_sha1": "9670376e2a700d5c910648e18304ca3193c33e9c",
+      "scope": "Native post-Eevee fixture, joined/disabled status authored independently; native dialogue/save/cold, no duplicate reward or Bill flag change",
+      "selected_results_and_images": [
+        "results.json",
+        "joined/sister-page-2.png",
+        "disabled/sister-page-2.png"
+      ]
+    },
+    {
+      "folder": "female-route-verified",
+      "ROM_sha1": "9670376e2a700d5c910648e18304ca3193c33e9c",
+      "scope": "Native fresh-female post-starter save with authored Goldenrod location; native PC door, generic breeder, neutral dialogue, save/cold, no false Eevee flag",
+      "selected_results_and_images": [
+        "result.json",
+        "native-entry/female-goldenrod-entry.png",
+        "breeder/female-neutral-page1.png",
+        "breeder/female-cold.png"
+      ]
+    },
+    {
+      "folder": "final-ledge",
+      "ROM_sha1": "9670376e2a700d5c910648e18304ca3193c33e9c",
+      "scope": "Authored Route 29 location and Repel; native ledge movement and ordered formation",
+      "selected_results_and_images": [
+        "result.json",
+        "ledge-mid.png",
+        "ledge-restored.png"
+      ]
+    },
+    {
+      "folder": "final-running",
+      "ROM_sha1": "9670376e2a700d5c910648e18304ca3193c33e9c",
+      "scope": "Native fresh male Cherrygrove save; held B movement, no speed/FPS claim",
+      "selected_results_and_images": [
+        "result.json",
+        "running-restored.png"
+      ]
+    }
+  ],
+  "not_claimed": [
+    "Complete Johto/Kanto/Mount Silver playthrough",
+    "Manic EMU or actual iPhone testing",
+    "All partner AI faint/switch/status edge cases",
+    "Exhaustive cutscene/map/graphics compatibility"
+  ]
+}

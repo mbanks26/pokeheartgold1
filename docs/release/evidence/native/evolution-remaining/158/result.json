@@ -1,0 +1,59 @@
+{
+  "starter": 158,
+  "before": {
+    "held_item": 0,
+    "species": 158,
+    "level": 17,
+    "ability": 67,
+    "experience": 3120,
+    "moves": [
+      10,
+      43,
+      0,
+      0
+    ],
+    "PP": [
+      35,
+      30,
+      0,
+      0
+    ],
+    "PID": 884359323,
+    "OT_ID": 3484597151,
+    "nature": 23,
+    "shiny_xor": 0,
+    "genuinely_shiny": true,
+    "checksum_valid": true,
+    "HP": 48,
+    "max_HP": 48
+  },
+  "after": {
+    "held_item": 0,
+    "species": 159,
+    "level": 18,
+    "ability": 67,
+    "experience": 3798,
+    "moves": [
+      10,
+      43,
+      0,
+      0
+    ],
+    "PP": [
+      35,
+      30,
+      0,
+      0
+    ],
+    "PID": 884359323,
+    "OT_ID": 3484597151,
+    "nature": 23,
+    "shiny_xor": 0,
+    "genuinely_shiny": true,
+    "checksum_valid": true,
+    "HP": 56,
+    "max_HP": 56
+  },
+  "native_save_and_cold_Continue": "PASS",
+  "scope": "Level/EXP/stats calculated from original IV/EV/nature and one Rare Candy are authored prerequisites; native item use and evolution preserve original shiny PID/OT; no runtime writes"
+}

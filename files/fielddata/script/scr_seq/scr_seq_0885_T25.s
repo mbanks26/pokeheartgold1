@@ -742,6 +742,7 @@ scr_seq_T25_033:
     PlaySE SEQ_SE_DP_SELECT
     LockAll
     FacePlayer
+    GoToIfSet FLAG_STORY_DISABLED_FOR_FEMALE, T25_Sister_FemaleRoute
     GoToIfSet FLAG_SISTER_RECEIVED_EEVEE, T25_Sister_After
     NPCMsg msg_0581_T25_00047
     PlayCry SPECIES_EEVEE, 0
@@ -752,7 +753,15 @@ scr_seq_T25_033:
     WaitMovement
     HidePerson obj_story_breeder
 T25_Sister_After:
+    GoToIfUnset FLAG_SABRINA_COMPANION_JOINED, T25_Sister_WithoutSabrina
     NPCMsg msg_0581_T25_00048
+    GoTo T25_Sister_Close
+T25_Sister_WithoutSabrina:
+    NPCMsg msg_0581_T25_00049
+    GoTo T25_Sister_Close
+T25_Sister_FemaleRoute:
+    NPCMsg msg_0581_T25_00050
+T25_Sister_Close:
     WaitButton
     CloseMsg
     ReleaseAll

@@ -1,0 +1,174 @@
+{
+  "enemy_trainer": 725,
+  "battle_type": "Native Trainer Single 0x1",
+  "paired_player_art": false,
+  "enemy_team": [
+    {
+      "held_item": 0,
+      "species": 65,
+      "level": 60,
+      "ability": 28,
+      "experience": 211060,
+      "moves": [
+        356,
+        411,
+        412,
+        94
+      ],
+      "PP": [
+        5,
+        5,
+        10,
+        10
+      ],
+      "PID": 3868280,
+      "OT_ID": 3793024519,
+      "nature": 5,
+      "shiny_xor": 4688,
+      "genuinely_shiny": false,
+      "checksum_valid": true,
+      "HP": 150,
+      "max_HP": 150
+    },
+    {
+      "held_item": 0,
+      "species": 196,
+      "level": 58,
+      "ability": 28,
+      "experience": 195112,
+      "moves": [
+        347,
+        226,
+        247,
+        94
+      ],
+      "PP": [
+        20,
+        40,
+        15,
+        10
+      ],
+      "PID": 3185273,
+      "OT_ID": 4158059268,
+      "nature": 23,
+      "shiny_xor": 40603,
+      "genuinely_shiny": false,
+      "checksum_valid": true,
+      "HP": 157,
+      "max_HP": 157
+    },
+    {
+      "held_item": 0,
+      "species": 122,
+      "level": 56,
+      "ability": 111,
+      "experience": 175616,
+      "moves": [
+        115,
+        285,
+        87,
+        94
+      ],
+      "PP": [
+        20,
+        10,
+        10,
+        10
+      ],
+      "PID": 2677369,
+      "OT_ID": 3044006146,
+      "nature": 19,
+      "shiny_xor": 46652,
+      "genuinely_shiny": false,
+      "checksum_valid": true,
+      "HP": 124,
+      "max_HP": 124
+    },
+    {
+      "held_item": 0,
+      "species": 124,
+      "level": 54,
+      "ability": 108,
+      "experience": 157464,
+      "moves": [
+        59,
+        195,
+        94,
+        411
+      ],
+      "PP": [
+        5,
+        5,
+        10,
+        5
+      ],
+      "PID": 2677369,
+      "OT_ID": 3044006146,
+      "nature": 19,
+      "shiny_xor": 46652,
+      "genuinely_shiny": false,
+      "checksum_valid": true,
+      "HP": 147,
+      "max_HP": 147
+    },
+    {
+      "held_item": 0,
+      "species": 202,
+      "level": 53,
+      "ability": 23,
+      "experience": 148877,
+      "moves": [
+        68,
+        243,
+        194,
+        227
+      ],
+      "PP": [
+        20,
+        20,
+        5,
+        5
+      ],
+      "PID": 2529657,
+      "OT_ID": 1064492838,
+      "nature": 7,
+      "shiny_xor": 30987,
+      "genuinely_shiny": false,
+      "checksum_valid": true,
+      "HP": 277,
+      "max_HP": 277
+    },
+    {
+      "held_item": 158,
+      "species": 475,
+      "level": 53,
+      "ability": 80,
+      "experience": 186096,
+      "moves": [
+        370,
+        427,
+        400,
+        444
+      ],
+      "PP": [
+        5,
+        20,
+        15,
+        5
+      ],
+      "PID": 8107385,
+      "OT_ID": 2635968280,
+      "nature": 10,
+      "shiny_xor": 34567,
+      "genuinely_shiny": false,
+      "checksum_valid": true,
+      "HP": 147,
+      "max_HP": 147
+    }
+  ],
+  "native_appointment_cleared_after_victory": true,
+  "canonical_NPC_hidden_after_victory": true,
+  "both_followers_restored": true,
+  "native_save_and_cold_Continue": "PASS",
+  "scope": "Location and phone appointment authored from native Gym-victory battery save; native Dojo entry, rematch, victory and persistence. Natural phone-number acquisition and weekly scheduling are not tested."
+}

@@ -1,0 +1,14 @@
+{
+  "elapsed_days": 8,
+  "result": {
+    "custom_flag_bytes": "ff40",
+    "joined": false,
+    "all_badges_and_game_clear_profile": true,
+    "native_GAME_CLEAR_flag": true,
+    "native_daily_sentinel_cleared": true
+  },
+  "native_save_CRC": "PASS",
+  "cold_Continue": "PASS",
+  "counter": 6,
+  "scope": "Stored day moved into past to exercise real calendar callbacks; post-Champion prerequisites authored; no runtime RAM writes"
+}

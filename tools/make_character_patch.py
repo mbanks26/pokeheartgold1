@@ -14,6 +14,22 @@ def number(value):
             out.append(digit|128);return out
         out.append(digit);value-=1
 
+def narc_member_ranges(data):
+    """Return validated relative ranges, or None for a nonstandard archive."""
+    if len(data)<32 or data[:4]!=b'NARC' or data[16:20]!=b'BTAF':return None
+    count=struct.unpack_from('<H',data,24)[0]
+    btnf=16+struct.unpack_from('<I',data,20)[0]
+    if btnf+8>len(data):return None
+    gmif=btnf+struct.unpack_from('<I',data,btnf+4)[0]
+    if gmif+8>len(data) or data[gmif:gmif+4]!=b'GMIF':return None
+    payload=gmif+8;ranges=[]
+    for i in range(count):
+        if 36+8*i>btnf:return None
+        start,end=struct.unpack_from('<II',data,28+8*i)
+        if not 0<=start<=end<=len(data)-payload:return None
+        ranges.append((payload+start,payload+end))
+    return ranges
+
 def make_patch(source,target,metadata=None):
     assert len(source)==len(target)
     assert hashlib.sha1(source).hexdigest()=='4fcded0e2713dc03929845de631d0932ea2b5a37'
@@ -47,7 +63,19 @@ def make_patch(source,target,metadata=None):
     for i in range(tlen//8):
         sa,se=struct.unpack_from('<II',source,sfat+8*i)
         ta,te=struct.unpack_from('<II',target,tfat+8*i)
-        if te>ta:spans.append((ta,te,sa if se-sa==te-ta else None))
+        if te<=ta:continue
+        if se-sa==te-ta:
+            spans.append((ta,te,sa));continue
+        # A changed archive size need not embed every unchanged member. Match
+        # native NARC members by index, preserving source validation while
+        # avoiding literal copies of thousands of unchanged game resources.
+        sm=narc_member_ranges(source[sa:se]);tm=narc_member_ranges(target[ta:te])
+        if sm is None or tm is None:
+            spans.append((ta,te,None));continue
+        for member,(start,end) in enumerate(tm):
+            src=None
+            if member<len(sm) and sm[member][1]-sm[member][0]==end-start:src=sa+sm[member][0]
+            if end>start:spans.append((ta+start,ta+end,src))
     pos=0
     for start,end,src in sorted(spans):
         assert pos<=start<=end<=len(target)
@@ -96,8 +124,9 @@ def apply_patch(source,patch):
 if __name__=='__main__':
     parser=argparse.ArgumentParser(description=__doc__)
     parser.add_argument('source',type=Path);parser.add_argument('target',type=Path);parser.add_argument('output',type=Path)
+    parser.add_argument('--metadata',help='UTF-8 release description embedded in the BPS header')
     args=parser.parse_args();source=args.source.read_bytes();target=args.target.read_bytes()
-    meta=b'HeartGold custom graphics and experimental Sabrina plus Pokemon walking companion; emulator gameplay testing required.' if 'companion' in args.output.name else None
+    meta=args.metadata.encode('utf-8') if args.metadata is not None else (b'HeartGold custom graphics and experimental Sabrina plus Pokemon walking companion; emulator gameplay testing required.' if 'companion' in args.output.name else None)
     patch=make_patch(source,target,meta);assert apply_patch(source,patch)==target
-    args.output.write_bytes(patch)
+    with args.output.open('xb') as handle:handle.write(patch)
     print(f'BPS patch roundtrip passed: {len(patch)} bytes; target SHA-1 {hashlib.sha1(target).hexdigest()}')

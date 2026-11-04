@@ -1,0 +1,30 @@
+{
+  "native_ledge_and_restoration": "PASS",
+  "formation": [
+    [
+      255,
+      [
+        655,
+        2,
+        404
+      ]
+    ],
+    [
+      253,
+      [
+        654,
+        2,
+        404
+      ]
+    ],
+    [
+      252,
+      [
+        653,
+        2,
+        404
+      ]
+    ]
+  ],
+  "scope": "Authored Route 29 location and Repel prerequisites; native ledge movement, no runtime writes"
+}

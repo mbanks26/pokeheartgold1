@@ -1,0 +1,157 @@
+{
+  "scope": "Cold Continue from native pre-starter save, walk to device, choose center (replace input 13 for other starters), decline nickname, reach following Pokemon. No fixture writes.",
+  "commands": [
+    {
+      "frames": 600
+    },
+    {
+      "frames": 3,
+      "buttons": [
+        "A"
+      ]
+    },
+    {
+      "frames": 180
+    },
+    {
+      "frames": 3,
+      "buttons": [
+        "A"
+      ]
+    },
+    {
+      "frames": 300
+    },
+    {
+      "frames": 8,
+      "buttons": [
+        "A"
+      ]
+    },
+    {
+      "frames": 600,
+      "inspect": true,
+      "shot": "prestarter-cold-loaded.png"
+    },
+    {
+      "frames": 64,
+      "buttons": [
+        "RIGHT"
+      ]
+    },
+    {
+      "frames": 32,
+      "buttons": [
+        "UP"
+      ]
+    },
+    {
+      "frames": 20
+    },
+    {
+      "frames": 8,
+      "buttons": [
+        "A"
+      ]
+    },
+    {
+      "frames": 300,
+      "shot": "shiny-choice-menu.png"
+    },
+    {
+      "frames": 3,
+      "touch": [
+        128,
+        110
+      ]
+    },
+    {
+      "frames": 180,
+      "shot": "shiny-preview.png"
+    },
+    {
+      "frames": 8,
+      "buttons": [
+        "A"
+      ]
+    },
+    {
+      "frames": 240,
+      "shot": "shiny-confirm-question.png"
+    },
+    {
+      "frames": 3,
+      "touch": [
+        128,
+        110
+      ]
+    },
+    {
+      "frames": 180
+    },
+    {
+      "frames": 8,
+      "buttons": [
+        "A"
+      ]
+    },
+    {
+      "frames": 300,
+      "inspect": true,
+      "shot": "starter-received.png"
+    },
+    {
+      "frames": 8,
+      "buttons": [
+        "A"
+      ]
+    },
+    {
+      "frames": 180
+    },
+    {
+      "frames": 8,
+      "buttons": [
+        "A"
+      ]
+    },
+    {
+      "frames": 150
+    },
+    {
+      "frames": 8,
+      "buttons": [
+        "B"
+      ]
+    },
+    {
+      "frames": 180
+    },
+    {
+      "talk": 45,
+      "inspect": true,
+      "shot": "starter-event-finished.png"
+    },
+    {
+      "frames": 1,
+      "inspect": true
+    },
+    {
+      "frames": 64,
+      "buttons": [
+        "LEFT"
+      ]
+    },
+    {
+      "frames": 48,
+      "buttons": [
+        "DOWN"
+      ]
+    },
+    {
+      "frames": 180,
+      "inspect": true,
+      "shot": "shiny-followers.png"
+    }
+  ]
+}

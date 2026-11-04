@@ -1,0 +1,28 @@
+{
+  "format": "BPS",
+  "independent_decoder": "Rom Patcher JS BPS v20240821",
+  "base_region": "NTR-IPKE-USA",
+  "base_revision": 0,
+  "base": {
+    "bytes": 134217728,
+    "sha1": "4fcded0e2713dc03929845de631d0932ea2b5a37",
+    "sha256": "65f02a56842b75aa92d775d56d657a56fe3fa993550b04dc20704ab82d760105"
+  },
+  "target": {
+    "bytes": 134217728,
+    "sha1": "9670376e2a700d5c910648e18304ca3193c33e9c",
+    "sha256": "2333089f68a9f29f633fd839b5a6b922a7bf9870ae45e326fb85274ee350c5b7"
+  },
+  "patch": {
+    "bytes": 3957611,
+    "sha1": "4076fcf197034ab6ceda0cbae9595fb642644343",
+    "sha256": "f61448b75042e8d17d77d5ed0d55e23163fcf8091d1a01ad764bc8652f6b0d90"
+  },
+  "source_crc32": "c180a0e9",
+  "target_crc32": "f353ed65",
+  "patch_crc32": "e489726f",
+  "metadata": "HeartGold RC1 2026-11-04: custom characters, independent Sabrina companion, sister story, shiny starters and native AI partner battles. Experimental player-test candidate; see docs/release/REPORT.md. Base: NTR-IPKE-USA revision 0.",
+  "independent_byte_identical": true,
+  "wrong_base_rejected": true,
+  "corrupt_patch_rejected": true
+}

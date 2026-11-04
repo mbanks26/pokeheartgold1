@@ -1,0 +1,20 @@
+{
+  "baseline_ROM_sha1": "4f4e203c2b52967d2739c762360ed0065b458d59",
+  "final_ROM_sha1": "9670376e2a700d5c910648e18304ca3193c33e9c",
+  "ARM9_byte_identical": true,
+  "unchanged_ROM_resources": 382,
+  "changed_ROM_resources": {
+    "a/0/1/2": {
+      "changed_members": [
+        885
+      ]
+    },
+    "a/0/2/7": {
+      "changed_members": [
+        581,
+        612,
+        629
+      ]
+    }
+  }
+}

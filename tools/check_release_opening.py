@@ -1,6 +1,6 @@
 """Replay a blank-save opening for either gender using native inputs only."""
 from pathlib import Path
-import argparse,json,struct
+import argparse,json,struct,binascii
 from release_emulator_session import EmulatorSession,isolated_rom
 from inspect_story_pokemon import inspect_ram
 
@@ -30,5 +30,10 @@ assert bool(raw[flags+0xB5D//8] & (1<<(0xB5D%8)))==bool(expected_gender)
 report={'gender':a.gender,'scope':'Fresh native opening through starter; no authored progress or RAM writes',
         'custom_name_input':'CPDEX','counts':counts,'joined':g['joined'],'pokemon':pokemon,
         'female_story_guard':bool(expected_gender),'frames':result['frame']}
-s.close();(a.output/'result.json').write_text(json.dumps(report,indent=2)+'\n')
+s.save();s.close()
+saved=rom.with_suffix('.dsv').read_bytes();sectors=[base for base in [0,0x40000] if struct.unpack_from('<I',saved,base+0xf620)[0]==0x20060623];latest=max(sectors,key=lambda base:struct.unpack_from('<I',saved,base+0xf618)[0])
+assert binascii.crc_hqx(saved[latest:latest+0xf618],65535)==struct.unpack_from('<H',saved,latest+0xf626)[0]
+s=EmulatorSession(a.core,rom,a.symbols,a.output,'opening-cold');g=s.boot_continue()['game'];assert g['gender']==expected_gender and g['joined']==(a.gender=='male');s.close()
+report.update(native_poststarter_save_and_cold_Continue='PASS',save_counter=struct.unpack_from('<I',saved,latest+0xf618)[0])
+(a.output/'result.json').write_text(json.dumps(report,indent=2)+'\n')
 print(json.dumps(report),flush=True)

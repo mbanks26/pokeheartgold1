@@ -1,0 +1,198 @@
+[
+  {
+    "mode": "victory",
+    "Marsh_Badge": true,
+    "defeated_trainer_flag": false,
+    "TM48_quantity": 1,
+    "joined": true,
+    "follower_counts": {
+      "252": 1,
+      "253": 1
+    },
+    "return_map": 59,
+    "battle_type": "Native Trainer Single 0x1",
+    "enemy_trainer": 258,
+    "enemy_team": [
+      {
+        "held_item": 0,
+        "species": 196,
+        "level": 53,
+        "ability": 28,
+        "experience": 148877,
+        "moves": [
+          247,
+          285,
+          347,
+          94
+        ],
+        "PP": [
+          15,
+          10,
+          20,
+          10
+        ],
+        "PID": 10626424,
+        "OT_ID": 4021064925,
+        "nature": 24,
+        "shiny_xor": 24235,
+        "genuinely_shiny": false,
+        "checksum_valid": true,
+        "HP": 144,
+        "max_HP": 144
+      },
+      {
+        "held_item": 0,
+        "species": 122,
+        "level": 53,
+        "ability": 111,
+        "experience": 148877,
+        "moves": [
+          102,
+          113,
+          285,
+          94
+        ],
+        "PP": [
+          10,
+          30,
+          10,
+          10
+        ],
+        "PID": 8807289,
+        "OT_ID": 1014977310,
+        "nature": 14,
+        "shiny_xor": 3230,
+        "genuinely_shiny": false,
+        "checksum_valid": true,
+        "HP": 118,
+        "max_HP": 118
+      },
+      {
+        "held_item": 158,
+        "species": 65,
+        "level": 55,
+        "ability": 39,
+        "experience": 159635,
+        "moves": [
+          285,
+          94,
+          412,
+          115
+        ],
+        "PP": [
+          10,
+          10,
+          10,
+          20
+        ],
+        "PID": 11309433,
+        "OT_ID": 3656095712,
+        "nature": 8,
+        "shiny_xor": 57310,
+        "genuinely_shiny": false,
+        "checksum_valid": true,
+        "HP": 138,
+        "max_HP": 138
+      }
+    ],
+    "scope": "Native Gym entry, teleporter puzzle, battle result and recovery. High-level party/location and four defeated subtrainers are authored prerequisites; defeat sets only HP 1 and PP 0 before boot; no runtime writes."
+  },
+  {
+    "mode": "defeat",
+    "Marsh_Badge": false,
+    "defeated_trainer_flag": false,
+    "TM48_quantity": 0,
+    "joined": true,
+    "follower_counts": {
+      "252": 1,
+      "253": 1
+    },
+    "return_map": 63,
+    "battle_type": "Native Trainer Single 0x1",
+    "enemy_trainer": 258,
+    "enemy_team": [
+      {
+        "held_item": 0,
+        "species": 196,
+        "level": 53,
+        "ability": 28,
+        "experience": 148877,
+        "moves": [
+          247,
+          285,
+          347,
+          94
+        ],
+        "PP": [
+          15,
+          10,
+          20,
+          10
+        ],
+        "PID": 10626424,
+        "OT_ID": 4021064925,
+        "nature": 24,
+        "shiny_xor": 24235,
+        "genuinely_shiny": false,
+        "checksum_valid": true,
+        "HP": 144,
+        "max_HP": 144
+      },
+      {
+        "held_item": 0,
+        "species": 122,
+        "level": 53,
+        "ability": 111,
+        "experience": 148877,
+        "moves": [
+          102,
+          113,
+          285,
+          94
+        ],
+        "PP": [
+          10,
+          30,
+          10,
+          10
+        ],
+        "PID": 8807289,
+        "OT_ID": 1014977310,
+        "nature": 14,
+        "shiny_xor": 3230,
+        "genuinely_shiny": false,
+        "checksum_valid": true,
+        "HP": 118,
+        "max_HP": 118
+      },
+      {
+        "held_item": 158,
+        "species": 65,
+        "level": 55,
+        "ability": 39,
+        "experience": 159635,
+        "moves": [
+          285,
+          94,
+          412,
+          115
+        ],
+        "PP": [
+          10,
+          10,
+          10,
+          20
+        ],
+        "PID": 11309433,
+        "OT_ID": 3656095712,
+        "nature": 8,
+        "shiny_xor": 57310,
+        "genuinely_shiny": false,
+        "checksum_valid": true,
+        "HP": 138,
+        "max_HP": 138
+      }
+    ],
+    "scope": "Native Gym entry, teleporter puzzle, battle result and recovery. High-level party/location and four defeated subtrainers are authored prerequisites; defeat sets only HP 1 and PP 0 before boot; no runtime writes."
+  }
+]

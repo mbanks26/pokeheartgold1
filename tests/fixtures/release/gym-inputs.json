@@ -1,0 +1,425 @@
+{
+  "scope": "Native entry, teleporter puzzle, Single Battle and original exit; authored prerequisite battery save; no RAM writes",
+  "commands": [
+    {
+      "frames": 600
+    },
+    {
+      "frames": 3,
+      "buttons": [
+        "A"
+      ]
+    },
+    {
+      "frames": 180
+    },
+    {
+      "frames": 3,
+      "buttons": [
+        "A"
+      ]
+    },
+    {
+      "frames": 300
+    },
+    {
+      "frames": 8,
+      "buttons": [
+        "A"
+      ]
+    },
+    {
+      "frames": 600,
+      "shot": "loaded.png",
+      "inspect": true
+    },
+    {
+      "frames": 48,
+      "buttons": [
+        "UP"
+      ]
+    },
+    {
+      "frames": 600,
+      "inspect": true,
+      "shot": "gym-entry.png"
+    },
+    {
+      "frames": 80,
+      "buttons": [
+        "UP"
+      ]
+    },
+    {
+      "frames": 60,
+      "shot": "gym-first-platform.png"
+    },
+    {
+      "frames": 16,
+      "buttons": [
+        "UP"
+      ]
+    },
+    {
+      "frames": 48,
+      "buttons": [
+        "RIGHT"
+      ]
+    },
+    {
+      "frames": 240,
+      "shot": "gym-warp-one.png"
+    },
+    {
+      "frames": 32,
+      "buttons": [
+        "DOWN"
+      ]
+    },
+    {
+      "frames": 48,
+      "buttons": [
+        "RIGHT"
+      ]
+    },
+    {
+      "frames": 32,
+      "buttons": [
+        "UP"
+      ]
+    },
+    {
+      "frames": 240,
+      "shot": "gym-teleporter-1.png"
+    },
+    {
+      "frames": 16,
+      "buttons": [
+        "LEFT"
+      ]
+    },
+    {
+      "frames": 32,
+      "buttons": [
+        "UP"
+      ]
+    },
+    {
+      "frames": 240,
+      "shot": "gym-teleporter-status.png"
+    },
+    {
+      "frames": 1,
+      "shot": "gym-grid-current.png"
+    },
+    {
+      "frames": 48,
+      "buttons": [
+        "DOWN"
+      ]
+    },
+    {
+      "frames": 20,
+      "shot": "gym-pad-path-a.png"
+    },
+    {
+      "frames": 48,
+      "buttons": [
+        "RIGHT"
+      ]
+    },
+    {
+      "frames": 20,
+      "shot": "gym-pad-path-b.png"
+    },
+    {
+      "frames": 32,
+      "buttons": [
+        "UP"
+      ]
+    },
+    {
+      "frames": 240,
+      "shot": "gym-first-warp-actual.png"
+    },
+    {
+      "frames": 1,
+      "shot": "gym-after-pad.png"
+    },
+    {
+      "frames": 48,
+      "buttons": [
+        "UP"
+      ]
+    },
+    {
+      "frames": 240,
+      "shot": "gym-warp-2.png"
+    },
+    {
+      "frames": 48,
+      "buttons": [
+        "DOWN"
+      ]
+    },
+    {
+      "frames": 240,
+      "shot": "gym-warp-3.png"
+    },
+    {
+      "frames": 48,
+      "buttons": [
+        "DOWN"
+      ]
+    },
+    {
+      "frames": 240,
+      "shot": "gym-warp-4.png"
+    },
+    {
+      "frames": 96,
+      "buttons": [
+        "LEFT"
+      ]
+    },
+    {
+      "frames": 240,
+      "shot": "gym-leader-platform.png"
+    },
+    {
+      "frames": 48,
+      "buttons": [
+        "LEFT"
+      ]
+    },
+    {
+      "frames": 48,
+      "buttons": [
+        "UP"
+      ]
+    },
+    {
+      "frames": 30,
+      "inspect": true,
+      "shot": "before-gym-battle.png"
+    },
+    {
+      "frames": 8,
+      "buttons": [
+        "A"
+      ]
+    },
+    {
+      "frames": 180,
+      "shot": "gym-greeting.png"
+    },
+    {
+      "talk": 8
+    },
+    {
+      "frames": 900,
+      "shot": "gym-single-menu.png"
+    },
+    {
+      "frames": 8,
+      "buttons": [
+        "A"
+      ]
+    },
+    {
+      "frames": 360
+    },
+    {
+      "frames": 8,
+      "buttons": [
+        "A"
+      ]
+    },
+    {
+      "frames": 360
+    },
+    {
+      "frames": 8,
+      "buttons": [
+        "A"
+      ]
+    },
+    {
+      "frames": 360
+    },
+    {
+      "frames": 8,
+      "buttons": [
+        "A"
+      ]
+    },
+    {
+      "frames": 360
+    },
+    {
+      "frames": 8,
+      "buttons": [
+        "A"
+      ]
+    },
+    {
+      "frames": 360
+    },
+    {
+      "frames": 8,
+      "buttons": [
+        "A"
+      ]
+    },
+    {
+      "frames": 360
+    },
+    {
+      "frames": 8,
+      "buttons": [
+        "A"
+      ]
+    },
+    {
+      "frames": 360
+    },
+    {
+      "frames": 8,
+      "buttons": [
+        "A"
+      ]
+    },
+    {
+      "frames": 360
+    },
+    {
+      "frames": 8,
+      "buttons": [
+        "A"
+      ]
+    },
+    {
+      "frames": 360
+    },
+    {
+      "frames": 8,
+      "buttons": [
+        "A"
+      ]
+    },
+    {
+      "frames": 360
+    },
+    {
+      "frames": 8,
+      "buttons": [
+        "A"
+      ]
+    },
+    {
+      "frames": 360
+    },
+    {
+      "frames": 8,
+      "buttons": [
+        "A"
+      ]
+    },
+    {
+      "frames": 360
+    },
+    {
+      "talk": 35,
+      "inspect": true,
+      "shot": "gym-victory.png"
+    },
+    {
+      "frames": 48,
+      "buttons": [
+        "DOWN"
+      ]
+    },
+    {
+      "frames": 48,
+      "buttons": [
+        "RIGHT"
+      ]
+    },
+    {
+      "frames": 240
+    },
+    {
+      "frames": 96,
+      "buttons": [
+        "RIGHT"
+      ]
+    },
+    {
+      "frames": 240
+    },
+    {
+      "frames": 48,
+      "buttons": [
+        "UP"
+      ]
+    },
+    {
+      "frames": 240
+    },
+    {
+      "frames": 48,
+      "buttons": [
+        "UP"
+      ]
+    },
+    {
+      "frames": 240
+    },
+    {
+      "frames": 48,
+      "buttons": [
+        "DOWN"
+      ]
+    },
+    {
+      "frames": 240,
+      "shot": "gym-win-return-platform.png"
+    },
+    {
+      "frames": 32,
+      "buttons": [
+        "DOWN"
+      ]
+    },
+    {
+      "frames": 48,
+      "buttons": [
+        "LEFT"
+      ]
+    },
+    {
+      "frames": 80,
+      "buttons": [
+        "DOWN"
+      ]
+    },
+    {
+      "frames": 240
+    },
+    {
+      "frames": 48,
+      "buttons": [
+        "DOWN"
+      ]
+    },
+    {
+      "frames": 120,
+      "shot": "sabrina-resumes-after-victory.png"
+    },
+    {
+      "frames": 60,
+      "inspect": true,
+      "shot": "outside-followers.png"
+    }
+  ]
+}

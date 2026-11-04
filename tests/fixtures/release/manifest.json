@@ -1,0 +1,26 @@
+{
+  "saffron-pre-gym": {
+    "bytes": 524288,
+    "raw_sha256": "640be3ec6b21d5ebb3e05cea7c63784cdbe16a19b1e00d917bf971f8d2c2d428",
+    "source": "/workspace/work/story-partner/f-gym/test.dsv",
+    "scope": "Authored test prerequisites, not campaign progression"
+  },
+  "actions-input": {
+    "bytes": 524288,
+    "raw_sha256": "17b460b6c42ad634a2a3316a2cf3cb24d95ec3099e17a98fafb212b902293033",
+    "source": "/workspace/work/release-qa/actions/input.sav",
+    "scope": "Authored test prerequisites, not campaign progression"
+  },
+  "ledge-input": {
+    "bytes": 524288,
+    "raw_sha256": "1a1dfc18f92b65569018e136df6f12e826bc4926d4b4e4089d1f8664ec5a3385",
+    "source": "/workspace/work/gameplay-validation/ledge-repel-smoke/ledge.dsv",
+    "scope": "Authored test prerequisites, not campaign progression"
+  },
+  "goldenrod-after-eevee": {
+    "bytes": 524288,
+    "raw_sha256": "83dd5e47bcfeed90e75e94245f63d6cdbebe4cbb6a6582a9818cc88452bd3c33",
+    "source": "Native post-Eevee save from the prior story milestone, retained in tests/fixtures/story/after-sister-eevee.sav.gz",
+    "scope": "Latest valid main generation has B51 set; older backup predates Eevee. Preserve existing save-sector counters. Not proof of preceding campaign completion."
+  }
+}
