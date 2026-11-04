@@ -1,0 +1,123 @@
+{
+  "test_fixture_only": true,
+  "setup": [
+    "valid main slots normalized to the actual newest selected-starter state",
+    "relocated to Route 29",
+    "level 15 and experience 2534; stats calculated using native formula and original IVs, EVs, nature"
+  ],
+  "PID_OT_species_ability_moves_unchanged": true,
+  "slots": [
+    {
+      "before": {
+        "held_item": 0,
+        "species": 152,
+        "level": 5,
+        "ability": 65,
+        "experience": 135,
+        "moves": [
+          33,
+          45,
+          0,
+          0
+        ],
+        "PP": [
+          35,
+          40,
+          0,
+          0
+        ],
+        "PID": 878592113,
+        "OT_ID": 3484597151,
+        "nature": 13,
+        "shiny_xor": 2,
+        "genuinely_shiny": true,
+        "checksum_valid": true,
+        "HP": 19,
+        "max_HP": 19
+      },
+      "after_authored_setup": {
+        "held_item": 0,
+        "species": 152,
+        "level": 15,
+        "ability": 65,
+        "experience": 2534,
+        "moves": [
+          33,
+          45,
+          0,
+          0
+        ],
+        "PP": [
+          35,
+          40,
+          0,
+          0
+        ],
+        "PID": 878592113,
+        "OT_ID": 3484597151,
+        "nature": 13,
+        "shiny_xor": 2,
+        "genuinely_shiny": true,
+        "checksum_valid": true,
+        "HP": 38,
+        "max_HP": 38
+      }
+    },
+    {
+      "before": {
+        "held_item": 0,
+        "species": 152,
+        "level": 5,
+        "ability": 65,
+        "experience": 135,
+        "moves": [
+          33,
+          45,
+          0,
+          0
+        ],
+        "PP": [
+          35,
+          40,
+          0,
+          0
+        ],
+        "PID": 878592113,
+        "OT_ID": 3484597151,
+        "nature": 13,
+        "shiny_xor": 2,
+        "genuinely_shiny": true,
+        "checksum_valid": true,
+        "HP": 19,
+        "max_HP": 19
+      },
+      "after_authored_setup": {
+        "held_item": 0,
+        "species": 152,
+        "level": 15,
+        "ability": 65,
+        "experience": 2534,
+        "moves": [
+          33,
+          45,
+          0,
+          0
+        ],
+        "PP": [
+          35,
+          40,
+          0,
+          0
+        ],
+        "PID": 878592113,
+        "OT_ID": 3484597151,
+        "nature": 13,
+        "shiny_xor": 2,
+        "genuinely_shiny": true,
+        "checksum_valid": true,
+        "HP": 38,
+        "max_HP": 38
+      }
+    }
+  ]
+}

@@ -69,3 +69,4 @@ are documented separately in the stage reports.
 - [tools/inspect_partner_battle.py](../../tools/inspect_partner_battle.py)
 - [tools/inspect_story_pokemon.py](../../tools/inspect_story_pokemon.py)
 - [tools/story_text.py](../../tools/story_text.py)
+- [tools/check_sabrina_practice_roundtrip.py](../../tools/check_sabrina_practice_roundtrip.py)

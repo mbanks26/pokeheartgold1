@@ -1,0 +1,41 @@
+[
+  {
+    "file": "practice-victory.sav.gz",
+    "test_fixture_only": true,
+    "description": "Native Multi victory, joined companion and Marsh Badge; authored high-level player fixture.",
+    "source_ROM_SHA1": "4f4e203c2b52967d2739c762360ed0065b458d59",
+    "raw_SHA256": "1ce3bb81e33d6668a11696afa909f97570be20140e7ba458e21c217d83164e7d",
+    "native_save_counters": [
+      4,
+      5
+    ]
+  },
+  {
+    "file": "companion-disabled.sav.gz",
+    "test_fixture_only": true,
+    "description": "Natively saved disabled status after native daily-update check; sister Eevee retained.",
+    "source_ROM_SHA1": "c794f957edb5656e7298b50548afcaf4a5497c25",
+    "raw_SHA256": "7f452ed55b9480d409767ca4d53b37c470c5c7ee8c44ed33b14656f0d8e68825",
+    "native_save_counters": [
+      4,
+      3
+    ]
+  },
+  {
+    "file": "evolved-shiny-bayleef.sav.gz",
+    "test_fixture_only": true,
+    "description": "Actual native shiny Chikorita evolved into Bayleef after a wild battle; level/experience setup authored before battle.",
+    "source_ROM_SHA1": "c794f957edb5656e7298b50548afcaf4a5497c25",
+    "raw_SHA256": "7717b6f501692d2a6827c10c8bfdae8ce796c679fff5a9e2592ebb52c29cf340",
+    "native_save_counters": [
+      4,
+      3
+    ]
+  },
+  {
+    "file": "practice-input.sav.gz",
+    "test_fixture_only": true,
+    "description": "Authored pre-practice input, post-Marsh native save with both followers placed beside students; original NPC records retained.",
+    "raw_SHA256": "670e9798052ece84a75e1784909473e2277740b7345d163f5a063d0e609ae4d7"
+  }
+]

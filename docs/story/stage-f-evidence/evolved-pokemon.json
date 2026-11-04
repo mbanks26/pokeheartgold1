@@ -1,0 +1,32 @@
+{
+  "player_OT_ID": 3484597151,
+  "party": [
+    {
+      "held_item": 0,
+      "species": 153,
+      "level": 16,
+      "ability": 65,
+      "experience": 2550,
+      "moves": [
+        33,
+        45,
+        0,
+        0
+      ],
+      "PP": [
+        34,
+        40,
+        0,
+        0
+      ],
+      "PID": 878592113,
+      "OT_ID": 3484597151,
+      "nature": 13,
+      "shiny_xor": 2,
+      "genuinely_shiny": true,
+      "checksum_valid": true,
+      "HP": 45,
+      "max_HP": 45
+    }
+  ]
+}

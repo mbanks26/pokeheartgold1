@@ -1,0 +1,9 @@
+{
+  "test_fixture_only": true,
+  "source_sha256": "f2ed9edb411febb570266e3ca4269a15d8ded7af4e8f2e998ba719f34128efd0",
+  "setup": [
+    "post-Marsh native save, practice flag unset",
+    "player and native Pokemon placed together beside students",
+    "standing/walking mode, all original Saffron NPC records retained"
+  ]
+}

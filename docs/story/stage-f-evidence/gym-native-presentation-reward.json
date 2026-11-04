@@ -1,0 +1,20 @@
+{
+  "battle_type": "0x1 ordinary Trainer Single",
+  "enemy_trainer": 258,
+  "original_Sabrina_team": [
+    [
+      196,
+      53
+    ],
+    [
+      122,
+      53
+    ],
+    [
+      65,
+      55
+    ]
+  ],
+  "combined_art_enabled": false,
+  "native_TM48_reward_quantity": 1
+}

@@ -1,0 +1,57 @@
+{
+  "test_fixture_only": true,
+  "original": {
+    "held_item": 0,
+    "species": 160,
+    "level": 100,
+    "ability": 67,
+    "experience": 1059860,
+    "moves": [
+      242,
+      57,
+      127,
+      70
+    ],
+    "PP": [
+      15,
+      15,
+      15,
+      15
+    ],
+    "PID": 2789238736,
+    "OT_ID": 3438256915,
+    "nature": 11,
+    "shiny_xor": 44652,
+    "genuinely_shiny": false,
+    "checksum_valid": true,
+    "HP": 350,
+    "max_HP": 350
+  },
+  "authored_for_defeat": {
+    "held_item": 0,
+    "species": 160,
+    "level": 100,
+    "ability": 67,
+    "experience": 1059860,
+    "moves": [
+      242,
+      57,
+      127,
+      70
+    ],
+    "PP": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "PID": 2789238736,
+    "OT_ID": 3438256915,
+    "nature": 11,
+    "shiny_xor": 44652,
+    "genuinely_shiny": false,
+    "checksum_valid": true,
+    "HP": 1,
+    "max_HP": 350
+  }
+}

@@ -32,3 +32,6 @@ Load native battery saves only. Emulator save states belong to their exact ROM.
 
 Headless DeSmuME checks do not establish full-campaign or Manic compatibility.
 Link trading needs separate hardware/network support and remains a manual check.
+
+The automated regression report is [STAGE-F.md](STAGE-F.md). The partner rear-view
+presentation and a full campaign still need visual gameplay review on your device.

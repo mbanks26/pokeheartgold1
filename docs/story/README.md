@@ -1,7 +1,7 @@
 # Story and partner integration
 
 Use [the latest stable story/partner patch](stage-e-release.bps),
-[implementation and tests](STAGE-E.md), [RTC persistence correction](RTC-PERSISTENCE.md)
+[implementation](STAGE-E.md), [final regression report](STAGE-F.md), [RTC persistence correction](RTC-PERSISTENCE.md)
 and [iPhone gameplay checklist](MANIC-CHECKLIST.md).
 
 Development branch: development/story-partner-integration-20261103 in
