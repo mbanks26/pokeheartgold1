@@ -1,0 +1,77 @@
+{
+  "release": "HeartGold RC1",
+  "date_UTC": "2026-11-04",
+  "status": "experimental comprehensive-player-test candidate; not full-campaign certified",
+  "repository": "mbanks26/pokeheartgold1",
+  "branch": "development/release-candidate-20261104",
+  "recovered_feature_head": "110f4acf4a97c185192467dbc27b1f05ff6d39d0",
+  "initial_QA_checkpoint": "66a6be90c36449248b1fd5826a31f09cbd96fb77",
+  "exact_game_source_commit": "507ca40db6d692683746ccf318e910e321eb48d7",
+  "exact_source_tree": "7630f4b4048c535bacd079461192c6bd72dd6427",
+  "archive_commit": "The enclosing Git commit containing this manifest and BPS; exact SHA recorded in delivery message and GitHub commit history",
+  "master_preserved": "3fea383f5a229391d12ef3429f8095177638a44d",
+  "artifact": "heartgold-rc1.bps",
+  "patch_validation": {
+    "format": "BPS",
+    "independent_decoder": "Rom Patcher JS BPS v20240821",
+    "base_region": "NTR-IPKE-USA",
+    "base_revision": 0,
+    "base": {
+      "bytes": 134217728,
+      "sha1": "4fcded0e2713dc03929845de631d0932ea2b5a37",
+      "sha256": "65f02a56842b75aa92d775d56d657a56fe3fa993550b04dc20704ab82d760105"
+    },
+    "target": {
+      "bytes": 134217728,
+      "sha1": "9670376e2a700d5c910648e18304ca3193c33e9c",
+      "sha256": "2333089f68a9f29f633fd839b5a6b922a7bf9870ae45e326fb85274ee350c5b7"
+    },
+    "patch": {
+      "bytes": 3957611,
+      "sha1": "4076fcf197034ab6ceda0cbae9595fb642644343",
+      "sha256": "f61448b75042e8d17d77d5ed0d55e23163fcf8091d1a01ad764bc8652f6b0d90"
+    },
+    "source_crc32": "c180a0e9",
+    "target_crc32": "f353ed65",
+    "patch_crc32": "e489726f",
+    "metadata": "HeartGold RC1 2026-11-04: custom characters, independent Sabrina companion, sister story, shiny starters and native AI partner battles. Experimental player-test candidate; see docs/release/REPORT.md. Base: NTR-IPKE-USA revision 0.",
+    "independent_byte_identical": true,
+    "wrong_base_rejected": true,
+    "corrupt_patch_rejected": true
+  },
+  "independent_decoder": {
+    "project": "Rom Patcher JS",
+    "version": "BPS module v20240821",
+    "source": "https://github.com/marcrobledo/RomPatcher.js",
+    "files_sha256": {
+      "BinFile.js": "8330493ee4207d8b37ffd291e2c4ae1d8c136f5a91693743d850d339266db777",
+      "HashCalculator.js": "354ffecb51cf26ae2028982f79ad92ad6767913f24ffbb0a41018b65424b4430",
+      "RomPatcher.format.bps.js": "5f8c0594c1b02dcc9c6fb2e67dc165e46e34e822ff9ee69ff12d8a4f6ce61c57"
+    }
+  },
+  "fresh_campaign_coverage": "Male blank save through Cherrygrove Guide Gent, native save and cold Continue; female blank save through shiny starter and native save/cold Continue",
+  "native_evidence": "evidence/native-index.json",
+  "automated_results": "evidence/final-host-regressions.json",
+  "full_campaign_completed": false,
+  "Manic_EMU_tested": false,
+  "save_structure_changed": false,
+  "known_minor_limits": [
+    "Stock Ethan/Lyra 3D Bag models",
+    "Native counterpart tutorial/phone wording not fully sibling-aware",
+    "Native AI immunity retargeting can waste a move"
+  ],
+  "known_cosmetic_limits": [
+    "Sabrina partner art reuses existing front/profile poses"
+  ],
+  "unverified": [
+    "Complete Johto/Kanto/Mount Silver/Red progression",
+    "Natural Sabrina phone appointment schedule",
+    "All special-action artwork/animation",
+    "All partner AI switch/faint/status/ability/loss/reward edge cases",
+    "Cold Continue while still cycling/Surfing or mid-script",
+    "Actual iPhone performance/compatibility",
+    "Paired clean/custom performance benchmark"
+  ],
+  "commercial_ROM_included": false,
+  "older_branches_patches_and_ROMs_preserved": true
+}

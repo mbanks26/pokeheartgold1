@@ -1,5 +1,11 @@
 # Character graphics integration
 
+> Historical first-integration record. For the current integrated action, intro,
+> Trainer Card, companion and story state, use [PROJECT.md](../PROJECT.md) and
+> the [RC1 graphics review](../docs/release/GRAPHICS.md). Later work completed the
+> separate 2D appearances described as pending below; the stock **3D Bag models**
+> remain a known limitation. Earlier stage evidence and art are preserved.
+
 Development branch: `development/character-integration-20261103`.
 The separate `recovery/verified-foundation-20261103` branch remains unchanged.
 
