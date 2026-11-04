@@ -1,5 +1,13 @@
 # HeartGold RC1 — player-test download
 
+**Finished `.nds` download:** [open your private download page](https://heartgold-rc1-manic-download.assuredkite.chatgpt.site)
+in Safari, sign in with the same ChatGPT account, wait for preparation, then tap
+**Save game to Files** and import `HeartGold-RC1-Manic.nds` into Manic. All RC1
+changes are already applied; no patching or original-ROM selection is needed.
+See [direct-download instructions and recovery details](DIRECT-DOWNLOAD.md).
+
+The patch links and instructions below remain as earlier archival alternatives.
+
 **RC1 is ready for a comprehensive player test, with coverage limits.** It is
 not a verified complete Johto–Kanto–Mount Silver playthrough. Actual Manic EMU
 compatibility has not been tested. The final report identifies every remaining
